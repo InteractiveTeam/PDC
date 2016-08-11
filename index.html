@@ -8,13 +8,14 @@
     <title>puntos de contacto</title>
 
     <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/ax-bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/trun/docs.css">
     <link rel="stylesheet" href="css/ax-main.css">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript" src="js/trun/modernizr.2.5.3.min.js"></script>
   </head>
   <body>
    
@@ -114,28 +115,51 @@
     </div>
     
     <div id="manual" class="manual">
-        
-        <div id="flipbook">
-            <div class="hard"> Turn.js </div>
-            <div class="hard"></div>
-            <div> Page 1 </div>
-            <div> Page 2 </div>
-            <div> Page 3 </div>
-            <div> Page 4 </div>
-            <div class="hard"></div>
-            <div class="hard"></div>
+        <div class="flipbook-viewport">
+            <div class="container">
+                <div class="flipbook">
+                   <!-- PAGE 0 -->
+                    <div class="hard ax-page-0" style="background-image:url(img/portada.jpg)"></div>
+                    <div class="ax-page-1" style="background-image:url(img/ax-pag1.jpg)"></div>
+                    <div class="ax-page-2" style="background-image:url(img/ax-pag2.jpg)">
+                        <div class="cont-title ax-hidden">
+                            <h2>Manual de <br/>Puntos de Contacto</h2>
+                            <img src="img/logo-epm.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="ax-page-3">
+                       <div class="ax-cont-info">
+                            <h2>Contenido</h2>
+                            <ul>
+                                <li><span>6</span>· Pensemos en marcas</li>
+                                <li><span>8</span>· Unamos los puntos de esta historia</li>
+                                <li><span>10</span>· ¿Puntos de contacto digitales?</li>
+                                <li><span>12</span>· Las redes sociales y sus personalidades</li>
+                                <li><span>14</span>· Antes del contacto esta la estrategia</li>
+                                <li><span>16</span>· Nuestros dominios</li>
+                                <li><span>18</span>· Juega en tablero estratégico de puntos de contacto</li>
+                                <li><span>20</span>· Espacio para preguntas</li>
+                                <li><span>22</span>· Tabla para medir rendimiento de puntos de contacto</li>
+                                <li><span>24</span>· Nuestras redes tienen cara</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ax-page-4">
+                        <div class="ax-cont-info">
+                            <h2>Introducción</h2>
+                            <p>Probablemente en estos momentos no entiendas de qué se trata esta cartilla, pero no te preocupes, lo entenderás mientras enciendes tu interruptor creativo. Así que te invitamos a que te prepares porque esta guía será poco convencional.</p>
+                            <p>En ella encontrarás una serie de dinámicas que te ayudarán a entender de qué se trata todo esto de los puntos de contacto y cuál es tu papel en este juego.</p>
+                        </div>
+                    </div>
+                    <div class="hard">suerte es que les digo agonia.. jumm mero lulito</div>
+                </div>
+            </div>
         </div>
-
     </div>
     
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/trun/hash.js"></script>
-    <script src="js/trun/scissor.min.js"></script>
-    <script src="js/trun/turn.html4.min.js"></script>
     <script src="js/trun/turn.min.js"></script>
     <script src="js/ax-main.js"></script>
   </body>

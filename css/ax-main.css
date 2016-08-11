@@ -21,25 +21,68 @@
     font-style: normal;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: 'vagron'
 }
 
+.ax-cont-info h2 {
+    font-family: 'vagroundedlight';
+    font-size: 3.7rem;
+    letter-spacing: 0.2rem;
+}
+
+body {
+    background: #f4f4f4
+}
+
 * {
-    font-family: 'vagroundedlight'
+    font-family: 'vagroundedlight';
 }
 
 .manual {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: #c6c6c6;
-    top: 100%;
-        
+    background: #ededed;
+    top: 120%;
+    padding: 40px;
+}
+
+.manual:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3));
+    bottom: 100%;
 }
 
 /*doble página*/
 /* Basic sample */
+
+.flipbook-viewport{
+	overflow:hidden;
+	width:100%;
+	height:100%;
+}
+
+.flipbook-viewport .container{
+	margin: 0 auto;
+}
+
+.flipbook-viewport .flipbook{
+	width:922px;
+	height:600px;
+}
+
+.flipbook-viewport .page{
+	width:461px;
+	height:600px;
+	background-color:white;
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+}
 
 .flipbook .page{
 	-webkit-box-shadow:0 0 20px rgba(0,0,0,0.2);
@@ -72,8 +115,108 @@ h1,h2,h3,h4,h5,h6 {
 	box-shadow:0 0 20px #ccc;
 }
 
-.flipbook-viewport .double{
-	width:800px;
-	height:400px;
-	background-size:100% 100%;
+
+/*Pages*/
+
+.ax-page-2 .cont-title {
+    width: 350px;
+    text-align: center;
+    height: 170px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.ax-page-2 h2 {
+    color: #575756;
+    font-family: 'vagroundedlight';
+    font-size: 2rem;
+    font-weight: lighter;
+    letter-spacing: 0.2rem;
+    line-height: 2.9rem
+}
+
+.ax-page-2 .cont-title img {
+    width: 32%;
+    margin-top: 10px;
+}
+
+.ax-page-3:after {
+    content: "";
+    display: block;
+    background: #3fa435;
+    position: absolute;
+    height: 100%;
+    width: 25px;
+    top: 0;
+    right: 0;
+}
+
+.ax-page-3 .ax-cont-info {
+   width:  80%;
+    position: absolute;
+    right: 0;
+    top: 24%;
+}
+
+.ax-page-3 .ax-cont-info h2 {
+    position: relative;
+    margin-right: 26%;
+    width: 100%;
+}
+
+.ax-page-3 .ax-cont-info h2:after {
+    content: "";
+    display: block;
+    background: #3fa435;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+}
+
+.ax-page-3 .ax-cont-info ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 80px;
+}
+
+.ax-page-3 .ax-cont-info li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.ax-page-3 ul span {
+    color: #3fa435;
+    font-family: 'vagron';
+    margin: 0 10px 0 ;
+    text-align: right;
+    display: inline-block;
+}
+
+.ax-page-4 .ax-cont-info {
+    background: #3fa435 url(../img/epm_logowhite.png) no-repeat 87% 93%;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center
+}
+
+.ax-page-4 .ax-cont-info h2 {
+    font-size: 3rem;
+    padding-top: 40%
+}
+
+.ax-page-4 .ax-cont-info p {
+    width: 63%;
+    font-size: 1.1rem;
+    margin: 30px auto;
+    letter-spacing: 0.1rem;
+}
+
+.ax-hidden {
+    display: none;
 }
