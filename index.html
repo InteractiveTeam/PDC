@@ -9,6 +9,7 @@
 
     <!-- Bootstrap -->
     <link href="css/ax-bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/trun/docs.css">
     <link rel="stylesheet" href="css/ax-main.css">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -16,6 +17,10 @@
     <![endif]-->
   </head>
   <body>
+   
+    <div class="container ax-principal">
+          <a href="#manual" class="btn btn-outline-primary btn-manual">Ver manual</a>
+    </div>
     
     <div class="container ax-iniciar-sesion">
         <div class="row">
@@ -108,12 +113,19 @@
         </div>
     </div>
     
-    <div class="container ax-principal">
-          <a href="#manual" class="btn btn-outline-primary ">Ver manual</a>
-    </div>
-    
-    <div id="manual">
-        el manual
+    <div id="manual" class="manual">
+        
+        <div id="flipbook">
+            <div class="hard"> Turn.js </div>
+            <div class="hard"></div>
+            <div> Page 1 </div>
+            <div> Page 2 </div>
+            <div> Page 3 </div>
+            <div> Page 4 </div>
+            <div class="hard"></div>
+            <div class="hard"></div>
+        </div>
+
     </div>
     
 
@@ -121,5 +133,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/trun/hash.js"></script>
+    <script src="js/trun/scissor.min.js"></script>
+    <script src="js/trun/turn.html4.min.js"></script>
+    <script src="js/trun/turn.min.js"></script>
+    <script src="js/ax-main.js"></script>
   </body>
 </html>
