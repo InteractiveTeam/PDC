@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'vagroundedlight';
+    src: url('../fonts/vagrounded-light-webfont.eot');
+    src: url('../fonts/vagrounded-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/vagrounded-light-webfont.woff') format('woff'),
+         url('../fonts/vagrounded-light-webfont.ttf') format('truetype'),
+         url('../fonts/vagrounded-light-webfont.svg#vagroundedlightlightLtLt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'vagron';
+    src: url('../fonts/vagron.eot');
+    src: url('../fonts/vagron-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/vagron-webfont.woff') format('woff'),
+         url('../fonts/vagron-webfont.ttf') format('truetype'),
+         url('../fonts/vagron-webfont.svg#vagron-webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'vagron'
+}
+
+* {
+    font-family: 'vagroundedlight'
+}
