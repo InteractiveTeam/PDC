@@ -53,26 +53,26 @@
                <hgroup>
                    <h2>Regístrate</h2>
                </hgroup>
-                <form role="form">
+                <form role="form" id="form-record">
                   <div class="form-group">
                     <label for="name">Nombre:</label>
-                    <input type="text" class="form-control" id="name"  placeholder="Nombre">
+                    <input type="text" class="form-control" id="name" name="name"  placeholder="Nombre">
                   </div>
                   <div class="form-group">
                     <label for="lastName">Apellido:</label>
-                    <input type="text" class="form-control" id="lastName" placeholder="Apellido">
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Apellido">
                   </div>
                   <div class="form-group">
                     <label for="email">Correo electrónico:</label>
-                    <input type="mail" class="form-control" id="email" placeholder="Correo electrónico">
+                    <input type="mail" class="form-control" id="email" name="email" placeholder="Correo electrónico">
                   </div>
                   <div class="form-group">
                     <label for="pwd1">Contraseña:</label>
-                    <input type="password" class="form-control" id="pwd1" placeholder="Contraseña">
+                    <input type="password" class="form-control" id="pwd1" name="pwd1" placeholder="Contraseña">
                   </div>
                   <div class="form-group">
                     <label for="pwd2">Repetir Contraseña:</label>
-                    <input type="password" class="form-control" id="pwd2" placeholder="Contraseña">
+                    <input type="password" class="form-control" id="pwd2" name="pwd2" placeholder="Contraseña">
                   </div>
                   <div class="form-group  text-xs-center">
                       <label class="custom-control custom-checkbox">
@@ -83,7 +83,7 @@
                   </div>
                   <div class="form-group text-xs-center">
                     <button class="btn btn-outline-primary" href="#">Cancelar</button>
-                    <button class="btn btn-outline-secondary" href="#">Aceptar</button>
+                    <button type="submit" class="btn btn-outline-secondary">Aceptar</button>
                   </div>
                 </form>
             </div>
