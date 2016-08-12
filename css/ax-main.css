@@ -23,10 +23,10 @@
 
 @font-face {
     font-family: 'tragic';
-    src: url('../fonts/TragicMarker-Regular.eot.eot');
-    src: url('../fonts/TragicMarker-Regular.eot.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/TragicMarker-Regular.eot.woff') format('woff'),
-         url('../fonts/TragicMarker-Regular.eot.ttf') format('truetype'),
+    src: url('../fonts/TragicMarker-Regular.eot');
+    src: url('../fonts/TragicMarker-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/TragicMarker-Regular.woff') format('woff'),
+         url('../fonts/TragicMarker-Regular.ttf') format('truetype'),
     font-weight: normal;
     font-style: normal;
 }
