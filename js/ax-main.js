@@ -16,10 +16,14 @@ $(document).ready(function(){
 
         switch (page) {
             case 2:
-            $('.cont-title').delay(700).fadeIn(2000);
+                $('.cont-title').delay(700).fadeIn(1000);
             break;
             
+            case 6:
+            break;
         }
     });
-
 })
+
+var path = document.querySelector('.path');
+var length = path.getTotalLength();
