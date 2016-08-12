@@ -23,10 +23,9 @@
 
 @font-face {
     font-family: 'tragic';
-    src: url('../fonts/TragicMarker-Regular.eot');
-    src: url('../fonts/TragicMarker-Regular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/TragicMarker-Regular.woff') format('woff'),
-         url('../fonts/TragicMarker-Regular.ttf') format('truetype'),
+    src: url('../fonts/TragicMarker.eot');
+    src: url('../fonts/TragicMarker.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/TragicMarker.woff') format('woff'),
     font-weight: normal;
     font-style: normal;
 }
@@ -252,6 +251,27 @@ p {
     padding-bottom: 10px;
 }
 
+.ax-page-5 .ax-eger-1 {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.ax-page-5 .ax-image-svg {
+    width: 50%;
+    display: inline-block;
+}
+
+.ax-page-5 .ax-eger-1 h3 {
+    color: #9ac331;
+    line-height: 32px;
+}
+
+.ax-page-5 .ax-eger-1 .ax-pasos {
+    right: -14%;
+    top: 12%;
+}
+
 .path path {
   stroke-dasharray: 800;
   stroke-dashoffset: 800;
@@ -280,10 +300,11 @@ p {
     background: url(../img/ax-pasos.png) no-repeat center;
     width: 30px;
     height: 30px;
-    dipslay: block;
+    display: block;
     padding: 14px;
     line-height: 10px;
     font-family: 'tragic';
+    position: absolute;
 }
 
 .ax-hidden {
