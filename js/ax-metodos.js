@@ -3,6 +3,7 @@ var epmModule = (function($){
     return {
         setting:{
             formRecord:$("#form-record"),
+            loginUser:$("#loginUser"),
             btnManual:$('.btn-manual'),
             manual:$('#manual'),
             flipbook:$(".flipbook")
@@ -34,12 +35,22 @@ var epmModule = (function($){
                 });
             });
         },
-        bindActions:function(){
+        bindActions:function(){            
             actions.formRecord.submit(function(e){
                 e.preventDefault();
                 data = {
                     data:epmModule.getFormData(actions.formRecord),
                     action:'recordUser'
+                }
+                var result = epmModule.requestAjax(data);
+                alert('registro exitoso');
+            });
+            
+            actions.loginUser.submit(function(e){
+                e.preventDefault();
+                data = {
+                    data:epmModule.getFormData(actions.loginUser),
+                    action:'login'
                 }
                 var result = epmModule.requestAjax(data);
                 console.log(result);

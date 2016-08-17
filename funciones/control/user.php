@@ -7,11 +7,16 @@
         $objUser = new Modeluser();
         
 		switch ($_POST['action']) {
+            case 'login':
+                $result = $objUser->login($dataUser);
+				
+                print_r(json_encode($result));
+				
+                break;
 			case 'recordUser':
                 $pass = password_hash($dataUser['pwd'],PASSWORD_DEFAULT);
                 $miIp = getRealIP();
-                $result = $objUser->recordUser($dataUser,$miIp,$pass);
-                //echo $result;
+                $result = $objUser->recordUser($dataUser,$miIp,$pass);                
                 print_r(json_encode(array('status'=>$result)));
 				break;
 		}
