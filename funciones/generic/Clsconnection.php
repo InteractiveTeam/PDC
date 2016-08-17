@@ -1,16 +1,16 @@
 <?php 
-
 class Clsconnection{
-    private $user = 'root';
-    private $pass = '';
-    private $host = 'localhost';
-    private $db = 'ptos_epm';
-    private static $con;
+    public static $user = 'root';
+    public static $pass = '';
+    public static $host = 'localhost';
+    public static $db = 'ptos_epm';
+    public static $con;
 
-    public static function conect(){
+    public static function conect(){        
         try {
-            if (!self::$con){                     
-                self::$con = new PDO('mysql:host='.$this->$db_host.'; dbname='.$this->db_name, $this->$db_user, $this->$user_pw);  
+            if (!self::$con){
+                self::$con = new PDO('mysql:host='.self::$host.'; dbname='.self::$db, self::$user, self::$pass,
+                    array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'",PDO::ATTR_PERSISTENT => true));  
                 self::$con->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
             }
             return self::$con;
