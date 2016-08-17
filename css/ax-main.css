@@ -259,7 +259,7 @@ p {
     padding: 0 0 40px 0;
 }
 
-.ax-page-5 .ax-eger-1:after {
+.ax-page-5 .ax-eger-1:after, .ax-page-6 .ax-eger-2:after, .ax-page-6 .ax-eger-3:after {
     content: "";
     display: block;
     width: 100%;
