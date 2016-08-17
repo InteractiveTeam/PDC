@@ -23,9 +23,10 @@
 
 @font-face {
     font-family: 'tragic';
-    src: url('../fonts/TragicMarker.eot');
-    src: url('../fonts/TragicMarker.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/TragicMarker.woff') format('woff'),
+    src: url('../fonts/TragicMarker.otf');
+    src: url('../fonts/TragicMarker.eot'),
+         url('../fonts/TragicMarker.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/TragicMarker.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -42,8 +43,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .ax-cont-info h3 {
     font-family: 'vagroundedlight';
-    font-size: 2.2rem;
-    letter-spacing: 0.2rem;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
 }
 
 body {
@@ -243,7 +244,7 @@ p {
 }
 
 .ax-page-5 .ax-cont-info .ax-cont-first {
-    padding-top: 60px;
+    padding-top: 40px;
     width: 80%;
 }
 
@@ -255,6 +256,25 @@ p {
     width: 100%;
     position: relative;
     display: inline-block;
+    padding: 0 0 40px 0;
+}
+
+.ax-page-5 .ax-eger-1:after {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 30px;
+    background: url(../img/line-page.png) no-repeat;
+}
+
+.ax-page-5 .ax-eger-1 > div {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    vertical-align: bottom;
+    float: none;
 }
 
 .ax-page-5 .ax-image-svg {
@@ -267,15 +287,70 @@ p {
     line-height: 32px;
 }
 
+.ax-page-5 .ax-eger-1 p, .ax-page-6 .ax-eger-2 p, .ax-page-6  .ax-eger-3 p, .ax-page-5 .ax-eger-4 p {
+    font-family: 'tragic';
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.1rem;
+}
+
 .ax-page-5 .ax-eger-1 .ax-pasos {
-    right: -14%;
-    top: 12%;
+    right: -13%;
+    top: 38%;
+}
+
+.ax-page-5 .ax-eger-4 {
+    background: url(../img/ax-font-green.png);
+    background-size: 101% 100%;
+    color: #fff;
+    padding: 20px 26px;
+    position: relative;
+}
+
+.ax-page-5 .ax-eger-4 .ax-pasos { 
+    background-image: url(../img/ax-pasos-withe.png);
+    color: #000;
+    padding: 14px;
+    top: 20px;
+    left: 20px;
+}
+
+.ax-page-5 .ax-eger-4 h3 {
+    font-family: 'vagron';
+    font-size: 20px;
+    width: 90%;
+    text-align: center;
+    margin-left: 10%;
+}
+
+.ax-page-5 .ax-eger-4 p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.ax-page-5 .ax-eger-4 textarea {
+    background: transparent;
+    border: none;
+    width: 100%;
+    background: url(../img/ax-font-textarea.png);
+    background-size: 100%;
+    height: 90px;
+    min-height: 90px;
+    max-height: 90px;
+    line-height: 1.6rem;
+    letter-spacing: 0.05rem;
+    font-weight: lighter;
 }
 
 .path path {
   stroke-dasharray: 800;
   stroke-dashoffset: 800;
   animation: dash 2s ease-in forwards;
+}
+
+svg {
+    width: 90%;
+    margin-left: 5%;
 }
 
 @keyframes dash {
@@ -298,13 +373,14 @@ p {
 
 .ax-pasos {
     background: url(../img/ax-pasos.png) no-repeat center;
-    width: 30px;
-    height: 30px;
+    background-size: 100%;
     display: block;
-    padding: 14px;
-    line-height: 10px;
+    padding: 16px;
+    line-height: 16px;
     font-family: 'tragic';
     position: absolute;
+    font-weight: bold;
+    font-size: 34px;
 }
 
 .ax-hidden {

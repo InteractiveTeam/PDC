@@ -11,6 +11,10 @@ var epmModule = (function($){
         init:function(){
             actions = this.setting;
             $(document).ready(function(){
+               
+                $('.ax-page-5').load('page.html .page-6');
+                $('.ax-page-6').load('page.html .page-7');
+                
                 epmModule.bindActions();
                 actions.btnManual.on('click', function(){
                     actions.manual.animate({top: 0}, 'slow')
@@ -30,6 +34,7 @@ var epmModule = (function($){
                         break;
 
                         case 6:
+                            
                         break;
                     }
                 });
