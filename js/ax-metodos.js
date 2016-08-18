@@ -14,6 +14,8 @@ var epmModule = (function($){
                
                 $('.ax-page-5').load('page.html .page-6');
                 $('.ax-page-6').load('page.html .page-7');
+                $('.ax-page-7').load('page.html .page-8');
+                $('.ax-page-8').load('page.html .page-9');
                 
                 epmModule.bindActions();
                 actions.btnManual.on('click', function(){
@@ -34,7 +36,8 @@ var epmModule = (function($){
                         break;
 
                         case 6:
-                            
+                            $('.ax-image-svg').delay(500).animate({opacity: 1}, 1000);
+                            $('.ax-page-6 .ax-image-svg').delay(4000).animate({opacity: 1}, 1000);
                         break;
                     }
                 });

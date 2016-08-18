@@ -176,7 +176,7 @@ p {
 }
 
 .ax-page-3 .ax-cont-info {
-   width:  80%;
+    width:  90%;
     position: absolute;
     right: 0;
     top: 24%;
@@ -237,15 +237,19 @@ p {
     letter-spacing: 0.1rem;
 }
 
-.ax-page-5 .ax-cont-info {
+.ax-page-5 .ax-cont-info, .ax-page-7 .ax-cont-info {
     width: 90%;
     height: 90%;
     margin-left: 10%;
 }
 
-.ax-page-5 .ax-cont-info .ax-cont-first {
-    padding-top: 40px;
-    width: 80%;
+.ax-page-5 .ax-cont-info .ax-cont-first, .ax-page-7 .ax-cont-info .ax-cont-first {
+    padding: 40px 0;
+    width: 81%;
+}
+
+.ax-page-5 .ax-cont-info .ax-cont-first p {
+    height: 140px;
 }
 
 .ax-page-5 .ax-cont-info h3 {
@@ -253,13 +257,10 @@ p {
 }
 
 .ax-page-5 .ax-eger-1 {
-    width: 100%;
     position: relative;
-    display: inline-block;
-    padding: 0 0 40px 0;
 }
 
-.ax-page-5 .ax-eger-1:after, .ax-page-6 .ax-eger-2:after, .ax-page-6 .ax-eger-3:after {
+.ax-page-5 .ax-eger-1:after, .ax-page-6 .ax-eger-2 .ax-text:after, .ax-page-6 .ax-eger-3:after {
     content: "";
     display: block;
     width: 100%;
@@ -267,6 +268,15 @@ p {
     bottom: 0;
     height: 30px;
     background: url(../img/line-page.png) no-repeat;
+    background-size: 100% 3px;
+}
+
+.ax-page-5 .ax-eger-1:after {
+    background-size: 240px 3px;
+}
+
+.ax-page-5 .ax-eger-1 p {
+    padding: 0 0 30px 0;
 }
 
 .ax-page-5 .ax-eger-1 > div {
@@ -282,6 +292,11 @@ p {
     display: inline-block;
 }
 
+.ax-page-5 .ax-image-svg svg {
+    width: 80%;
+    margin-left: 10%;
+}
+
 .ax-page-5 .ax-eger-1 h3 {
     color: #9ac331;
     line-height: 32px;
@@ -289,8 +304,8 @@ p {
 
 .ax-page-5 .ax-eger-1 p, .ax-page-6 .ax-eger-2 p, .ax-page-6  .ax-eger-3 p, .ax-page-5 .ax-eger-4 p {
     font-family: 'tragic';
-    font-size: 1.4rem;
-    line-height: 1.6rem;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
     letter-spacing: 0.1rem;
 }
 
@@ -299,12 +314,16 @@ p {
     top: 38%;
 }
 
-.ax-page-5 .ax-eger-4 {
+.ax-page-5 .ax-eger-4, .ax-page-6 .ax-eger-4 {
     background: url(../img/ax-font-green.png);
     background-size: 101% 100%;
     color: #fff;
     padding: 20px 26px;
     position: relative;
+}
+
+.ax-page-6 .ax-eger-4 {
+    background-position: -4px 0;
 }
 
 .ax-page-5 .ax-eger-4 .ax-pasos { 
@@ -315,7 +334,7 @@ p {
     left: 20px;
 }
 
-.ax-page-5 .ax-eger-4 h3 {
+.ax-page-5 .ax-eger-4 h3  {
     font-family: 'vagron';
     font-size: 20px;
     width: 90%;
@@ -337,20 +356,222 @@ p {
     height: 90px;
     min-height: 90px;
     max-height: 90px;
-    line-height: 1.6rem;
+    line-height: 1.7rem;
     letter-spacing: 0.05rem;
     font-weight: lighter;
+}
+
+.ax-page-5 .ax-eger-4 textarea:focus {
+    outline: none;
+}
+
+.ax-page-6 .ax-cont-info, .ax-page-8 .ax-cont-info {
+    width:  90%;
+    position: absolute;
+    left: 0;
+}
+
+.ax-page-6 .ax-eger-2 {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    padding: 59px 0 40px 0;
+}
+
+.ax-page-6 .ax-eger-2 .ax-text {
+    position: absolute;
+    right: 0;
+    bottom: 11%;
+    padding: 60px 0;
+    width: 240px;
+}
+
+.ax-page-6 .ax-eger-2 .ax-text p {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.ax-page-6 .ax-eger-2 .ax-pasos {
+    top: -13%;
+    left: 6%;
+}
+
+.ax-page-6 .ax-eger-2 .ax-image-svg img {
+    width: 150%;
+}
+
+.ax-page-6 .ax-eger-3 {
+    position: relative;
+    display: inline-block;
+    padding: 50px 0 43px 0;
+}
+
+.ax-page-6 .ax-eger-3 .ax-image-svg img {
+    width: 100%;
+}
+
+.ax-page-6 .ax-eger-3 .ax-pasos {
+    top: -53%;
+    left: 2.5%;
+}
+
+.ax-page-6 .ax-eger-4:before {
+    content: url(../img/ax-font-person-happy.png);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.ax-page-6 .ax-eger-4 h3, .ax-page-6 .ax-eger-4 p, .ax-page-7 .ax-text p, .ax-page-8 .ax-text p {
+    font-family: 'tragic';
+    font-size: 20px;
+    letter-spacing: 0.1rem;
+}
+
+.ax-page-7 .ax-text p {
+    font-size: 18px;
+}
+
+.ax-page-6 .ax-eger-4 textarea {
+    background: transparent;
+    border: none;
+    width: 70%;
+    background: url(../img/ax-font-textarea.png);
+    background-size: 100% 30px;
+    height: 69px;
+    min-height: 69px;
+    max-height: 69px;
+    line-height: 1.8rem;
+    letter-spacing: 0.05rem;
+    font-weight: lighter;
+}
+
+.ax-page-6 .ax-eger-4 textarea:focus {
+    outline: none;
+}
+
+.ax-page-7 .ax-cont-info .ax-cont-first  {
+    padding: 30px 0;
+}
+
+.ax-page-7 .ax-cont-info .ax-cont-first {
+    width: 90%;
+}
+
+.ax-page-7 .ax-text h3 {
+    color: #9ac331;
+    line-height: 32px;
+}
+
+.ax-imagen-tols {
+    position: relative;
+}
+
+.ax-imagen-tols .ax-tols {
+    position: absolute;
+    top: 100%;
+    right: 100%;
+}
+
+.ax-imagen-tols .ax-tols img {
+    width: 13px;
+    display: block;
+    margin: 0 auto;
+}
+
+.ax-imagen-tols .ax-tols p {
+    font-size: 1.05rem;
+    text-align: center;
+    margin-top: 10px;
+    letter-spacing: 0.05rem;
+}
+
+.ax-imagen-tols .ax-tols-1 {
+    top: 30px;
+    left: 0%;
+    width: 70px;
+}
+
+.ax-imagen-tols .ax-tols-2 {
+    top: 30px;
+    left: 19%;
+    width: 70px
+}
+
+.ax-imagen-tols .ax-tols-3 {
+    top: 60px;
+    left: 35%;
+    width: 80px;
+}
+
+.ax-imagen-tols .ax-tols-4 {
+    top: 70px;
+    left: 55%;
+    width: 80px;
+}
+
+.ax-imagen-tols .ax-tols-5 {
+    top: 50px;
+    left: 84%;
+    width: 100px;
+}
+
+.ax-imagen-tols .ax-tols-6 {
+    top: 200px;
+    left: 40%;
+    width: 230px;
+}
+
+.ax-imagen-tols .ax-tols-4 p {
+    padding: 0;
+    margin: 0;
+}
+
+.ax-imagen-tols .ax-tols-5 p {
+    position: absolute;
+    width: 100px;
+    transform:rotate(270deg);
+    top: 40px;
+    left: -15px;
+}
+
+.ax-imagen-tols .ax-tols-2 img {
+    width: 11.7px;
+    display: block;
+    margin: 0 auto;
+}
+
+.ax-imagen-tols .ax-tols-3 img {
+    width: 18px;
+}
+
+.ax-imagen-tols .ax-tols-5 img {
+    width: 17px;
+    margin: 0;
+}
+
+.ax-imagen-tols .ax-tols-4 img {
+    width: 90%;
+}
+
+.ax-imagen-tols .ax-tols-6 img {
+    width: 80px;
+    float: left;
+}
+
+.ax-image-svg {
+    opacity: 0;
+}
+
+.ax-page-8 P {
+    
 }
 
 .path path {
   stroke-dasharray: 800;
   stroke-dashoffset: 800;
   animation: dash 2s ease-in forwards;
-}
-
-svg {
-    width: 90%;
-    margin-left: 5%;
 }
 
 @keyframes dash {
