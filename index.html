@@ -18,60 +18,59 @@
     <script type="text/javascript" src="js/trun/modernizr.2.5.3.min.js"></script>
   </head>
   <body>
-    <!--<div id="particle-canvas"></div>-->
+<!--    <div id="particle-canvas"></div>-->
     <div class="container ax-principal">
           <a href="#manual" class="btn btn-outline-primary btn-manual">Ver manual</a>
-    </div>
-    
-    <div class="container ax-iniciar-sesion">
-        <div class="row">
-            <div class="col-xs-12">
+          <div class="row content-login">
+            <div class="col-md-12 col-centered text-center">
+              <div class="button button--antiman btn-login"><span>Iniciar sesión</span></div>
+              <div class="button button--antiman btn-sign-up"><span>Regístrate</span></div>
+            </div>
+          </div>
+        <div class="row ax-iniciar-sesion">
+            <div class="col-md-6 col-centered">
                <hgroup>
                    <h2>Iniciar sesión</h2>
                </hgroup>
                 <form role="form" id="loginUser">
-                  <div class="form-group">
-                    <label for="user">Usuario:</label>
+                  <div class="form-group">                    
                     <input type="text" class="form-control" id="user" name="user" placeholder="Ususario">
                   </div>
-                  <div class="form-group">
-                    <label for="pwd">Contraseña:</label>
+                  <div class="form-group">                    
                     <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Contraseña">
                   </div>
-                  <div class="form-group text-xs-center">
-                    <button class="btn btn-outline-primary" href="#">¿Olvidaste tu contraseña?</button>
-                    <button class="btn btn-outline-secondary" href="#">Crear una cuenta nueva</button>
+                  <div class="form-group text-center">
+                    <a class="linkEffect" href="#">¿Olvidaste tu contraseña?</a>
                   </div>
+                  <div class="form-group text-center">
+                    <a class="linkEffect" href="#">Crear una cuenta nueva</a>                      
+                  </div>
+                    <div class="text-center content-btn">
+                      <button type="submit" class="button button--antiman btn-login"><span>Iniciar sesion</span></button>
+                      <button class="button button--antiman btn-cancel-login"><span>Cancelar</span></button>
+                    </div>
                 </form>
             </div>
         </div>
-    </div>
-    
-    <div class="container ax-registro">
-        <div class="row">
-            <div class="col-xs-12">
+        <div class="row ax-registro">
+            <div class="col-md-6 col-centered">
                <hgroup>
                    <h2>Regístrate</h2>
                </hgroup>
                 <form role="form" id="form-record" type="POST">
-                  <div class="form-group">
-                    <label for="name">Nombre:</label>
+                  <div class="form-group">                    
                     <input type="text" class="form-control" id="name" name="name"  placeholder="Nombre">
                   </div>
-                  <div class="form-group">
-                    <label for="lastName">Apellido:</label>
+                  <div class="form-group">                    
                     <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Apellido">
                   </div>
-                  <div class="form-group">
-                    <label for="email">Correo electrónico:</label>
+                  <div class="form-group">                    
                     <input type="mail" class="form-control" id="email" name="email" placeholder="Correo electrónico">
                   </div>
-                  <div class="form-group">
-                    <label for="pwd1">Contraseña:</label>
+                  <div class="form-group">                    
                     <input type="password" class="form-control" id="pwd1" name="pwd" placeholder="Contraseña">
                   </div>
-                  <div class="form-group">
-                    <label for="pwd2">Repetir Contraseña:</label>
+                  <div class="form-group">                    
                     <input type="password" class="form-control" id="pwd2" name="pwd2" placeholder="Contraseña">
                   </div>
                   <div class="form-group  text-xs-center">
@@ -81,9 +80,13 @@
                         <span class="custom-control-description">Acepto recibir el envío de información vía correo electrónico.</span>
                       </label>
                   </div>
-                  <div class="form-group text-xs-center">
-                    <button class="btn btn-outline-primary" href="#">Cancelar</button>
-                    <button type="submit" class="btn btn-outline-secondary">Aceptar</button>
+                  <div class="text-center content-btn">
+                        <button type="submit" class="button button--antiman btn-login"><span>Aceptar</span></button>
+                        <div class="button button--antiman btn-cancel-login"><span>Cancelar</span></div>
+<!--
+                        <button class="btn btn-outline-primary" href="#">Cancelar</button>
+                        <button type="submit" class="btn btn-outline-secondary">Aceptar</button>
+-->
                   </div>
                 </form>
             </div>
@@ -172,10 +175,21 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+<!--
+    <script src="js/TweenLite.min.js"></script>
+    <script src="js/TimelineLite.min.js"></script>
+    <script src="js/CSSPlugin.min.js"></script>
+-->
     <script src="js/trun/turn.min.js"></script>
     <script src="js/ax-metodos.js"></script>
     <script src="js/ax-main.js"></script>
-    <!--<script src="js/ax-canvas.js"></script>-->
+    
+    
+    
+<!--    <script src="js/TimelineLite.min.js"></script>-->
+    
+<!--    <script src="js/ax-canvas.js"></script>-->
 
   </body>
 </html>

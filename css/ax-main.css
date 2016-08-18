@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    background: #f4f4f4
+    background: rgb(75, 171, 73);
 }
 
 * {
@@ -618,4 +618,108 @@ p {
 
 .ax-iniciar-sesion,.ax-registro,.ax-recuperar{
     display: none;
+}
+
+.col-centered{
+    margin: 0 auto;
+    float: none;
+/*    text-align: center;*/
+}
+
+/* Common button styles */
+.button {
+    display: inline-block;
+    min-width: 150px;
+    max-width: 250px;
+    margin: 0.5em;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.4em;
+    border-radius: 25px;
+}
+.button:focus {
+	outline: none;
+}
+
+/* Antiman */
+.button--antiman {	
+/*	border: solid 2px #fff;*/
+    color: #fff;
+/*    background: none;   */
+}
+
+.button--antiman::before,
+.button--antiman::after {
+	content: '';
+	z-index: -1;
+	border-radius: inherit;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+}
+.button--antiman::before {
+	border: 2px solid #fff;
+	opacity: 0;
+	-webkit-transform: scale3d(1.2, 1.2, 1);
+	transform: scale3d(1.2, 1.2, 1);
+}
+
+.button--antiman::after {
+	background: transparent;
+}
+
+.button--antiman:hover::before {
+	opacity: 1;
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+}
+.button--antiman:hover::after {
+	opacity: 0;
+	-webkit-transform: scale3d(0.8, 0.8, 1);
+	transform: scale3d(0.8, 0.8, 1);
+}
+/*
+.button--antiman:hover{
+    color: rgb(75,171,73);
+}
+*/
+
+a.linkEffect{
+	-webkit-backface-visibility:hidden;
+  	backface-visibility:hidden;
+	position:relative;
+  	transition:0.5s color ease;
+	text-decoration:none;
+    color: #fff;
+}
+a.linkEffect:hover{	color:#fff; }
+
+a.linkEffect:after{
+  content: "";
+  transition:0.5s all ease;
+  -webkit-backface-visibility:hidden;
+  backface-visibility:hidden;
+  position:absolute;
+  bottom:-0.1em;
+  height:0.1rem;
+  width:0;
+  background:#fff;
+  left:0;
+}
+
+a.linkEffect:hover:after{  width:100%; }
+
+.ax-iniciar-sesion .form-control,.ax-registro .form-control{
+    border-radius: 0;
+    border: none;
 }
