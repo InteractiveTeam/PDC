@@ -498,7 +498,7 @@ a.linkEffect:after{
 
 a.linkEffect:hover:after{  width:100%; }
 
-.ax-iniciar-sesion .form-control{
+.ax-iniciar-sesion .form-control,.ax-registro .form-control{
     border-radius: 0;
     border: none;
 }
