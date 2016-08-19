@@ -633,7 +633,6 @@ p {
     max-width: 250px;
     margin: 0.5em;
     position: relative;
-    z-index: 1;
     cursor: pointer;
     text-align: center;
     padding: 0.4em;

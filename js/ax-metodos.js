@@ -33,7 +33,7 @@ var epmModule = (function($){
                 actions.flipbook.bind("turning", function(event, page, view) {
                     switch (page) {
                         case 2:
-//                            $('.cont-title').delay(700).fadeIn(1000);
+                            $('.cont-title').delay(700).fadeIn(1000);
                         break;
 
                         case 6:
