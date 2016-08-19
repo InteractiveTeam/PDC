@@ -20,8 +20,8 @@ var epmModule = (function($){
                 })
 
                 actions.flipbook.turn({
-                    width: 1240,
-                    height: 840,
+                    width: 1044,
+                    height: 750,
                     autoCenter: true,
                     display: (window.innerWidth > 768)?'double':'single'
                 })

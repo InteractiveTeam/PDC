@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .ax-cont-info h3 {
     font-family: 'vagroundedlight';
-    font-size: 2rem;
+    font-size: 1.6rem;
     letter-spacing: 0.1rem;
 }
 
@@ -56,7 +56,8 @@ body {
 }
 
 p {
-    line-height: 1.3rem;
+    line-height: 1.2rem;
+    font-size: 0.95rem;
 }
 
 .manual {
@@ -153,10 +154,10 @@ p {
 .ax-page-2 h2 {
     color: #575756;
     font-family: 'vagroundedlight';
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: lighter;
     letter-spacing: 0.2rem;
-    line-height: 2.9rem
+    line-height: 2.2rem
 }
 
 .ax-page-2 .cont-title img {
@@ -205,7 +206,7 @@ p {
 }
 
 .ax-page-3 .ax-cont-info li {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: 10px 0;
 }
 
@@ -238,18 +239,18 @@ p {
 }
 
 .ax-page-5 .ax-cont-info, .ax-page-7 .ax-cont-info {
-    width: 90%;
+    width: 92%;
     height: 90%;
-    margin-left: 10%;
+    margin-left: 8%;
 }
 
 .ax-page-5 .ax-cont-info .ax-cont-first, .ax-page-7 .ax-cont-info .ax-cont-first {
     padding: 40px 0;
-    width: 81%;
+    width: 90%;
 }
 
 .ax-page-5 .ax-cont-info .ax-cont-first p {
-    height: 140px;
+    height: 138px;
 }
 
 .ax-page-5 .ax-cont-info h3 {
@@ -294,17 +295,17 @@ p {
 
 .ax-page-5 .ax-image-svg svg {
     width: 80%;
-    margin-left: 10%;
+    margin-left: 20%;
 }
 
 .ax-page-5 .ax-eger-1 h3 {
     color: #9ac331;
-    line-height: 32px;
+    line-height: 28px;
 }
 
 .ax-page-5 .ax-eger-1 p, .ax-page-6 .ax-eger-2 p, .ax-page-6  .ax-eger-3 p, .ax-page-5 .ax-eger-4 p {
     font-family: 'tragic';
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1.5rem;
     letter-spacing: 0.1rem;
 }
@@ -336,8 +337,8 @@ p {
 
 .ax-page-5 .ax-eger-4 h3  {
     font-family: 'vagron';
-    font-size: 20px;
-    width: 90%;
+    font-size: 18px;
+    width: 92%;
     text-align: center;
     margin-left: 10%;
 }
@@ -387,7 +388,7 @@ p {
 }
 
 .ax-page-6 .ax-eger-2 .ax-text p {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -430,7 +431,7 @@ p {
 }
 
 .ax-page-7 .ax-text p {
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .ax-page-6 .ax-eger-4 textarea {
@@ -452,11 +453,11 @@ p {
 }
 
 .ax-page-7 .ax-cont-info .ax-cont-first  {
-    padding: 30px 0;
+    padding: 20px 0;
 }
 
 .ax-page-7 .ax-cont-info .ax-cont-first {
-    width: 90%;
+    width: 93%;
 }
 
 .ax-page-7 .ax-text h3 {
@@ -466,6 +467,7 @@ p {
 
 .ax-imagen-tols {
     position: relative;
+    padding-right: 0;
 }
 
 .ax-imagen-tols .ax-tols {
@@ -475,7 +477,7 @@ p {
 }
 
 .ax-imagen-tols .ax-tols img {
-    width: 13px;
+    width: 12px;
     display: block;
     margin: 0 auto;
 }
@@ -496,7 +498,7 @@ p {
 .ax-imagen-tols .ax-tols-2 {
     top: 30px;
     left: 19%;
-    width: 70px
+    width: 63px
 }
 
 .ax-imagen-tols .ax-tols-3 {
@@ -518,7 +520,7 @@ p {
 }
 
 .ax-imagen-tols .ax-tols-6 {
-    top: 200px;
+    top: 190px;
     left: 40%;
     width: 230px;
 }
@@ -537,13 +539,13 @@ p {
 }
 
 .ax-imagen-tols .ax-tols-2 img {
-    width: 11.7px;
+    width: 10.9px;
     display: block;
     margin: 0 auto;
 }
 
 .ax-imagen-tols .ax-tols-3 img {
-    width: 18px;
+    width: 16px;
 }
 
 .ax-imagen-tols .ax-tols-5 img {
@@ -556,7 +558,7 @@ p {
 }
 
 .ax-imagen-tols .ax-tols-6 img {
-    width: 80px;
+    width: 73px;
     float: left;
 }
 
@@ -564,8 +566,71 @@ p {
     opacity: 0;
 }
 
-.ax-page-8 P {
-    
+.ax-page-8 .ax-cont-info {
+    left: 8%;
+}
+
+.ax-game-line {
+    position: relative;
+}
+
+.ax-page-8 .ax-line-1.ax-game-line {
+    padding: 70px 0 0 0;
+}
+
+.ax-page-8 .ax-line-1 P {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.ax-page-8 .ax-line-2 {
+    margin-top: -30px;
+}
+
+.ax-page-8 .ax-line-2 P {
+    width: 30%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 30px
+}
+
+.ax-page-8 .ax-line-2 img {
+    display: inline-block;
+    width: 33%;
+    margin: 30px
+}
+
+.ax-page-8 .ax-line-3 P {
+    width: 25%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 30px
+}
+
+.ax-page-8 .ax-line-3 img {
+    display: inline-block;
+    width: 23%;
+    margin: 40px 0 0 0;
+}
+
+.ax-page-8 .ax-empezar-linea {
+    position: absolute;
+    width: 45%;
+    top: 10%;
+    right: 0;
+}
+
+.ax-page-8 .ax-empezar-linea p {
+    font-size: 0.7rem;
+    width: 100%;
+}
+
+.ax-page-8 .ax-empezar-linea img {
+    width: 30px;
+    position: absolute;
+    bottom: 0px;
+    left: 8%;
 }
 
 .path path {
