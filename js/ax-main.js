@@ -1,10 +1,6 @@
 epmModule.init();
 var tl = epmModule.setting.tl;
 $(document).ready(function(){
-    $('.ax-page-5').load('page.html .page-6');
-    $('.ax-page-6').load('page.html .page-7');
-    $('.ax-page-7').load('page.html .page-8');
-    $('.ax-page-8').load('page.html .page-9');
     
     $(".btn-login").on('click',function(){
         tl.to('.content-login', 0.5, {opacity:0,display:'none'})
@@ -24,6 +20,7 @@ $(document).ready(function(){
         .staggerFrom('.ax-registro .form-group,.ax-registro hgroup', 0.7, {y:-20,opacity:0,},0.10)
         .staggerFrom('.content-btn .button', 0.5, {y:15,opacity:0,},0.10,'-=0.85');
     });
+    
 });
 
 if( document.createElement('svg').getAttributeNS ) {
