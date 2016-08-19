@@ -17,11 +17,10 @@
                 $pass = password_hash($dataUser['pwd'],PASSWORD_DEFAULT);
                 $miIp = getRealIP();
                 $result = $objUser->recordUser($dataUser,$miIp,$pass);                
-                print_r(json_encode(array('status'=>$result)));
+                print_r(json_encode($result));
 				break;
 		}
 	}
-
 
     function generatePassword($length = 9) {
 	    $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';

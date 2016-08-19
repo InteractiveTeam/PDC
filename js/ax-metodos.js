@@ -43,12 +43,27 @@ var epmModule = (function($){
         bindActions:function(){            
             actions.formRecord.submit(function(e){
                 e.preventDefault();
+                
+                var status = true;
+				if(!(epmModule.validateForm('text',$(this).find('[name="name"]').val()))){
+					epmModule.setMessage('El campo nombre no es valido.');status = false;
+				}else if(!(epmModule.validateForm('text',$(this).find('[name="lastName"]').val()))){
+					epmModule.setMessage('El campo apellido es incorrecto.');status = false;
+				}else if(!(epmModule.validateForm('email',$(this).find('[name="email"]').val()))){
+					epmModule.setMessage('El campo correo electrónico no es valido.');status = false;
+				}else if(!$(this).find('[name="term_cond"]').prop('checked')){
+					epmModule.setMessage('Debe aceptar términos y condiciones.');status = false;
+				}
+                
                 data = {
                     data:epmModule.getFormData(actions.formRecord),
                     action:'recordUser'
                 }
-                var result = epmModule.requestAjax(data);
-                alert('registro exitoso');
+                if(status){
+                    var result = epmModule.requestAjax(data);
+                    console.log(result);
+                    alert('registro exitoso');
+                }
             });
             
             actions.loginUser.submit(function(e){
@@ -106,6 +121,12 @@ var epmModule = (function($){
 				break;
 			}
 			return status;
+		},
+        setMessage:function(msg){
+            alert(msg);
+			/*$('.msg-box').html(msg).stop().animate({'top': '2%',opacity:1}, 1000, function(){
+				setTimeout(function(){$('.msg-box').stop().animate({'top': '-15%',opacity:0}, 1000);}, 4000);
+			});*/
 		}
     }
 }(jQuery));

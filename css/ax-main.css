@@ -46,6 +46,10 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.6rem;
     letter-spacing: 0.1rem;
 }
+::-webkit-input-placeholder { color: #b3a1a5 !important; }
+:-moz-placeholder { color: #b3a1a5 !important;  }
+::-moz-placeholder { color: #b3a1a5 !important; }
+:-ms-input-placeholder { color: #b3a1a5 !important; }
 
 body {
     background: rgb(75, 171, 73);
@@ -783,7 +787,7 @@ a.linkEffect:after{
 
 a.linkEffect:hover:after{  width:100%; }
 
-.ax-iniciar-sesion .form-control,.ax-registro .form-control{
+.ax-iniciar-sesion .form-control,.ax-registro .form-control,.ax-recuperar .form-control{
     border-radius: 0;
     border: none;
 }

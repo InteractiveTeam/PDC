@@ -6,23 +6,30 @@ $(document).ready(function(){
     $('.ax-page-7').load('page.html .page-8');
     $('.ax-page-8').load('page.html .page-9');
     
-    $(".btn-login").on('click',function(){
+    $(".btn-login").on('click',function(){        
         tl.to('.content-login', 0.5, {opacity:0,display:'none'})
         .to('.ax-iniciar-sesion', 0.5, {opacity:1,display:'block'},'-=0.20')
         .staggerFrom('.ax-iniciar-sesion .form-group,.ax-iniciar-sesion hgroup', 0.7, {y:-20,opacity:0,},0.10)
         .staggerFrom('.content-btn button', 0.5, {y:15,opacity:0,},0.10,'-=0.85');
     });
     $(".btn-cancel-login").on('click',function(){
-        tl.to('.ax-iniciar-sesion', 0.5, {opacity:0,display:'none'})
+        tl.to('.ax-iniciar-sesion,.ax-registro,.ax-recuperar', 0.5, {opacity:0,display:'none'})
         .to('.content-login', 0.5, {opacity:1,display:'block'})
         .staggerFrom('.content-login .button', 0.7, {y:20,opacity:0,},0.10,'-=0.85');
     });
 
     $(".btn-sign-up").on('click',function(){
-        tl.to('.content-login', 0.5, {opacity:0,display:'none'})
+        tl.to('.content-login,.ax-iniciar-sesion', 0.5, {opacity:0,display:'none'})
         .to('.ax-registro', 0.5, {opacity:1,display:'block'},'-=0.20')
         .staggerFrom('.ax-registro .form-group,.ax-registro hgroup', 0.7, {y:-20,opacity:0,},0.10)
         .staggerFrom('.content-btn .button', 0.5, {y:15,opacity:0,},0.10,'-=0.85');
+    });
+    
+    $(".btn-forgot-pass").on('click',function(){
+        tl.to('.ax-iniciar-sesion', 0.5, {opacity:0,display:'none'})
+        .to('.ax-recuperar', 0.5, {opacity:1,display:'block'})
+        .staggerFrom('.ax-recuperar .form-group', 0.7, {y:-20,opacity:0,},0.10)
+        .staggerFrom('.content-btn .button', 0.7, {y:20,opacity:0,},0.10,'-=0.85');
     });
 });
 
