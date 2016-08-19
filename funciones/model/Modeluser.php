@@ -11,26 +11,25 @@ class Modeluser {
 	}
     
     public function recordUser($data,$ip,$pass){        
-//        date_default_timezone_set('America/bogota');
-//        $query = "SELECT * FROM users WHERE email = ?";
-//        $data = array($data['email']);
-//        $result = $this->queries($query,$data);
-        
-        //if(!$result){
+        date_default_timezone_set('America/bogota');
+        $query = "SELECT * FROM users WHERE email = ?";        
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute(array($data['email']));
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        if(!$result){
             $query = "INSERT INTO users (name, last_name, email,password,ip,date_create) VALUES (?,?,?,?,?,?)";
-
             $stmt = $this->conn->prepare($query);
-
-            $test = $stmt->execute(array($data['name'],$data['lastName'],$data['email'],$pass,$ip,date('Y-m-d h:s:i')));
-            
-            return array('data'=>$test);
+            $stmt->execute(array($data['name'],$data['lastName'],$data['email'],$pass,$ip,date('Y-m-d h:s:i')));
+        
             $lastId = $this->conn->lastInsertId();
-
+            
             $query = "SELECT * FROM users WHERE id = ?";
             $data = array($lastId);
             $result = $this->queries($query,$data);
-        //}
-        return array('data'=>$result);
+            return array('data'=>$result);
+        }else{
+            return array('data'=>false,'msg'=>'User exist');
+        }        
     }
     
     public function login($data){        

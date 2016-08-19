@@ -14,14 +14,6 @@ var epmModule = (function($){
             actions = this.setting;
             $(document).ready(function(){
                 
-                $('.ax-page-5').load('page.html .page-6');
-                $('.ax-page-6').load('page.html .page-7');
-                $('.ax-page-7').load('page.html .page-8');
-                $('.ax-page-8').load('page.html .page-9');
-                $('.ax-page-9').load('page.html .page-10');
-                $('.ax-page-10').load('page.html .page-11');
-                
-                
                 epmModule.bindActions();
                 actions.btnManual.on('click', function(){
                     actions.manual.animate({top: 0}, 'slow')
@@ -70,7 +62,11 @@ var epmModule = (function($){
                 if(status){
                     var result = epmModule.requestAjax(data);
                     console.log(result);
-                    alert('registro exitoso');
+                    if(result.data){
+                        sessionStorage.setItem('user', result.data);
+                    }else{
+                        alert('usuario existe');
+                    }
                 }
             });
             
