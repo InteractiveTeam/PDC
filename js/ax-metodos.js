@@ -1,8 +1,9 @@
 var epmModule = (function($){
     var actions = '';
-    var tl = new TimelineLite();
+    //var tl = ;
     return {
         setting:{
+            tl:new TimelineLite(),
             formRecord:$("#form-record"),
             loginUser:$("#loginUser"),
             btnManual:$('.btn-manual'),
@@ -12,11 +13,6 @@ var epmModule = (function($){
         init:function(){
             actions = this.setting;
             $(document).ready(function(){
-               
-                $('.ax-page-5').load('page.html .page-6');
-                $('.ax-page-6').load('page.html .page-7');
-                $('.ax-page-7').load('page.html .page-8');
-                $('.ax-page-8').load('page.html .page-9');
                 
                 epmModule.bindActions();
                 actions.btnManual.on('click', function(){
@@ -45,26 +41,6 @@ var epmModule = (function($){
             });
         },
         bindActions:function(){            
-            $(".btn-login").on('click',function(){
-                tl.to('.content-login', 0.5, {opacity:0,display:'none'})
-                .to('.ax-iniciar-sesion', 0.5, {opacity:1,display:'block'},'-=0.20')
-                .staggerFrom('.ax-iniciar-sesion .form-group,.ax-iniciar-sesion hgroup', 0.7, {y:-20,opacity:0,},0.10)
-                .staggerFrom('.content-btn button', 0.5, {y:15,opacity:0,},0.10,'-=0.85');
-            });
-            $(".btn-cancel-login").on('click',function(){
-                tl.to('.ax-iniciar-sesion', 0.5, {opacity:0,display:'none'})
-                .to('.content-login', 0.5, {opacity:1,display:'block'})
-                .staggerFrom('.content-login .button', 0.7, {y:20,opacity:0,},0.10,'-=0.85');
-            });
-            
-            $(".btn-sign-up").on('click',function(){
-                tl.to('.content-login', 0.5, {opacity:0,display:'none'})
-                .to('.ax-registro', 0.5, {opacity:1,display:'block'},'-=0.20')
-                .staggerFrom('.ax-registro .form-group,.ax-registro hgroup', 0.7, {y:-20,opacity:0,},0.10)
-                .staggerFrom('.content-btn button', 0.5, {y:15,opacity:0,},0.10,'-=0.85');
-            });
-            
-            
             actions.formRecord.submit(function(e){
                 e.preventDefault();
                 data = {
