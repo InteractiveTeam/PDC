@@ -12,7 +12,14 @@ var epmModule = (function($){
         },
         init:function(){
             actions = this.setting;
-            $(document).ready(function(){
+            this.validateUser();
+            $(document).ready(function(){                
+                $('.ax-page-5').load('page.html .page-6');
+                $('.ax-page-6').load('page.html .page-7');
+                $('.ax-page-7').load('page.html .page-8');
+                $('.ax-page-8').load('page.html .page-9');
+                $('.ax-page-9').load('page.html .page-10');
+                $('.ax-page-10').load('page.html .page-11');
                 
                 epmModule.bindActions();
                 actions.btnManual.on('click', function(){
@@ -63,7 +70,7 @@ var epmModule = (function($){
                     var result = epmModule.requestAjax(data);
                     console.log(result);
                     if(result.data){
-                        sessionStorage.setItem('user', result.data);
+                        sessionStorage.setItem('user', JSON.stringify(result.data));
                     }else{
                         alert('usuario existe');
                     }
@@ -78,7 +85,25 @@ var epmModule = (function($){
                 }
                 var result = epmModule.requestAjax(data);
                 console.log(result);
+                if(result.data){
+                    sessionStorage.setItem('user', JSON.stringify(result.data));
+                }else{
+                    alert('usuario existe');
+                }
             });
+        },
+        validateUser:function(){
+            if(sessionStorage.length){
+                var data = JSON.parse(sessionStorage.getItem('user'));
+                if(Object.keys(data).length){
+                    actions.tl.to('.content-login', 0, {opacity:0,display:'none'})
+                    .to('.ax-profile', 0.5, {opacity:1,display:'block'})
+                    .staggerFrom('.content-btn .button', 0.7, {y:20,opacity:0,},0.10,'-=0.85');
+                }
+            }else{
+                actions.tl.to('.content-login', 0, {opacity:1,display:'block'})
+                .staggerFrom('.content-login .button', 0.7, {y:20,opacity:0,},0.10,'-=0.85');
+            }
         },
         requestAjax:function(data){
             var result = '';

@@ -6,7 +6,7 @@ $(document).ready(function(){
         tl.to('.content-login', 0.5, {opacity:0,display:'none'})
         .to('.ax-iniciar-sesion', 0.5, {opacity:1,display:'block'},'-=0.20')
         .staggerFrom('.ax-iniciar-sesion .form-group,.ax-iniciar-sesion hgroup', 0.7, {y:-20,opacity:0,},0.10)
-        .staggerFrom('.content-btn button', 0.5, {y:15,opacity:0,},0.10,'-=0.85');
+        .staggerFrom('.content-btn .button', 0.5, {y:15,opacity:0,},0.10,'-=0.85');
     });
     $(".btn-cancel-login").on('click',function(){
         tl.to('.ax-iniciar-sesion,.ax-registro,.ax-recuperar', 0.5, {opacity:0,display:'none'})
@@ -21,7 +21,6 @@ $(document).ready(function(){
         .staggerFrom('.content-btn .button', 0.5, {y:15,opacity:0,},0.10,'-=0.85');
     });
     
-
     $(".btn-forgot-pass").on('click',function(){
         tl.to('.ax-iniciar-sesion', 0.5, {opacity:0,display:'none'})
         .to('.ax-recuperar', 0.5, {opacity:1,display:'block'})

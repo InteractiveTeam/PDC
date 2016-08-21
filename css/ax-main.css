@@ -34,6 +34,7 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: 'vagron'
 }
+textarea {resize: none}
 
 .ax-cont-info h2 {
     font-family: 'vagroundedlight';
@@ -767,7 +768,7 @@ p {
     height: 100%;
 }
 
-.ax-iniciar-sesion,.ax-registro,.ax-recuperar{
+.ax-iniciar-sesion,.ax-registro,.ax-recuperar,.ax-profile,.content-login{
     display: none;
 }
 
