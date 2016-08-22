@@ -37,7 +37,7 @@ $(document).ready(function(){
         alert('asd');
     	tl.to('#manual', 0.7, {top:0});
     });*/
-    $("body").on('blur','#pensemos_marca1,#pensemos_marca2',function(){
+    $("body").on('blur','#pensemos_marca1,#pensemos_marca2,#describe_personaje1,#describe_personaje2',function(){
         var text = $(this).val();
         epmModule.saveDataPage(text,$(this).attr('id'));
     });

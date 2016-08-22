@@ -76,7 +76,7 @@ class Modeluser {
         }else{
             $query = "UPDATE data_fields SET ".key($data)." =? WHERE id_user=?";            
             $stmt = $this->conn->prepare($query);
-            $result = $stmt->execute(array(nl2br($data[key($data)]),$user['id']));
+            $result = $stmt->execute(array($data[key($data)],$user['id']));
             
             return array('data'=>$result);
         }
@@ -87,11 +87,7 @@ class Modeluser {
         $result = $this->queries($query,array($user['id']));
         return array('data'=>$result);
     }
-    
-    /*function br2nl($input) {
-        return preg_replace('/<br\\s*?\/??>/i', '', $input);
-    }*/
-    
+        
     public function generatePassword($length = 9){
 	    $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 	    $count = mb_strlen($chars);
