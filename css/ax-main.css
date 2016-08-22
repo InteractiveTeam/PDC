@@ -702,7 +702,7 @@ p {
     z-index: 1;
 }
 
-.ax-page-10 textarea {
+.ax-page-10 textarea{
     position: relative;
     border: none;
     width: 74%;
@@ -893,6 +893,24 @@ p {
     position: absolute;
     top: 65%;
     right: 20%;
+}
+
+.ax-cont-info.page-20{
+    width: 81%;
+    margin: 10%;
+}
+
+.ax-page-20 textarea{
+    position: relative;
+    border: none;
+    width: 100%;
+    background: rgba(255,255,255,0.7) url(../img/ax-border-textarea-white.png);
+    background-size: 100%;
+    height: 250px;
+    line-height: 1.7rem;
+    letter-spacing: 0.05rem;
+    font-weight: lighter;
+    z-index: 2;
 }
 
 .ax-cuadro-verde {

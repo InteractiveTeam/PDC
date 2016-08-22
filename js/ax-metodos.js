@@ -25,6 +25,7 @@ var epmModule = (function($){
                 $('.ax-page-12').load('page.html .page-13');
                 
                 $('.ax-page-20').load('page.html .page-20');
+//                $('.ax-page-21').load('page.html .page-21');
                 
                 epmModule.bindActions();
                 actions.btnManual.on('click', function(){
