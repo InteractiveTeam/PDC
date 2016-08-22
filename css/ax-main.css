@@ -243,7 +243,7 @@ p {
     letter-spacing: 0.1rem;
 }
 
-.ax-page-5 .ax-cont-info, .ax-page-7 .ax-cont-info, .ax-page-9 .ax-cont-info {
+.ax-page-5 .ax-cont-info, .ax-page-7 .ax-cont-info, .ax-page-9 .ax-cont-info, .ax-page-11 .ax-cont-info {
     width: 92%;
     height: 90%;
     margin-left: 8%;
@@ -387,7 +387,7 @@ p {
     outline: none;
 }
 
-.ax-page-6 .ax-cont-info, .ax-page-8 .ax-cont-info, .ax-page-10 .ax-cont-info {
+.ax-page-6 .ax-cont-info, .ax-page-8 .ax-cont-info, .ax-page-10 .ax-cont-info, .ax-page-12 .ax-cont-info {
     width:  90%;
     position: absolute;
     left: 0;
@@ -445,7 +445,7 @@ p {
     right: 0;
 }
 
-.ax-page-6 .ax-eger-4 h3, .ax-page-6 .ax-eger-4 p, .ax-page-7 .ax-text p, .ax-page-8 .ax-text p, .ax-page-10 .ax-text {
+.ax-page-6 .ax-eger-4 h3, .ax-page-6 .ax-eger-4 p, .ax-page-7 .ax-text p, .ax-page-8 .ax-text p, .ax-page-10 .ax-text, .ax-page-12 .ax-text {
     font-family: 'tragic';
     font-size: 20px;
     letter-spacing: 0.1rem;
@@ -675,9 +675,13 @@ p {
     padding-top: 80px;
 }
 
+.ax-page-10 .ax-cont-info h3 {
+    padding-bottom: 30px;
+}
+
 .ax-page-10 .ax-text {
-    padding-top: 30px;
     width: 77%;
+    line-height: 17px;
 }
 
 .ax-page-10 img {
@@ -703,8 +707,135 @@ p {
     z-index: 2;
 }
 
-.ax-page-10 textarea:focus {
+.ax-page-10 textarea:focus, .ax-page-10 input:focus {
     outline: none;
+}
+
+.ax-page-10 input {
+    border: none;
+    width: 70%;
+    background: url(../img/ax-border-textarea-white.png) no-repeat bottom;
+    background-size: 100% 30px;
+    height: 29px;
+    min-height: 29px;
+    max-height: 29px;
+    line-height: 1.8rem;
+    letter-spacing: 0.05rem;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+
+.ax-page-10 .ax-text-finish {
+    font-size: 16px;
+    line-height: 16px;
+    color: #6d6e71;
+}
+
+.ax-page-10 .ax-text-finish span {
+    background: #91c848;
+    color: #fff;
+    font-family: 'tragic';
+}
+
+.ax-page-11 .ax-cont-first {
+    width: 43%;
+    margin-top: 30px;
+}
+
+.ax-page-11 .ax-image {
+    position: absolute;
+    display: block;
+    top: 30%;
+    right: -2%;
+}
+
+.ax-page-12 .ax-cont-first {
+    position: relative;
+}
+
+.ax-page-12 p {
+    font-size: 0.8rem;
+    line-height: 0.9rem;
+}
+
+.ax-page-12 .ax-pliege-top {
+    transform: rotate(-90deg);
+    position: absolute;
+    width: 200px;
+    height: 130px;
+    right: -20%;
+    top: 40px;
+}
+
+.ax-page-12 .ax-pliege-top h3 {
+    font-size: 22px;
+}
+
+.ax-page-12 .ax-pliege-top:after, .ax-page-12 .ax-pliege-bottom:after {
+    content: "";
+    display: block;
+    background: #c1c1c1;
+    width: 450px;
+    height: 1px;
+    position: absolute;
+}
+
+.ax-page-12 .ax-pliege-bottom {
+    transform: rotate(90deg);
+    position: absolute;
+    width: 190px;
+    height: 100px;
+    right: -19%;
+    top: 600px;
+}
+
+.ax-page-12 .ax-pliege-bottom p {
+    line-height: 0.9rem;
+    font-size: 0.7.5rem;
+}
+
+.ax-page-12 .ax-pliege-top:after {
+    transform: rotate(-45deg);
+    top: -40px;
+    left: -190px;
+}
+
+.ax-page-12 .ax-pliege-bottom:after {
+    transform: rotate(45deg);
+    top: 160px;
+    left: -200px;
+}
+
+.ax-page-12 .ax-image {
+    position: absolute;
+    display: block;
+    top: 235px;
+    left: -30px;
+    width: 318px;
+}
+
+
+.ax-text-select-person {
+    position: absolute;
+    width: 41%;
+    transform: rotate(-5deg);
+    bottom: 16%;
+    z-index: 2;
+    left: 15%;
+}
+
+.ax-text-select-person p {
+    color: #91c848;
+    font-family: 'tragic';
+    letter-spacing: 0.05rem;
+    font-size: 23px;
+    line-height: 21px;
+}
+
+.ax-text-select-person img {
+    position: absolute;
+    top: 65%;
+    right: 20%;
 }
 
 .ax-cuadro-verde {
