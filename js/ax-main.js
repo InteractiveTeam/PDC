@@ -28,6 +28,14 @@ $(document).ready(function(){
         .staggerFrom('.content-btn .button', 0.7, {y:20,opacity:0,},0.10,'-=0.85');
     });
 
+    $(".btn-log-out").on('click',function(){
+    	sessionStorage.clear();
+    	location.reload();
+    });
+
+   	$(".btnManual").on('click',function(){
+    	tl.to('#manual', 0.7, {top:0});
+    });
 });
 
 if( document.createElement('svg').getAttributeNS ) {
