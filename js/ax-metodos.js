@@ -24,6 +24,8 @@ var epmModule = (function($){
                 $('.ax-page-11').load('page.html .page-12');
                 $('.ax-page-12').load('page.html .page-13');
                 
+                $('.ax-page-20').load('page.html .page-20');
+                
                 epmModule.bindActions();
                 actions.btnManual.on('click', function(){
                     actions.manual.animate({top: 0}, 'slow')
@@ -50,6 +52,9 @@ var epmModule = (function($){
                             //LLenamos los datos del usuario
                             $("#pensemos_marca1").val(infoPages.data.pensemos_marca1);                            
                             $("#pensemos_marca2").val(infoPages.data.pensemos_marca2);
+                            $("#pensemos_marca3").val(infoPages.data.pensemos_marca3);                            
+                            $("#pensemos_marca4").val(infoPages.data.pensemos_marca4);
+                            $("#pensemos_marca5").val(infoPages.data.pensemos_marca5);
                         break;
                         case 10:
                         case 11:                            

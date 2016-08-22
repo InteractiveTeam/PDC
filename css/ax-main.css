@@ -143,6 +143,16 @@ p {
 
 
 /*Pages*/
+.manual input{
+    border: none;
+    outline: none;
+}
+.page-7 input,.page-6 input{
+    bottom: 30px;
+    position: absolute;
+    width: 100%;
+    left: 12px;
+}
 
 .ax-page-2 .cont-title {
     width: 350px;
@@ -298,7 +308,7 @@ p {
 }
 
 .ax-page-5 .ax-eger-1 p {
-    padding: 0 0 30px 0;
+    padding: 0 0 40px 0;
 }
 
 .ax-page-5 .ax-eger-1 > div {

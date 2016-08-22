@@ -63,7 +63,7 @@ class Modeluser {
         $query = "SELECT * FROM data_fields WHERE id_user = ?";
         $result = $this->queries($query,array($user['id']));
         if(!$result){
-           $query = "INSERT INTO data_fields (id_user,pensemos_marca1,pensemos_marca2,describe_personaje1,describe_personaje2)    VALUES(?,?,?,?,?)";
+           $query = "INSERT INTO data_fields (id_user,pensemos_marca1,pensemos_marca2,pensemos_marca3,pensemos_marca4,pensemos_marca5,describe_personaje1,describe_personaje2)    VALUES(?,?,?,?,?)";
             $stmt = $this->conn->prepare($query);
             $result = $stmt->execute(array(
                 $user['id'],
