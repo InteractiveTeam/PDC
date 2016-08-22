@@ -1,9 +1,9 @@
 <?php 
 class Clsconnection{
-    public static $user = 'root';
-    public static $pass = '';
-    public static $host = 'localhost';
-    public static $db = 'ptos_epm';
+    public static $user = 'epmusr';
+    public static $pass = 'C0NT4C2016!';
+    public static $host = '192.168.3.30';
+    public static $db = 'epmpuntoscontacto';
     public static $con;
 
     public static function conect(){        

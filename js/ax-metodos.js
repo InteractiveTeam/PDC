@@ -1,11 +1,12 @@
 var epmModule = (function($){
-    var actions = '';
-    //var tl = ;
+    var actions = '',pageCat = '',infoPages='';
+    var dataUser = JSON.parse(sessionStorage.getItem('user'));
     return {
         setting:{
             tl:new TimelineLite(),
             formRecord:$("#form-record"),
             loginUser:$("#loginUser"),
+            forgotPass:$("#form-forgot-pass"),
             btnManual:$('.btn-manual'),
             manual:$('#manual'),
             flipbook:$(".flipbook")
@@ -34,6 +35,7 @@ var epmModule = (function($){
                 })
 
                 actions.flipbook.bind("turning", function(event, page, view) {
+                    pageCat = page;
                     switch (page) {
                         case 2:
                             $('.cont-title').delay(700).fadeIn(1000);
@@ -42,12 +44,15 @@ var epmModule = (function($){
                         case 6:
                             $('.ax-image-svg').delay(500).animate({opacity: 1}, 1000);
                             $('.ax-page-6 .ax-image-svg').delay(4000).animate({opacity: 1}, 1000);
+                            //LLenamos los datos del usuario
+                            $("#pensemos_marca1").html(infoPages.data.pensemos_marca1);                            
+                            $("#pensemos_marca2").html(infoPages.data.pensemos_marca2);
                         break;
                     }
                 });
             });
         },
-        bindActions:function(){            
+        bindActions:function(){
             actions.formRecord.submit(function(e){
                 e.preventDefault();
                 
@@ -67,12 +72,12 @@ var epmModule = (function($){
                     action:'recordUser'
                 }
                 if(status){
-                    var result = epmModule.requestAjax(data);
-                    console.log(result);
+                    var result = epmModule.requestAjax(data);                    
                     if(result.data){
                         sessionStorage.setItem('user', JSON.stringify(result.data));
+                        location.reload();
                     }else{
-                        alert('usuario existe');
+                        epmModule.setMessage('usuario existe');
                     }
                 }
             });
@@ -83,27 +88,65 @@ var epmModule = (function($){
                     data:epmModule.getFormData(actions.loginUser),
                     action:'login'
                 }
-                var result = epmModule.requestAjax(data);
-                console.log(result);
+                var result = epmModule.requestAjax(data);                
                 if(result.data){
                     sessionStorage.setItem('user', JSON.stringify(result.data));
+                    location.reload();
                 }else{
-                    alert('usuario existe');
+                    epmModule.setMessage('usuario incorrecto');
+                }
+            });
+            
+            actions.forgotPass.submit(function(e){
+                e.preventDefault();
+                data = {
+                    data:epmModule.getFormData(actions.forgotPass),
+                    action:'forgotpass'
+                }
+                var result = epmModule.requestAjax(data);
+                if(result.data){
+                    epmModule.setMessage('hemos enviado un correo con su nueva contraseña');
+                }else{
+                    epmModule.setMessage('usuario no existe');
                 }
             });
         },
         validateUser:function(){
             if(sessionStorage.length){
-                var data = JSON.parse(sessionStorage.getItem('user'));
-                if(Object.keys(data).length){
+                if(Object.keys(dataUser).length){
                     actions.tl.to('.content-login', 0, {opacity:0,display:'none'})
                     .to('.ax-profile', 0.5, {opacity:1,display:'block'})
                     .staggerFrom('.content-btn .button', 0.7, {y:20,opacity:0,},0.10,'-=0.85');
+                    $(".ax-user-name").text(dataUser.name+' '+dataUser.last_name);
+                    this.getData();
                 }
             }else{
                 actions.tl.to('.content-login', 0, {opacity:1,display:'block'})
                 .staggerFrom('.content-login .button', 0.7, {y:20,opacity:0,},0.10,'-=0.85');
             }
+        },
+        saveDataPage:function(data,field){
+            //console.log(pageCat);
+            var info = {};
+            info[field] = data;
+            switch(pageCat){
+                case 6:
+                    data = {
+                        data:dataUser,
+                        info:info,
+                        action:'saveData'
+                    }
+                    var result = epmModule.requestAjax(data);
+                    console.log(result);
+                break;
+            }
+        },
+        getData:function(){
+            data = {
+                data:dataUser,
+                action:'getDataPages'
+            }
+            infoPages = epmModule.requestAjax(data);
         },
         requestAjax:function(data){
             var result = '';

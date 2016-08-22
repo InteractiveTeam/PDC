@@ -27,7 +27,7 @@
             </div>
           </div>
         <div class="row ax-iniciar-sesion">
-            <div class="col-md-6 col-centered">
+            <div class="col-md-5 col-centered">
                <hgroup>
                    <h2>Iniciar sesión</h2>
                </hgroup>
@@ -52,7 +52,7 @@
             </div>
         </div>
         <div class="row ax-registro">
-            <div class="col-md-6 col-centered">
+            <div class="col-md-5 col-centered">
                <hgroup>
                    <h2>Regístrate</h2>
                </hgroup>
@@ -78,20 +78,20 @@
                     </ul>
                   </div>
                   <div class="text-center content-btn">
-                        <button type="submit" class="button button--general"><span>Aceptar</span></button>
                         <div class="button button--general btn-cancel-login"><span>Cancelar</span></div>
+                        <button type="submit" class="button button--general"><span>Aceptar</span></button>
                   </div>
                 </form>
             </div>
         </div>
         <div class="row ax-recuperar">
-            <div class="col-md-6 col-centered">
+            <div class="col-md-5 col-centered">
                <hgroup>
                    <h2>Recuperar contraseña</h2>
                </hgroup>
-                <form role="form">
+                <form role="form" id="form-forgot-pass">
                   <div class="form-group">                    
-                    <input type="password" class="form-control" id="newPassword" placeholder="Correo electrónico">
+                    <input type="text" class="form-control" name="emailPass" placeholder="Correo electrónico">
                   </div>                  
                   <div class="text-center content-btn">
                         <button type="submit" class="button button--general"><span>Recuperar contraseña</span></button>
@@ -101,7 +101,8 @@
             </div>
         </div>
         <div class="row ax-profile">
-          <div class="col-md-12 col-centered text-right">
+          <div class="col-md-12 col-centered text-right content-btn">
+            <span class="ax-user-name"></span>
             <div class="button button--general btn-log-out"><span>Cerrar sesión</span></div>
           </div>
           <div class="col-md-12 col-centered">

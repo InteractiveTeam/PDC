@@ -7,31 +7,29 @@
         $objUser = new Modeluser();
         
 		switch ($_POST['action']) {
-            case 'login':
-                $result = $objUser->login($dataUser);
-				
-                print_r(json_encode($result));
-				
+            case 'login':                
+                $result = $objUser->login($dataUser);				
+                print_r(json_encode($result));				
                 break;
 			case 'recordUser':
                 $pass = password_hash($dataUser['pwd'],PASSWORD_DEFAULT);
                 $miIp = getRealIP();
-                $result = $objUser->recordUser($dataUser,$miIp,$pass);                
+                $result = $objUser->recordUser($dataUser,$miIp,$pass);
                 print_r(json_encode($result));
 				break;
+            case 'forgotpass':
+                $result = $objUser->forgotPass($dataUser);
+                print_r(json_encode($result));
+                break;
+            case 'saveData':
+                $result = $objUser->saveData($dataUser,$_POST['info']);
+                print_r(json_encode($result));
+                break;
+            case 'getDataPages':
+                $result = $objUser->getData($dataUser);
+                print_r(json_encode($result));
+                break;
 		}
-	}
-
-    function generatePassword($length = 9) {
-	    $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-	    $count = mb_strlen($chars);
-
-	    for ($i = 0, $result = ''; $i < $length; $i++) {
-	        $index = rand(0, $count - 1);
-	        $result .= mb_substr($chars, $index, 1);
-	    }
-
-	    return $result;
 	}
 
 	function sendEmail($email,$name,$subject,$body,$emailFrom = ''){

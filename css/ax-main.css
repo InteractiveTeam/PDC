@@ -796,6 +796,9 @@ p {
 .button--general {
     color: #fff;
     background: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 .button--general:hover{
     color: #4bab49;
@@ -940,4 +943,7 @@ form svg path {
 	stroke-linejoin: round;
 	fill: none;
 }
-
+.ax-user-name{
+    color: #fff;
+    text-transform: capitalize;
+}

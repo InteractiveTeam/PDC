@@ -67,8 +67,7 @@
 		<div class="dot dot1"></div>
 		<div class="dot dot2"></div>
 		<svg id ="svg" height="200" width="400" xmlns="http://www.w3.org/2000/svg">
-			<path d="" stroke="#e1f6f1" fill="none" stroke-width="10"
-			/>
+			<path d="" stroke="#e1f6f1" fill="none" stroke-width="10"/>
 		</svg>
 	</div>
 	<script>
@@ -97,8 +96,8 @@
 							case 0:
 								svg.children[length].setAttribute('d','M'+ x1+','+y1+'L'+x2+','+y2);
 								//console.log((x2-20),(y2-20));
-								if((x2 >= (auxCor[(length+1)].x-20)  && x2 <= (auxCor[(length+1)].x+20)) && 
-									(y2 >= (auxCor[(length+1)].y-20) && y2 <= (auxCor[(length+1)].y+20)) && bandera1==true) {
+								if((x2 >= (auxCor[(length+1)].x-10)  && x2 <= (auxCor[(length+1)].x+10)) && 
+									(y2 >= (auxCor[(length+1)].y-10) && y2 <= (auxCor[(length+1)].y+10)) && bandera1==true) {
 									bandera1 = false;
 									auxArray.push(length);
 									addPath('path',{d:'M'+auxCor[(length+1)].x+','+auxCor[(length+1)].y+'L'+x2+','+y2,stroke:'#e1f6f1',fill:'none','stroke-width':10});
@@ -108,8 +107,8 @@
 							case 1:
 								svg.children[length].setAttribute('d','M'+ auxCor[length].x+','+auxCor[length].y+'L'+x2+','+y2);
 								//console.log((x2-20),(y2-20));
-								if((x2 >= (auxCor[(length+1)].x-20)  && x2 <= (auxCor[(length+1)].x+20)) && 
-									(y2 >= (auxCor[(length+1)].y-20) && y2 <= (auxCor[(length+1)].y+20)) && bandera1==true) {
+								if((x2 >= (auxCor[(length+1)].x-10)  && x2 <= (auxCor[(length+1)].x+10)) && 
+									(y2 >= (auxCor[(length+1)].y-10) && y2 <= (auxCor[(length+1)].y+10)) && bandera1==true) {
 									bandera1 = false;
 									auxArray.push(length);
 									addPath('path',{d:'M'+auxCor[(length+1)].x+','+auxCor[(length+1)].y+'L'+x2+','+y2,stroke:'#e1f6f1',fill:'none','stroke-width':10});
