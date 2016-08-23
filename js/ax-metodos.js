@@ -51,17 +51,17 @@ var epmModule = (function($){
                             $('.ax-image-svg').delay(500).animate({opacity: 1}, 1000);
                             $('.ax-page-6 .ax-image-svg').delay(4000).animate({opacity: 1}, 1000);
                             //LLenamos los datos del usuario
-                            $("#pensemos_marca1").val(infoPages.data.pensemos_marca1);                            
-                            $("#pensemos_marca2").val(infoPages.data.pensemos_marca2);
-                            $("#pensemos_marca3").val(infoPages.data.pensemos_marca3);                            
-                            $("#pensemos_marca4").val(infoPages.data.pensemos_marca4);
-                            $("#pensemos_marca5").val(infoPages.data.pensemos_marca5);
+                            // $("#pensemos_marca1").val(infoPages.data.pensemos_marca1);                            
+                            // $("#pensemos_marca2").val(infoPages.data.pensemos_marca2);
+                            // $("#pensemos_marca3").val(infoPages.data.pensemos_marca3);                            
+                            // $("#pensemos_marca4").val(infoPages.data.pensemos_marca4);
+                            // $("#pensemos_marca5").val(infoPages.data.pensemos_marca5);
                         break;
                         case 10:
                         case 11:                            
                             //LLenamos los datos del usuario
-                            $("#describe_personaje1").val(infoPages.data.describe_personaje1);
-                            $("#describe_personaje2").val(infoPages.data.describe_personaje2);
+                            /*$("#describe_personaje1").val(infoPages.data.describe_personaje1);
+                            $("#describe_personaje2").val(infoPages.data.describe_personaje2);*/
                         break;
                     }
                 });
