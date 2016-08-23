@@ -78,7 +78,7 @@ p {
     height: 100%;
     background: #ededed;
     top: 120%;
-    padding: 20px;
+    padding: 20px 0 0 0;
 }
 
 .manual:before {
@@ -470,6 +470,12 @@ p {
 
 .ax-page-7 .ax-text p {
     font-size: 17px;
+}
+
+.ax-page-21 .ax-text {
+    font-size: 16px;
+    line-height: 16px;
+    transform: rotate(-3deg);
 }
 
 .ax-page-6 .ax-eger-4 textarea {
@@ -1034,6 +1040,11 @@ p {
     margin-bottom: 30px;
 }
 
+.ax-page-14 h3 span, .ax-page-20 .ax-pliege-top span {
+    font-family: 'vagron';
+    font-size: 1rem;
+}
+
 .ax-conment-social .ax-comt-7 {
     width: 123px;
     height: 112px;
@@ -1087,12 +1098,25 @@ p {
 .page-20 .ax-cont-first{
     padding: 25px 0;
 }
-.ax-felicitaciones{
+.ax-page-20 .ax-cont-first .ax-felicitaciones{
     color: #91c848;
-    font-size: 2em;
+    font-size: 2.3em;
     text-align: center;
-    transform: rotate(-8deg);
+    transform: rotate(-5deg);
 }
+
+.ax-page-20 h6 {
+    font-family: 'vagroundedlight';
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+}
+
+.ax-page-21 .ax-cont-first {
+     background: url(../img/ax-font-line-12-22.png) no-repeat 1px 60px;
+    padding-left: 30px;
+}
+
 .ax-page-21 textarea{
     width: 46%;
     height: 98px;
