@@ -23,6 +23,8 @@ var epmModule = (function($){
                 $('.ax-page-10').load('page.html .page-10');
                 $('.ax-page-11').load('page.html .page-11');
                 $('.ax-page-12').load('page.html .page-12');
+                $('.ax-page-13').load('page.html .page-13');
+                $('.ax-page-14').load('page.html .page-14');
                 
                 $('.ax-page-20').load('page.html .page-20');
 //                $('.ax-page-21').load('page.html .page-21');
