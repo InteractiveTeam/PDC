@@ -154,7 +154,7 @@ p {
     border: none;
     outline: none;
 }
-.page-7 input,.page-6 input{
+.page-6 input,.page-5 input{
     bottom: 30px;
     position: absolute;
     width: 100%;
@@ -848,6 +848,7 @@ p {
     padding: 32px;
     position: absolute;
     background: url(../img/ax-globos.png) no-repeat;
+    line-height: 1.2rem;
 }
 
 .ax-conment-social .ax-comt-1 {
