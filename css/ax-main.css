@@ -40,6 +40,7 @@ textarea {
     border: none;
     background: rgba(255,255,255,0.7) url(../img/ax-border-textarea-white.png);
     background-size: 100%;
+    outline: none;
 }
 
 .ax-cont-info h2 {
@@ -994,14 +995,17 @@ p {
     letter-spacing: 0.05rem;
     font-weight: lighter;
     z-index: 2;
+    background-size: 100% 23px;
 }
 .ax-page-21 textarea{
     width: 46%;
-    height: 84px;
-    line-height: 1.7rem;
+    height: 98px;
+    line-height: 1.45rem;
     letter-spacing: 0.05rem;
     font-weight: lighter;
-    z-index: 2;   
+    z-index: 2;
+    bottom: -14px;
+    position: absolute;
 }
 .ax-cuadro-verde {
     background: url(../img/ax-cuadro-verde.png);
@@ -1234,7 +1238,7 @@ form svg {
     width: 18px;
     height: 18px;
     top: 50%;
-    margin-top: -13px;
+    margin-top: -12px;
     left: 3px;
     pointer-events: none;
 }
@@ -1254,7 +1258,21 @@ form svg path {
     text-transform: capitalize;
 }
 
+.ax-question ul{
+    padding-top: 8px;    
+}
 .ax-question{
     display: inline-block;
-    width: 32%;
+    width: 35%;
+    text-align: right;
+    padding-right: 10px;
+}
+.ax-content-question {
+    position: relative;
+    padding: 22px 0;
+}
+.ax-question li span{
+    position: absolute;
+    top: -22px;
+    left: 4px;
 }
