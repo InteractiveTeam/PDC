@@ -462,7 +462,7 @@ p {
     right: 0;
 }
 
-.ax-page-6 .ax-eger-4 h3, .ax-page-6 .ax-eger-4 p, .ax-page-7 .ax-text p, .ax-page-8 .ax-text p, .ax-page-10 .ax-text, .ax-page-12 .ax-text {
+.ax-page-6 .ax-eger-4 h3, .ax-page-6 .ax-eger-4 p, .ax-page-7 .ax-text p, .ax-page-8 .ax-text p, .ax-page-10 .ax-text, .ax-page-12 .ax-text, .ax-page-14 .ax-text, .ax-page-20 .ax-text, .ax-page-21 .ax-text {
     font-family: 'tragic';
     font-size: 20px;
     letter-spacing: 0.1rem;
@@ -947,6 +947,93 @@ p {
     line-height: 1.2rem;
 }
 
+.ax-page-13 .ax-cont-info {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.ax-page-13 .ax-pliegue {
+    width: 60%;
+    height: 296px;
+    position: absolute;
+}
+
+.ax-page-13 .ax-plie-top-left {
+    top: 0;
+}
+
+.ax-page-13 .ax-plie-bottom-left {
+    bottom: 0;
+}
+
+.ax-page-13 .ax-plie-top-left img {
+    position: absolute;
+    left: 42%;
+    top: 38%;
+}
+
+.ax-page-13 .ax-plie-bottom-left img {
+    position: absolute;
+    left: 38%;
+    top: 48%;
+}
+
+.ax-page-13 .ax-pliegue:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 110%;
+    height: 1px;
+    border-top: dotted 1px #262626;
+}
+
+.ax-page-13 .ax-plie-top-left:after {
+    transform: rotate(-45deg);
+    top: 130px;
+    left: -40px;
+}
+
+.ax-page-13 .ax-plie-bottom-left:after {
+    transform: rotate(45deg);
+    top: 160px;
+    left: -40px;
+}
+
+.ax-page-13 .ax-cont-first {
+    width: 66%;
+    margin: 0 0 0 34%;
+    padding-top: 120px;
+}
+
+.ax-page-14 .ax-cont-first {
+    width: 81%;
+    margin: 0 0 0 10%;
+    padding-top: 102px;
+}
+
+.ax-page-14 .ax-cont-first .ax-content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.ax-page-14 .ax-text-last {
+    width: 88%;
+    margin: 20px auto 0 auto;
+    transform: rotate(-2deg);
+}
+
+.ax-page-14 .ax-image {
+    right: 100px;
+    top: 30px;
+    position: absolute;
+}
+
+.ax-page-13 h3, .ax-page-14 h3 {
+    font-size: 1.9rem;
+    margin-bottom: 30px;
+}
+
 .ax-conment-social .ax-comt-7 {
     width: 123px;
     height: 112px;
@@ -954,10 +1041,6 @@ p {
     top: 323px;
     background-position: -1025px -17px;
     left: 291px;
-}
-
-.ax-page-12 .ax-conment-social .ax-comt-7 textarea {
-    
 }
 
 .ax-text-select-person {
