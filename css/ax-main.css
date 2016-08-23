@@ -821,19 +821,20 @@ p {
 .ax-page-12 .ax-image {
     position: absolute;
     display: block;
-    top: 235px;
-    left: -30px;
-    width: 318px;
+    top: 248px;
+    left: -22px;
+    width: 333px;
 }
 
 .ax-page-11 textarea, .ax-page-12 textarea {
     border: none;
     outline: none;
-    width: 100%;
-    height: 100%;
-    min-height: 100%; 
-    max-height: 100%;
+    width: 80px;
+    height: 70px;
+    min-height: 70px;
+    max-height: 70px;
     background: transparent;
+    text-align: center;
 }
 
 .ax-conment-social {
@@ -856,6 +857,13 @@ p {
     left: 60px;
 }
 
+.ax-page-11 .ax-conment-social .ax-comt-1 textarea{
+    width: 100px;
+    height: 96px;
+    max-height: 96px;
+    min-height: 96px;
+}
+
 .ax-conment-social .ax-comt-2 {
     width: 120px;
     height: 114px;
@@ -865,6 +873,13 @@ p {
     left: 207px;
 }
 
+.ax-page-11 .ax-conment-social .ax-comt-2 textarea{
+    width: 74px;
+    height: 72px;
+    max-height: 72px;
+    min-height: 72px;
+}
+
 .ax-conment-social .ax-comt-3 {
     width: 138px;
     height: 144px;
@@ -872,6 +887,75 @@ p {
     top: -304px;
     background-position: -308px -1px;
     left: 330px;
+}
+
+.ax-page-11 .ax-conment-social .ax-comt-3 textarea{
+    width: 92px;
+    height: 80px;
+    max-height: 80px;
+    min-height: 80px;
+}
+
+.ax-conment-social .ax-comt-4 {
+    width: 138px;
+    height: 144px;
+    padding: 23px 23px 34px 23px;
+    top: 118px;
+    background-position: -458px -1px;
+    left: 0px;
+}
+
+.ax-page-12 .ax-conment-social .ax-comt-4 textarea{
+    width: 92px;
+    height: 80px;
+    max-height: 80px;
+    min-height: 80px;
+}
+
+.ax-conment-social .ax-comt-5 {
+    width: 168px;
+    height: 148px;
+    padding: 24px 23px 34px 54px;
+    top: 100px;
+    background-position: -610px 0px;
+    left: 110px;
+}
+
+.ax-page-12 .ax-conment-social .ax-comt-5 textarea{
+    width: 92px;
+    height: 80px;
+    max-height: 80px;
+    min-height: 80px;
+}
+
+.ax-conment-social .ax-comt-6 {
+    width: 221px;
+    height: 132px;
+    padding: 29px 23px 26px 100px;
+    top: 181px;
+    background-position: -791px -7px;
+    left: 185px;
+}
+
+.ax-page-12 .ax-conment-social .ax-comt-6 textarea{
+    width: 92px;
+    height: 80px;
+    max-height: 80px;
+    min-height: 80px;
+    line-height: 1.2rem;
+}
+
+.ax-conment-social .ax-comt-7 {
+    width: 123px;
+    height: 112px;
+    padding: 27px 21px 23px 19px;
+    top: 323px;
+    background-position: -1025px -17px;
+    left: 291px;
+}
+
+.ax-page-12 .ax-conment-social .ax-comt-7 textarea {
+    
 }
 
 .ax-text-select-person {
