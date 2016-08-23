@@ -1145,15 +1145,6 @@ p {
     padding-top: 18%;
 }
 
-.ax-tbl-metricas{
-    display: table;
-}
-.ax-tbl-row{
-    display: table-row;
-}
-.ax-tbl-cell{
-    display: table-cell;
-}
 
 .ax-cuadro-verde {
     background: url(../img/ax-cuadro-verde.png);
