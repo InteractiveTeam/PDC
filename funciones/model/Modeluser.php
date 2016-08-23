@@ -63,14 +63,27 @@ class Modeluser {
         $query = "SELECT * FROM data_fields WHERE id_user = ?";
         $result = $this->queries($query,array($user['id']));
         if(!$result){
-           $query = "INSERT INTO data_fields (id_user,pensemos_marca1,pensemos_marca2,pensemos_marca3,pensemos_marca4,pensemos_marca5,describe_personaje1,describe_personaje2)    VALUES(?,?,?,?,?)";
+           $query = "INSERT INTO data_fields (id_user,pensemos_marca1,pensemos_marca2,pensemos_marca3,pensemos_marca4,pensemos_marca5,describe_personaje1,describe_personaje2,facebook,google,instagram,twitter,youtube,pinterest,flickr) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
             $stmt = $this->conn->prepare($query);
             $result = $stmt->execute(array(
                 $user['id'],
                 $data['pensemos_marca1'],
                 $data['pensemos_marca2'],
+                $data['pensemos_marca3'],
+                $data['pensemos_marca4'],
+                $data['pensemos_marca5'],
+                
                 $data['describe_personaje1'],
-                $data['describe_personaje2']
+                $data['describe_personaje2'],
+                
+                $data['facebook'],
+                $data['google'],
+                $data['instagram'],
+                $data['twitter'],
+                $data['youtube'],
+                $data['pinterest'],
+                $data['flickr'],
+                
             ));
             return array('data'=>$result);
         }else{

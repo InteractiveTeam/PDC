@@ -983,20 +983,32 @@ p {
     right: 20%;
 }
 
-.ax-cont-info.page-20{
+.ax-cont-info.page-20,.ax-cont-info.page-22{
     width: 81%;
     margin: 10%;
 }
 
-
 .ax-page-20 textarea{
     width: 100%;
-    height: 250px;
+    height: 150px;
     line-height: 1.7rem;
     letter-spacing: 0.05rem;
     font-weight: lighter;
     z-index: 2;
     background-size: 100% 23px;
+}
+.page-20 span{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.page-20 .ax-cont-first{
+    padding: 25px 0;
+}
+.ax-felicitaciones{
+    color: #91c848;
+    font-size: 2em;
+    text-align: center;
+    transform: rotate(-8deg);
 }
 .ax-page-21 textarea{
     width: 46%;
@@ -1008,6 +1020,32 @@ p {
     bottom: -14px;
     position: absolute;
 }
+.ax-page-21 .ax-pliege-top{
+    width: 30%;
+    display: inline-block;
+    font-weight: bold;
+    position: absolute;
+    right: 22%;
+    top: 5%;
+}
+.ax-page-21 form svg{
+    margin-top: -10px;
+    left: 4px;
+}
+.ax-page-21 form{
+    padding-top: 18%;
+}
+
+.ax-tbl-metricas{
+    display: table;
+}
+.ax-tbl-row{
+    display: table-row;
+}
+.ax-tbl-cell{
+    display: table-cell;
+}
+
 .ax-cuadro-verde {
     background: url(../img/ax-cuadro-verde.png);
     padding: 20px;
@@ -1189,7 +1227,11 @@ form label {
 }
 
 .manual form label{color: #000;}
-.manual form label::before{ border: 2px solid #000;}
+.manual form label::before{    
+    background: url(../img/ax-radio-check.svg);
+    width: 26px;
+    height: 28px;
+}
 
 form input[type="checkbox"],
 form input[type="radio"],
