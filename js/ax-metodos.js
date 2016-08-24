@@ -30,6 +30,7 @@ var epmModule = (function($){
                 
                 $('.ax-page-20').load('page.html .page-20');
                 $('.ax-page-22').load('page.html .page-22');
+                $('.ax-page-23').load('page.html .page-23');
                 
                 epmModule.bindActions();
                 actions.btnManual.on('click', function(){

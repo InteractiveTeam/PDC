@@ -34,6 +34,14 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: 'vagron'
 }
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
 textarea {
     resize: none;
     position: relative;
@@ -1340,12 +1348,13 @@ p {
 
 .ax-content-metricas table td span,.ax-content-metricas table td p{
     padding-left: 0.9em;
+    font-size: 0.9em;
 }
 .ax-content-metricas table p.ax-bottomP{
     margin-top: 0;
     margin-bottom: 10px;
 }
-.ax-content-metricas table p.ax-topP{
+.ax-content-metricas table .ax-topP{
     margin-top: 10px;
     margin-bottom: 0;
 }
@@ -1366,6 +1375,10 @@ p {
     background: none;
     width: 60px;
     height: 100%;    
+}
+.ax-content-metricas td textarea{ width: 100%;}
+.ax-content-metricas table td table{
+    width: 100%;
 }
 
 .ax-cuadro-verde {
