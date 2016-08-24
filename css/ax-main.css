@@ -1236,8 +1236,8 @@ p {
 }
 
 .ax-cont-info.page-20,.ax-cont-info.page-22{
-    width: 81%;
-    margin: 10%;
+    width: 85%;
+    margin: 8%;
 }
 
 .ax-page-20 textarea{
@@ -1303,6 +1303,41 @@ p {
     padding-top: 18%;
 }
 
+.ax-content-metricas td, th { padding: 1px; }
+.ax-content-metricas table td{
+    border-bottom: solid 1px #00833e;
+}
+.ax-content-metricas .ax-field-tbl{ margin-left: 12px; }
+
+.ax-content-metricas table td span,.ax-content-metricas table td p{
+    padding-left: 0.9em;
+}
+.ax-content-metricas table p.ax-bottomP{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.ax-content-metricas table p.ax-topP{
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.ax-content-metricas table td.solid-right{
+    border-right: solid 1px #00833e;
+}
+.ax-content-metricas table td.no-solid{
+    border: 0;
+}
+.ax-content-metricas table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.ax-content-metricas table thead th{
+    width: 170px;
+}
+.ax-content-metricas input,.ax-content-metricas textarea{
+    background: none;
+    width: 60px;
+    height: 100%;    
+}
 
 .ax-cuadro-verde {
     background: url(../img/ax-cuadro-verde.png);
