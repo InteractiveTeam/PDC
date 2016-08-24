@@ -1355,11 +1355,13 @@ p {
     padding-top: 18%;
 }
 
-.ax-content-metricas td, th { padding: 1px; }
+.ax-content-metricas td, th { padding: 1px;}
 .ax-content-metricas table td{
-    border-bottom: solid 1px #00833e;
+/*    border-bottom: solid 1px #00833e;*/
+    border: 1px solid transparent;
+    border-image: url(../img/ax-line-table.png) 30;
 }
-.ax-content-metricas .ax-field-tbl{ margin-left: 12px; }
+.ax-content-metricas .ax-field-tbl{ margin-left: 12px; width: 84%;}
 
 .ax-content-metricas table td span,.ax-content-metricas table td p{
     padding-left: 0.9em;
@@ -1380,11 +1382,13 @@ p {
     border: 0;
 }
 .ax-content-metricas table{
-    border-collapse: collapse;
+    border-collapse: separate;
     border-spacing: 0;
 }
 .ax-content-metricas table thead th{
     width: 170px;
+    background: url(../img/ax-texture-table.jpg);
+    color: #fff;
 }
 .ax-content-metricas input,.ax-content-metricas textarea{
     background: none;
