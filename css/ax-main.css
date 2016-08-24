@@ -1191,6 +1191,21 @@ p {
     margin: 0 auto;
 }
 
+.page-17 {
+    width: 100%;
+    height: 100%;
+    padding: 0 8%;
+    background: url(../img/pag-17/ax-font-1.jpg) no-repeat center right;
+}
+
+.page-18 {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    padding: 0 8%;
+    background: url(../img/pag-17/ax-font-2.jpg) no-repeat center left;
+}
+
 .ax-content-letrero p {
     color: #91c848;
     margin: 0;
