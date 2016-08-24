@@ -1180,10 +1180,11 @@ p {
 .ax-page-16 .ax-cont-info .ax-text-clave {
     font-family: 'vagron';
     color: #000;
-    padding-left: 70px;
+    padding-left: 53px;
     margin: 25px 0px;
     font-size: 20px;
     line-height: 30px;
+    background: url(../img/pag-16/ax-flecha.png) no-repeat center left;
 }
 
 .ax-page-16 .ax-cont-info .ax-text-clave span {
@@ -1191,6 +1192,14 @@ p {
     color: #000;
     font-family: 'vagron';
     font-size: 30px;
+}
+
+.ax-page-16 .ax-text-cont-black p {
+    color: #000;
+}
+
+.ax-page-16 .ax-text-cont-black p span {
+    
 }
 
 .ax-page-13 h3, .ax-page-14 h3 {
