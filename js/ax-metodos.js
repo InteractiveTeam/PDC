@@ -44,7 +44,7 @@ var epmModule = (function($){
                     height: (window.innerWidth > 768)?750:500,
                     autoCenter: true,
                     display: (window.innerWidth > 768)?'double':'single',
-                    page:22
+                    page:18
                 })
 
                 actions.flipbook.bind("turning", function(event, page, view) {

@@ -291,7 +291,7 @@ p {
 }
 
 .ax-page-5 .ax-cont-info .ax-cont-first, .ax-page-7 .ax-cont-info .ax-cont-first, .ax-page-10 .ax-cont-info .ax-cont-first, .ax-page-15 .ax-cont-info .ax-cont-first {
-    padding: 40px 0;
+    padding: 36px 0;
     width: 90%;
 }
 
@@ -490,7 +490,7 @@ p {
     right: 0;
 }
 
-.ax-page-6 .ax-eger-4 h3, .ax-page-6 .ax-eger-4 p, .ax-page-7 .ax-text p, .ax-page-8 .ax-text p, .ax-page-10 .ax-text, .ax-page-12 .ax-text, .ax-page-14 .ax-text, .ax-page-20 .ax-text, .ax-page-21 .ax-text, .ax-page-22 .ax-text, .ax-page-23 .ax-text {
+.ax-page-6 .ax-eger-4 h3, .ax-page-6 .ax-eger-4 p, .ax-page-7 .ax-text p, .ax-page-8 .ax-text p, .ax-page-10 .ax-text, .ax-page-12 .ax-text, .ax-page-14 .ax-text, .ax-page-20 .ax-text, .ax-page-21 .ax-text, .ax-page-22 .ax-text, .ax-page-23 .ax-text, .page-17 .ax-cuestion-1-1 .ax-text {
     font-family: 'tragic';
     font-size: 20px;
     letter-spacing: 0.1rem;
@@ -505,6 +505,8 @@ p {
     line-height: 16px;
     transform: rotate(-3deg);
 }
+
+.page-17 .ax-cuestion-1-1
 
 .ax-page-6 .ax-eger-4 textarea {
     background: transparent;
@@ -1204,6 +1206,333 @@ p {
     color: #fff;
     padding: 0 8%;
     background: url(../img/pag-17/ax-font-2.jpg) no-repeat center left;
+}
+
+.page-17 .ax-pasos, .page-18 .ax-pasos {
+    color: #fff;
+    font-size: 20px;
+    padding: 8px;
+}
+
+.page-17 .ax-cuestino-item, .page-18 .ax-cuestino-item {
+    position: absolute;
+}
+
+.page-17 .ax-cuestino-item .ax-pasos, .page-18 .ax-cuestino-item .ax-pasos {
+    top: -7px;
+    left: -27px;
+}
+
+.ax-page-17 .ax-cuestino-item textarea, .ax-page-18 .ax-cuestino-item textarea {
+    width: 100%;
+    background: rgba(232, 232, 232, 0.2);
+    min-height: 64px;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.page-17 .ax-cuestion-1-1 {
+    top: 410px;
+    color:#fff;
+}
+
+.page-17 .ax-cuestion-1-1:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 80px;
+    background: url(../img/pag-17/ax-sprite.png) no-repeat left top;
+    background-position: -227px 14px;
+}
+
+.page-17 .ax-cuestion-1-1 h3 {
+    font-family: 'vagron';
+    font-size: 40px;
+    margin-left: 10px
+}
+
+.page-17 .ax-cuestion-1-1 p {
+    font-family: 'vagron';
+    margin-left: 10px;
+    font-size: 16px;
+    width: 116px;
+    letter-spacing: 0.1rem;
+    position: relative;
+}
+
+.page-17 .ax-cuestion-1-1 p span {
+    font-family: 'tragic';
+    position: absolute;
+    font-size: 42px;
+    bottom: 4px;
+    right: -4px;
+}
+
+.page-17 .ax-cuestion-1-2 {
+    top: 519px;
+    left: 227px;
+    width: 117px;
+}
+
+.page-17 .ax-cuestion-1-2 textarea {
+    margin-bottom: 16px;
+}
+
+.page-17 .ax-cuestion-1-2 .ax-pasos {
+    top: 76px;
+}
+
+.page-17 .ax-cuestion-1-3 {
+    top: 390px;
+    left: 240px;
+    width: 70px;
+}
+
+.page-17 .ax-cuestion-1-3 textarea {
+    width: 120%;
+    margin-left: -20%;
+}
+
+.page-17 .ax-cuestion-1-4 {
+    top: 305px;
+    left: 96px;
+    width: 70px;
+}
+
+.page-17 .ax-cuestion-1-4 .ax-pasos {
+    top: 67px;
+}
+
+.page-17 .ax-cuestion-1-4 textarea {
+    width: 130%;
+    margin-left: -50%;
+}
+
+.page-17 .ax-cuestion-1-5 {
+    top: 190px;
+    left: 86px;
+    width: 70px;
+}
+
+.page-17 .ax-cuestion-1-5 textarea {
+    width: 133%;
+    margin-left: -39%;
+}
+
+.page-17 .ax-cuestion-1-6 {
+    top: 89px;
+    left: 86px;
+    width: 70px;
+}
+
+.page-17 .ax-cuestion-1-6:after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 70px;
+    background: url(../img/pag-17/ax-sprite.png) no-repeat;
+    background-position: -168px 0px;
+    top: 20px;
+    left: -50px;
+}
+
+.page-17 .ax-cuestion-1-6 p {
+    margin: 0;
+}
+
+.page-17 .ax-cuestion-1-6 input {
+    background: rgba(232, 232, 232, 0.2);
+    width: 100px;
+    font-size: 13px;
+}
+
+.page-17 .ax-cuestion-2-1 {
+    top: 92px;
+    left: 200px;
+}
+
+.page-17 .ax-cuestion-2-1 p {
+    margin-left: 10px;
+    font-size: 15px;
+    width: 116px;
+    letter-spacing: 0.1rem;
+    line-height: 16px;
+    position: relative;
+    margin: 10px 0;
+    color:#fff; 
+}
+
+.page-17 .ax-cuestion-2-1 p span {
+    font-family: 'vagron';
+    position: absolute;
+    font-size: 42px;
+    bottom: 4px;
+    right: -4px;
+}
+
+.page-17 .ax-cuestion-2-1 {
+    width: 133px;
+    font-size: 13px;
+}
+
+.page-17 .ax-cuestion-2-2 {
+    top: 190px;
+    left: 220px;
+    width: 116px;
+}
+
+.page-17 .ax-cuestion-2-2 .ax-pasos {
+    top: 3px;
+}
+
+.page-17 .ax-cuestion-2-2 textarea {
+    width: 103%;
+    margin-top: 41px;
+    margin-left: -3%;
+}
+
+.page-17 .ax-cuestion-2-3 {
+    top: 283px;
+    left: 395px;
+    width: 116px;
+}
+
+.page-17 .ax-cuestion-2-3 textarea {
+    min-height: 50px;
+    margin-left: -20%;
+}
+
+.page-17 .ax-cuestion-2-4 {
+    top: 383px;
+    left: 395px;
+    width: 100px;
+}
+
+.page-17 .ax-cuestion-2-4 p {
+    margin: 0;
+}
+
+.page-17 .ax-cuestion-2-4 textarea {
+    min-height: 47px;
+    margin-left: -20%;
+    width: 120%;
+}
+
+.page-17 .ax-cuestion-2-5 {
+    top: 485px;
+    left: 375px;
+    width: 120px;
+}
+
+.page-18 .ax-cuestino-item textarea, .page-18 .ax-cuestino-item input {
+    color: #000;
+}
+
+.page-18 .ax-cuestion-2-6 {
+    top: 583px;
+    left: 68px;
+    width: 100px;
+}
+
+.page-18 .ax-cuestion-2-6:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 70px;
+    background: url(../img/pag-17/ax-sprite.png) no-repeat;
+    background-position: -168px 0px;
+    top: 20px;
+    right: 0;
+}
+
+.page-18 .ax-cuestion-3-6 textarea {
+    width: 100%;
+    min-height: 50px;
+    margin-left: -40%;
+}
+
+.page-18 .ax-cuestion-3-1 {
+    top: 576px;
+    left: 190px;
+}
+
+.page-18 .ax-cuestion-3-1 p {
+    margin-left: 10px;
+    font-size: 15px;
+    width: 126px;
+    letter-spacing: 0.1rem;
+    line-height: 16px;
+    position: relative;
+    margin: 10px 0;
+    color:#fff; 
+}
+
+.page-18 .ax-cuestion-3-1 p span {
+    font-family: 'vagron';
+    position: absolute;
+    font-size: 42px;
+    bottom: 4px;
+    right: -4px;
+}
+
+.page-18 .ax-cuestion-3-1 {
+    width: 133px;
+    font-size: 13px;
+}
+
+.page-18 .ax-cuestion-3-2 {
+    top: 462px;
+    left: 208px;
+    width: 120px;
+}
+
+.page-18 .ax-cuestion-3-2 .ax-pasos {
+    top: 79px;
+    left: -30px;
+}
+
+.page-17 p, .page-18 p {
+    font-family: 'vagron';
+    color: #000;
+}
+
+.page-18 .ax-cuestion-3-3 {
+    top: 372px;
+    left: 81px;
+    width: 80px;
+}
+
+.page-18 .ax-cuestion-3-3 textarea {
+    width: 140%;
+    margin-left: -40%;
+}
+
+.page-18 .ax-cuestion-3-3 .ax-pasos {
+    top: 65px;
+    left: -30px;
+}
+
+.page-17 .ax-cuestion-1-1 .campText {
+    background: url(../img/pag-17/ax-sprite.png) no-repeat left top;
+    background-size: auto 70px;
+    padding: 15px 0;
+} 
+
+.page-17 .ax-cuestion-1-1 input {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    font-size: 13px;
+    color: #000;
+}
+
+.page-17 .ax-cuestion-1-1 .ax-text {
+    color: #000;
+    font-size: 14px;
+    margin: 0;
+    margin-left: 27px;
 }
 
 .ax-content-letrero p {
