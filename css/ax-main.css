@@ -490,7 +490,7 @@ p {
     right: 0;
 }
 
-.ax-page-6 .ax-eger-4 h3, .ax-page-6 .ax-eger-4 p, .ax-page-7 .ax-text p, .ax-page-8 .ax-text p, .ax-page-10 .ax-text, .ax-page-12 .ax-text, .ax-page-14 .ax-text, .ax-page-20 .ax-text, .ax-page-21 .ax-text {
+.ax-page-6 .ax-eger-4 h3, .ax-page-6 .ax-eger-4 p, .ax-page-7 .ax-text p, .ax-page-8 .ax-text p, .ax-page-10 .ax-text, .ax-page-12 .ax-text, .ax-page-14 .ax-text, .ax-page-20 .ax-text, .ax-page-21 .ax-text, .ax-page-22 .ax-text, .ax-page-23 .ax-text {
     font-family: 'tragic';
     font-size: 20px;
     letter-spacing: 0.1rem;
@@ -1287,7 +1287,7 @@ p {
     right: 20%;
 }
 
-.ax-cont-info.page-20,.ax-cont-info.page-22{
+.ax-cont-info.page-20,.ax-cont-info.page-22,.ax-cont-info.page-23{
     width: 85%;
     margin: 8%;
 }
@@ -1355,11 +1355,13 @@ p {
     padding-top: 18%;
 }
 
+.ax-content-metricas{
+    position: relative;
+}
 .ax-content-metricas td, th { padding: 1px;}
-.ax-content-metricas table td{
-/*    border-bottom: solid 1px #00833e;*/
+.ax-content-metricas table td,.ax-content-metricas table th{
     border: 1px solid transparent;
-    border-image: url(../img/ax-line-table.png) 30;
+    border-image: url(../img/ax-line-table.png) 2;
 }
 .ax-content-metricas .ax-field-tbl{ margin-left: 12px; width: 84%;}
 
@@ -1369,14 +1371,21 @@ p {
 }
 .ax-content-metricas table p.ax-bottomP{
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .ax-content-metricas table .ax-topP{
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 0;
 }
 .ax-content-metricas table td.solid-right{
     border-right: solid 1px #00833e;
+    /*border: 1px solid transparent;
+    border-image: url(../img/ax-line-table.png) 2;*/
+/*
+    border-top: 0;
+    border-left: 0;
+    border-bottom: 0;
+*/
 }
 .ax-content-metricas table td.no-solid{
     border: 0;
@@ -1399,6 +1408,43 @@ p {
 .ax-content-metricas table td table{
     width: 100%;
 }
+.ax-content-metricas .ax-row-metrica{
+    position: absolute;
+    background: url(../img/ax-flecha-line.svg);
+    width: 18px;
+    height: 38px;
+    left: -16px;
+}
+/*.ax-content-metricas .ax-row-metrica:nth-child(1){ top: 90px; }*/
+.ax-content-metricas .ax-row-metrica:nth-child(1){ top: 180px; }
+.ax-content-metricas .ax-row-metrica:nth-child(2){ top: 300px; }
+.ax-content-metricas .ax-row-metrica:nth-child(3){ top: 400px; }
+
+.ax-content-metricas .ax-content-arrowT1{
+    position: absolute;
+    top: 65px;
+    left: -30px;
+}
+.ax-content-metricas .ax-content-arrowT2{
+    position: absolute;
+    top: -22px;
+    right: -30px;
+}
+.ax-content-metricas .ax-content-arrowT2 .ax-row-metrica-text{ right: 18px; }
+.ax-content-metricas .ax-row-metrica-text{
+    position: absolute;
+    background: url(../img/ax-flecha-line.svg);
+    width: 18px;
+    height: 38px;
+}
+
+.ax-content-metricas p.ax-text{
+    font-size: 11px;
+    transform: rotate(-17deg);
+    line-height: 1em;
+    margin: 0;
+}
+.ax-content-metricas .ax-content-arrowT2 p.ax-text{ transform: rotate(10deg); }
 
 .ax-cuadro-verde {
     background: url(../img/ax-cuadro-verde.png);
