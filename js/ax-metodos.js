@@ -43,14 +43,15 @@ var epmModule = (function($){
                     width: (window.innerWidth > 768)?1044:320,
                     height: (window.innerWidth > 768)?750:500,
                     autoCenter: true,
-                    display: (window.innerWidth > 768)?'double':'single'
+                    display: (window.innerWidth > 768)?'double':'single',
+                    page:22
                 })
 
                 actions.flipbook.bind("turning", function(event, page, view) {
                     pageCat = page;
                     switch (page) {
                         case 2:
-                            $('.cont-title').delay(700).fadeIn(1000);
+                            $('.cont-title').delay(500).fadeIn();                            
                         break;
 
                         case 6:
@@ -58,19 +59,18 @@ var epmModule = (function($){
                             $('.ax-image-svg').delay(500).animate({opacity: 1}, 1000);
                             $('.ax-page-6 .ax-image-svg').delay(4000).animate({opacity: 1}, 1000);
                             //LLenamos los datos del usuario
-                             $("#pensemos_marca1").val(infoPages.data.pensemos_marca1);                            
-                             $("#pensemos_marca2").val(infoPages.data.pensemos_marca2);
-                             $("#pensemos_marca3").val(infoPages.data.pensemos_marca3);                            
-                             $("#pensemos_marca4").val(infoPages.data.pensemos_marca4);
-                             $("#pensemos_marca5").val(infoPages.data.pensemos_marca5);
+                            
+                            for(var i=1;i<=5;i++){
+                                $("#pensemos_marca"+i).val(infoPages.data['pensemos_marca'+i]);                                
+                            }                             
                         break;
                         case 10:
-                        case 11:                            
+                        case 11:
                             //LLenamos los datos del usuario
                             $("#describe_personaje1").val(infoPages.data.describe_personaje1);
                             $("#describe_personaje2").val(infoPages.data.describe_personaje2);
                         case 12:
-                        case 13:                            
+                        case 13:
                             //LLenamos los datos del usuario
                             $("#facebook").val(infoPages.data.facebook);
                             $("#google").val(infoPages.data.google);
@@ -80,6 +80,83 @@ var epmModule = (function($){
                             $("#pinterest").val(infoPages.data.pinterest);
                             $("#flickr").val(infoPages.data.flickr);
                         break;
+                        case 16:
+                        case 17:
+                            //LLenamos los datos del usuario
+                            $("#dale_orden").val(infoPages.data.dale_orden);
+                            break;
+                        case 20:
+                        case 21:
+                            //LLenamos los datos del usuario
+                            $("#manos_obra").val(infoPages.data.manos_obra);
+                            
+                            for(var i=1;i<=4;i++){
+                                $("#answer_question"+i).val(infoPages.data['answer_question'+i]);
+                            }
+                            
+                            if(infoPages.data.answer_questionR1 == 'Si'){
+                                $("#questions_manos_obra #r1").trigger('click');
+                            }else if(infoPages.data.answer_questionR1 == 'No'){
+                                $("#questions_manos_obra #r2").trigger('click');
+                            }
+                            
+                            if(infoPages.data.answer_questionR2 == 'Si'){
+                                $("#questions_manos_obra #r3").trigger('click');
+                            }else if(infoPages.data.answer_questionR2 == 'No'){
+                                $("#questions_manos_obra #r4").trigger('click');
+                            }
+                            
+                            if(infoPages.data.answer_questionR3 == 'Si'){
+                                $("#questions_manos_obra #r5").trigger('click');
+                            }else if(infoPages.data.answer_questionR3 == 'No'){
+                                $("#questions_manos_obra #r6").trigger('click');
+                            }
+                            
+                            if(infoPages.data.answer_questionR4 == 'Si'){
+                                $("#questions_manos_obra #r7").trigger('click');
+                            }else if(infoPages.data.answer_questionR4 == 'No'){
+                                $("#questions_manos_obra #r8").trigger('click');
+                            }
+                            break;
+                        case 22:
+                        case 23:
+                            for(var i=1;i<=4;i++){
+                                $("#sitios_web"+i).val(infoPages.data['sitios_web'+i]);
+                                $("#boletines_electronicos"+i).val(infoPages.data['boletines_electronicos'+i]);
+                                $("#redes_sociales"+i).val(infoPages.data['redes_sociales'+i]);
+                                $("#aplicaciones_moviles"+i).val(infoPages.data['aplicaciones_moviles'+i]);
+                            }                            
+                            for(var i=1;i<=13;i++){
+                                $("#visitas"+i).val(infoPages.data['visitas'+i]);
+                                $("#visitantes_unicos"+i).val(infoPages.data['visitantes_unicos'+i]);
+                                $("#porcentaje_de_rebote"+i).val(infoPages.data['porcentaje_de_rebote'+i]);
+                                $("#tiempo_promedio_por_visita"+i).val(infoPages.data['tiempo_promedio_por_visita'+i]);
+                                $("#numero_de_contactos"+i).val(infoPages.data['numero_de_contactos'+i]);
+                                $("#boletines_abiertos"+i).val(infoPages.data['boletines_abiertos'+i]);
+                                $("#me_gusta"+i).val(infoPages.data['me_gusta'+i]);
+                                $("#compartidos"+i).val(infoPages.data['compartidos'+i]);                                
+                                $("#seguidores"+i).val(infoPages.data['seguidores'+i]);
+                                $("#comentarios"+i).val(infoPages.data['comentarios'+i]);
+                                $("#me_gusta"+i).val(infoPages.data['me_gusta'+i]);
+                                $("#descargas"+i).val(infoPages.data['descargas'+i]);
+                                $("#comentarios_en_tiendas"+i).val(infoPages.data['comentarios_en_tiendas'+i]);                                
+                            }
+                            for(var i=14;i<=26;i++){
+                                $("#visitas"+i).val(infoPages.data['visitas'+i]);
+                                $("#visitantes_unicos"+i).val(infoPages.data['visitantes_unicos'+i]);
+                                $("#porcentaje_de_rebote"+i).val(infoPages.data['porcentaje_de_rebote'+i]);
+                                $("#tiempo_promedio_por_visita"+i).val(infoPages.data['tiempo_promedio_por_visita'+i]);
+                                $("#numero_de_contactos"+i).val(infoPages.data['numero_de_contactos'+i]);
+                                $("#boletines_abiertos"+i).val(infoPages.data['boletines_abiertos'+i]);
+                                $("#me_gusta"+i).val(infoPages.data['me_gusta'+i]);
+                                $("#compartidos"+i).val(infoPages.data['compartidos'+i]);                                
+                                $("#seguidores"+i).val(infoPages.data['seguidores'+i]);
+                                $("#comentarios"+i).val(infoPages.data['comentarios'+i]);
+                                $("#me_gusta"+i).val(infoPages.data['me_gusta'+i]);
+                                $("#descargas"+i).val(infoPages.data['descargas'+i]);
+                                $("#comentarios_en_tiendas"+i).val(infoPages.data['comentarios_en_tiendas'+i]);
+                            }
+                            break;
                     }
                 });
             });
@@ -157,16 +234,20 @@ var epmModule = (function($){
                 .staggerFrom('.content-login .button', 0.7, {y:20,opacity:0,},0.10,'-=0.85');
             }
         },
-        saveDataPage:function(data,field){
-            var info = {};
-            info[field] = data;
-          
+        saveDataPage:function(data,field,bandera,action){
+            if(!bandera){
+                var info = {};
+                info[field] = data;
+            }else{
+                var info = data;
+            }
+            
             data = {
                 data:dataUser,
                 info:info,
-                action:'saveData'
-            }
-            var result = epmModule.requestAjax(data);
+                action:action
+            }            
+            var result = epmModule.requestAjax(data);            
         },
         getData:function(){
             data = {

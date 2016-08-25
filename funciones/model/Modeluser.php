@@ -63,7 +63,7 @@ class Modeluser {
         $query = "SELECT * FROM data_fields WHERE id_user = ?";
         $result = $this->queries($query,array($user['id']));
         if(!$result){
-           $query = "INSERT INTO data_fields (id_user,pensemos_marca1,pensemos_marca2,pensemos_marca3,pensemos_marca4,pensemos_marca5,describe_personaje1,describe_personaje2,facebook,google,instagram,twitter,youtube,pinterest,flickr) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+           $query = "INSERT INTO data_fields (id_user,pensemos_marca1,pensemos_marca2,pensemos_marca3,pensemos_marca4,pensemos_marca5,describe_personaje1,describe_personaje2,facebook,google,instagram,twitter,youtube,pinterest,flickr,dale_orden,manos_obra) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
             $stmt = $this->conn->prepare($query);
             $result = $stmt->execute(array(
                 $user['id'],
@@ -83,11 +83,18 @@ class Modeluser {
                 $data['youtube'],
                 $data['pinterest'],
                 $data['flickr'],
-                
+                $data['dale_orden'],
+                $data['manos_obra']
             ));
             return array('data'=>$result);
         }else{
-            $query = "UPDATE data_fields SET ".key($data)." =? WHERE id_user=?";            
+            //realizamos un update multiple
+            $query = "UPDATE data_fields SET ";
+            foreach($data as $key => $value){                
+                $query .= $key.' = CASE id_user WHEN '.$user['id'].' THEN "'.$value.'" END,';
+            }
+            $query = substr($query, 0, -1); 
+            $query .= " WHERE id_user = ".$user['id'];            
             $stmt = $this->conn->prepare($query);
             $result = $stmt->execute(array($data[key($data)],$user['id']));
             

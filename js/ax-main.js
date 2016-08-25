@@ -33,14 +33,29 @@ $(document).ready(function(){
     	location.reload();
     });
 
-   	/*$(".btnManual").on('click',function(){
-        alert('asd');
-    	tl.to('#manual', 0.7, {top:0});
-    });*/
-    $("body").on('blur','#pensemos_marca1,#pensemos_marca2,#pensemos_marca3,#pensemos_marca4,#pensemos_marca5,#describe_personaje1,#describe_personaje2,#facebook,#google,#instagram,#twitter,#youtube,#pinterest,#flickr',function(){
+    $("body").on('blur','#pensemos_marca1,#pensemos_marca2,#pensemos_marca3,#pensemos_marca4,#pensemos_marca5,#describe_personaje1,#describe_personaje2,#facebook,#google,#instagram,#twitter,#youtube,#pinterest,#flickr,#dale_orden,#manos_obra,#sitios_web1,#sitios_web2,#boletines_electronicos1,#boletines_electronicos2,#redes_sociales1,#redes_sociales2,#aplicaciones_moviles1,#aplicaciones_moviles2,#visitas1,#visitas2,#visitantes_unicos1,#visitantes_unicos2,#porcentaje_de_rebote1,#porcentaje_de_rebote2,#tiempo_promedio_por_visita1,#tiempo_promedio_por_visita2,#numero_de_contactos1,#numero_de_contactos2,#boletines_abiertos1,#boletines_abiertos2,#me_gusta1,#me_gusta2,#compartidos1,#compartidos2,#seguidores1,#seguidores2,#comentarios1,#comentarios2,#descargas1,#descargas2,#comentarios_en_tiendas1,#comentarios_en_tiendas2',function(){
         var text = $(this).val();
-        epmModule.saveDataPage(text,$(this).attr('id'));
+        epmModule.saveDataPage(text,$(this).attr('id'),false,'saveData');
     });
+    
+    $("body").on('blur','#answer_question1,#answer_question2,#answer_question3,#answer_question4',function(){
+        var id = $(this).attr('id'),val='',info = {};
+        var question = id.substr(id.length - 9);
+        val = $('input[name='+question+']:checked','#questions_manos_obra').val();
+        if(val){
+            info[id] = $(this).val();
+            //le añadimos el R al id para que quede igual nombre de la base de datos
+            var output = [id.slice(0, 15), 'R', id.slice(15)].join('');            
+            info[output] = val;
+            
+            epmModule.saveDataPage(info,'',true,'saveData');
+        }
+    });
+    
+    /*$("body").on('blur','#sitios_web1,#sitios_web2,#boletines_electronicos1,#boletines_electronicos2,#redes_sociales1,#redes_sociales2,#aplicaciones_moviles1,#aplicaciones_moviles2',function(){
+        var text = $(this).val();
+        epmModule.saveDataPage(text,$(this).attr('id'),false,'saveData');
+    });*/
 });
 
 if( document.createElement('svg').getAttributeNS ) {
