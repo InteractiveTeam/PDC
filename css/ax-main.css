@@ -1446,6 +1446,20 @@ p {
 }
 .ax-content-metricas .ax-content-arrowT2 p.ax-text{ transform: rotate(10deg); }
 
+.page-23 .ax-person-23{
+    background: url(../img/ax-person-23.png);
+    display: inline-block;
+    width: 148px;
+    height: 235px;
+}
+.page-23 .ax-text-person-23{
+    background: url(../img/ax-globo-23.png) no-repeat;
+    display: inline-block;
+    width: 166px;
+    height: 154px;
+    vertical-align: top;    
+}
+
 .ax-cuadro-verde {
     background: url(../img/ax-cuadro-verde.png);
     padding: 20px;
