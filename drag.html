@@ -9,117 +9,98 @@
 		.drag{
 			position: relative;
 			border: solid 1px;
-			height: 200px;
-			width:400px;
+            width:246px;
+			height: 219px;
+            display: inline-block;
+            background: url(../img/ax-game-1-page-9.svg);
 		}
 		.dot{
-			width: 40px;
-			height: 40px;
-			background: red;
+			width: 5px;
+			height: 5px;
+			background: #000;
 			border-radius:50%;
 			position: absolute;
 		}
-		.dot1{			
-			bottom: 60px;
-			right: 100px;
+		.dot0{
+			left: 176px;
+			top: 12px;
 		}
-		.dot2{			
-			bottom: 0px;
-			left: 100px;
+		.dot1{
+			left: 211px;
+			top: 27px;
+		}
+        .dot2{
+			left: 234px;
+			top: 57px;
+		}
+        .dot3{
+			left: 239px;
+			top: 88px;
+		}
+        
+        .dot4{
+			left: 235px;
+			top: 117px;
+		}
+        .dot5{
+			left: 217px;
+			top: 155px;
+		}
+        .dot6{
+			left: 188px;
+			top: 184px;
+		}
+        .dot7{
+			left: 152px;
+			top: 202px;
 		}
 	</style>
 </head>
 <body>
 
-<!-- <rect id="rect" x="20" y="10" width="100" height="100" fill="red">
-		<animate
-			attributeName="width"
-			begin="0s"
-			dur="5s"
-			from="20"
-			to="500"
-			fill="freeze"
-		/>
-		
-	</rect>
-	<circle id="circle" cx="170" cy="50" r="50" fill="blue"/>
-	<animate
-			attributeName="cx"
-			xlink:href="#circle"
-			begin="0s"
-			dur="5s"
-			from="170"
-			to="450"
-			fill="freeze"
-		/>
-	<animateColor
-			attributeName="fill"
-			xlink:href="#circle"
-			begin="0s"
-			dur="5s"
-			values="blue; orange; yellow"
-		/>
-	
-	<line id="line" x1="230" y1="10" x2="300" y2="100" style="stroke:green;stroke-width:2" />
-	<polygon points="350,10,300,100,400,100" fill="grey" /> -->
 	<div class="drag">
 		<div class="dot dot0"></div>
 		<div class="dot dot1"></div>
 		<div class="dot dot2"></div>
-		<svg id ="svg" height="200" width="400" xmlns="http://www.w3.org/2000/svg">
-			<path d="" stroke="#e1f6f1" fill="none" stroke-width="10"/>
+		<div class="dot dot3"></div>
+		
+		<div class="dot dot4"></div>
+		<div class="dot dot5"></div>
+		<div class="dot dot6"></div>
+		<div class="dot dot7"></div>
+		<svg id ="svg" height="219" width="246" xmlns="http://www.w3.org/2000/svg">
+			<path d="" stroke="#e1f6f1" fill="none" stroke-width="3"/>
 		</svg>
 	</div>
 	<script>
 		var auxArray = [];
-		var auxCor = [{x:27,y:29},{x:291,y:129},{x:128,y:187}];
+		var auxCor = [
+                        {x:176,y:12},{x:211,y:27},{x:234,y:57},{x:239,y:88},
+                        {x:235,y:117},{x:217,y:155},{x:188,y:184},{x:152,y:202}
+                     ];
 		var svg = document.getElementById('svg');
 		var bandera1 = true;
 		$(document).ready(function(){
 			$(".dot").on('mousedown',function(e){
 				e.preventDefault();
-				length = auxArray.length;//(auxArray.length == 0)?1:auxArray.length;
+				length = auxArray.length;				
 				
-				//console.log($(this).hasClass('dot'+length));
-
 				var x1 = e.clientX,
 					y1 = e.clientY;
 
-				//console.log(x1,y1);
 				if($(this).hasClass('dot'+length)){
 					$('.drag').on('mousemove',function(e){
 						length = auxArray.length;
-						var x2 = e.clientX,
-							y2 = e.clientY;
-
-						switch(length){
-							case 0:
-								svg.children[length].setAttribute('d','M'+ x1+','+y1+'L'+x2+','+y2);
-								//console.log((x2-20),(y2-20));
-								if((x2 >= (auxCor[(length+1)].x-10)  && x2 <= (auxCor[(length+1)].x+10)) && 
-									(y2 >= (auxCor[(length+1)].y-10) && y2 <= (auxCor[(length+1)].y+10)) && bandera1==true) {
-									bandera1 = false;
-									auxArray.push(length);
-									addPath('path',{d:'M'+auxCor[(length+1)].x+','+auxCor[(length+1)].y+'L'+x2+','+y2,stroke:'#e1f6f1',fill:'none','stroke-width':10});
-									//svg.children[auxArray.length].setAttribute('d','M'+ x1+','+y1+'L'+x2+','+y2);
-								}
-							break;
-							case 1:
-								svg.children[length].setAttribute('d','M'+ auxCor[length].x+','+auxCor[length].y+'L'+x2+','+y2);
-								//console.log((x2-20),(y2-20));
-								if((x2 >= (auxCor[(length+1)].x-10)  && x2 <= (auxCor[(length+1)].x+10)) && 
-									(y2 >= (auxCor[(length+1)].y-10) && y2 <= (auxCor[(length+1)].y+10)) && bandera1==true) {
-									bandera1 = false;
-									auxArray.push(length);
-									addPath('path',{d:'M'+auxCor[(length+1)].x+','+auxCor[(length+1)].y+'L'+x2+','+y2,stroke:'#e1f6f1',fill:'none','stroke-width':10});
-									//svg.children[auxArray.length].setAttribute('d','M'+ x1+','+y1+'L'+x2+','+y2);
-								}
-							break;
-						}
-						
-						//console.log(x2,y2);						
-						//var path = document.getElementById('svg');
-						
+						var x2 = (e.clientX-4),
+							y2 = (e.clientY-7);
+                        
+                        svg.children[length].setAttribute('d','M'+ auxCor[length].x+','+auxCor[length].y+'L'+x2+','+y2);
+                        if((x2 >= (auxCor[(length+1)].x-2)  && x2 <= (auxCor[(length+1)].x+4)) &&
+                            (y2 >= (auxCor[(length+1)].y-2) && y2 <= (auxCor[(length+1)].y+4))) {
+                            svg.children[length].setAttribute('d','M'+ auxCor[length].x+','+auxCor[length].y+'L'+x2+','+y2);
+                            auxArray.push(length);
+                            addPath('path',{d:'M'+auxCor[(length+1)].x+','+auxCor[(length+1)].y+'L'+x2+','+y2, stroke:'#e1f6f1',fill:'none','stroke-width':3});
+                        }						
 					});
 					$('.drag,.dot').on('mouseup',function(e){
 						$('.drag').off('mousemove');
@@ -128,7 +109,6 @@
 			});
 		});
 
-		//addPath('path',{d:'M290,126,L134,189',stroke:'#e1f6f1',fill:'none','stroke-width':10})
 		function addPath(tag,attrs){
 			var newpath = document.createElementNS("http://www.w3.org/2000/svg",tag);
 			for (var k in attrs)

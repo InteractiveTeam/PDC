@@ -80,10 +80,16 @@ var epmModule = (function($){
                             $("#pinterest").val(infoPages.data.pinterest);
                             $("#flickr").val(infoPages.data.flickr);
                         break;
-                        case 16:
-                        case 17:
+                        case 14:
+                        case 15:
                             //LLenamos los datos del usuario
                             $("#dale_orden").val(infoPages.data.dale_orden);
+                            break;
+                        case 16:
+                        case 17:
+                                for(var i=1;i<=11;i++){
+                                    $("#punto_contacto"+i).val(infoPages.data['punto_contacto'+i]);
+                                }
                             break;
                         case 20:
                         case 21:
