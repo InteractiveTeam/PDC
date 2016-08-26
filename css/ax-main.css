@@ -174,7 +174,7 @@ p {
     left: 12px;
 }
 
-.ax-page-2 .cont-title {
+.ax-page-2 .cont-title, .ax-page-27 .cont-title {
     width: 350px;
     text-align: center;
     height: 170px;
@@ -186,7 +186,12 @@ p {
     margin: auto;
 }
 
-.ax-page-2 h2 {
+.ax-page-27 .cont-title {
+    top: 40%;
+    width: 240px;
+}
+
+.ax-page-2 h2, .ax-page-27 h2 {
     color: #575756;
     font-family: 'vagroundedlight';
     font-size: 1.8rem;
@@ -195,9 +200,19 @@ p {
     line-height: 2.2rem
 }
 
+ .ax-page-27 h2 {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
 .ax-page-2 .cont-title img {
-    width: 32%;
+    width: 40%;
     margin-top: 10px;
+}
+
+.ax-page-27 .cont-title img {
+    width: 30%;
+    margin-bottom: 10px;
 }
 
 .ax-page-3:after {
@@ -1996,6 +2011,20 @@ p {
 .ax-page-26 .text-tanks {
     width: 60%;
     margin: 0 auto;
+}
+
+.ax-page-27 {
+    background: #3fa435 url(../img/ax-pag27.jpg);
+    background-size: cover;
+}
+
+.ax-page-28 .ax-cont-info {
+    background: #3fa435;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .ax-content-metricas{

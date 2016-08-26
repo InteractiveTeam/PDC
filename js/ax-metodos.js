@@ -37,6 +37,7 @@ var epmModule = (function($){
                 $('.ax-page-25').load('page.html .page-25');
                 $('.ax-page-26').load('page.html .page-26');
                 $('.ax-page-27').load('page.html .page-27');
+                $('.ax-page-28').load('page.html .page-28');
                 
                 epmModule.bindActions();
                 actions.btnManual.on('click', function(){
