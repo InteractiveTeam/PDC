@@ -2,7 +2,7 @@ epmModule.init();
 var tl = epmModule.setting.tl;
 $(document).ready(function(){
     
-    $(".btn-login").on('click',function(){        
+    $(".btn-login").on('click',function(){
         tl.to('.content-login', 0.5, {opacity:0,display:'none'})
         .to('.ax-iniciar-sesion', 0.5, {opacity:1,display:'block'},'-=0.20')
         .staggerFrom('.ax-iniciar-sesion .form-group,.ax-iniciar-sesion hgroup', 0.7, {y:-20,opacity:0,},0.10)
@@ -32,7 +32,6 @@ $(document).ready(function(){
     	sessionStorage.clear();
     	location.reload();
     });
-
     $("body").on('blur','#pensemos_marca1,#pensemos_marca2,#pensemos_marca3,#pensemos_marca4,#pensemos_marca5,#describe_personaje1,#describe_personaje2,#facebook,#google,#instagram,#twitter,#youtube,#pinterest,#flickr,#dale_orden,#manos_obra,#sitios_web1,#sitios_web2,#boletines_electronicos1,#boletines_electronicos2,#redes_sociales1,#redes_sociales2,#aplicaciones_moviles1,#aplicaciones_moviles2,#visitas1,#visitas2,#visitantes_unicos1,#visitantes_unicos2,#porcentaje_de_rebote1,#porcentaje_de_rebote2,#tiempo_promedio_por_visita1,#tiempo_promedio_por_visita2,#numero_de_contactos1,#numero_de_contactos2,#boletines_abiertos1,#boletines_abiertos2,#me_gusta1,#me_gusta2,#compartidos1,#compartidos2,#seguidores1,#seguidores2,#comentarios1,#comentarios2,#descargas1,#descargas2,#comentarios_en_tiendas1,#comentarios_en_tiendas2,#punto_contacto1,#punto_contacto2,#punto_contacto3,#punto_contacto4,#punto_contacto5,#punto_contacto6,#punto_contacto7,#punto_contacto8,#punto_contacto9,#punto_contacto10,#punto_contacto11',function(){
         var text = $(this).val();
         epmModule.saveDataPage(text,$(this).attr('id'),false,'saveData');
@@ -52,6 +51,64 @@ $(document).ready(function(){
         }
     });
 });
+
+
+var auxArray = [];
+var auxCor = [
+                {x:176,y:12},{x:211,y:27},{x:234,y:57},{x:239,y:88},
+                {x:235,y:117},{x:217,y:155},{x:188,y:184},{x:152,y:202},
+                {x:136,y:193},{x:144,y:172},{x:176,y:157},{x:196,y:137},
+                {x:209,y:105},{x:208,y:72},{x:190,y:48},{x:165,y:46},
+                {x:146,y:58},{x:140,y:72},{x:140,y:110},{x:126,y:125},
+                {x:109,y:112},{x:110,y:77},{x:99,y:53},{x:75,y:45},            
+                {x:52,y:56},{x:45,y:78},{x:45,y:108},{x:33,y:125},            
+                {x:13,y:114},{x:15,y:69},{x:23,y:44},{x:48,y:20},
+                {x:74,y:13},{x:104,y:19},{x:124,y:37},{x:145,y:18},
+                {x:176,y:12}
+             ];
+
+/*$("body").on('mousedown','.dot',function(e){
+    e.preventDefault();
+    
+    var svg = document.getElementById('svg_dots');
+    
+    length = auxArray.length;				
+
+    var x1 = e.clientX,
+        y1 = e.clientY;
+    
+    if($(this).hasClass('dot'+length)){
+        $('.drag').on('mousemove',function(e){
+            length = auxArray.length;
+            var x2 = (e.clientX - parseInt($(this).offset().left)),
+                y2 = (e.clientY - parseInt($(this).offset().top));
+            
+            console.log(x2,y2);
+            if(length <= 35){
+                svg.children[length].setAttribute('d','M'+ auxCor[length].x+','+auxCor[length].y+'L'+x2+','+y2);
+                if((x2 >= (auxCor[(length+1)].x)  && x2 <= (auxCor[(length+1)].x+4)) &&
+                    (y2 >= (auxCor[(length+1)].y) && y2 <= (auxCor[(length+1)].y+4))) {
+                    svg.children[length].setAttribute('d','M'+ (auxCor[length].x+2)+','+auxCor[length].y+'L'+x2+','+y2);
+                    auxArray.push(length);
+                    addPath('path',{d:'M'+(auxCor[(length+1)]+2).x+','+auxCor[(length+1)].y+'L'+x2+','+y2, stroke:'#000',fill:'none','stroke-width':3});
+                }						
+            }
+        });
+        $('.drag,.dot').on('mouseup',function(e){            
+            $('.drag').off('mousemove');
+        });
+    }
+});*/
+
+function addPath(tag,attrs){
+    var newpath = document.createElementNS("http://www.w3.org/2000/svg",tag);
+    var svg = document.getElementById('svg_dots');
+    for (var k in attrs)
+        newpath.setAttributeNS(null,k, attrs[k]);
+
+    svg.appendChild(newpath);
+}
+
 
 if( document.createElement('svg').getAttributeNS ) {
 	var radiobxsFill = Array.prototype.slice.call( document.querySelectorAll('form input[type="radio"]')),

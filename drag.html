@@ -13,6 +13,8 @@
 			height: 219px;
             display: inline-block;
             background: url(../img/ax-game-1-page-9.svg);
+            left: 350px;
+            top: 100px;
 		}
 		.dot{
 			width: 5px;
@@ -21,39 +23,42 @@
 			border-radius:50%;
 			position: absolute;
 		}
-		.dot0{
-			left: 176px;
-			top: 12px;
-		}
-		.dot1{
-			left: 211px;
-			top: 27px;
-		}
-        .dot2{
-			left: 234px;
-			top: 57px;
-		}
-        .dot3{
-			left: 239px;
-			top: 88px;
-		}
-        
-        .dot4{
-			left: 235px;
-			top: 117px;
-		}
-        .dot5{
-			left: 217px;
-			top: 155px;
-		}
-        .dot6{
-			left: 188px;
-			top: 184px;
-		}
-        .dot7{
-			left: 152px;
-			top: 202px;
-		}
+		.dot0{ left: 176px; top: 12px; }
+		.dot1{ left: 211px; top: 27px; }
+        .dot2{ left: 234px; top: 57px; }
+        .dot3{ left: 239px; top: 88px; }
+        .dot4{ left: 235px; top: 117px; }
+        .dot5{ left: 217px; top: 155px; }
+        .dot6{ left: 188px; top: 184px; }
+        .dot7{ left: 152px; top: 202px; }        
+        .dot8{ left: 136px; top: 193px; }
+        .dot9{ left: 144px; top: 172px; }
+        .dot10{ left: 176px; top: 157px; }
+        .dot11{ left: 196px; top: 137px; }
+        .dot12{ left: 209px; top: 105px; }
+        .dot13{ left: 208px; top: 72px; }
+        .dot14{ left: 190px; top: 48px; }
+        .dot15{ left: 165px; top: 46px; }        
+        .dot16{ left: 146px; top: 58px; }
+        .dot17{ left: 140px; top: 72px; }
+        .dot18{ left: 140px; top: 110px; }
+        .dot19{ left: 126px; top: 125px; }
+        .dot20{ left: 109px; top: 112px; }
+        .dot21{ left: 110px; top: 77px; }
+        .dot22{ left: 99px; top: 53px; }
+        .dot23{ left: 75px; top: 45px; }        
+        .dot24{ left: 52px; top: 56px; }
+        .dot25{ left: 45px; top: 78px; }
+        .dot26{ left: 45px; top: 108px; }
+        .dot27{ left: 33px; top: 125px; }
+        .dot28{ left: 13px; top: 114px; }
+        .dot29{ left: 15px; top: 69px; }
+        .dot30{ left: 23px; top: 44px; }
+        .dot31{ left: 48px; top: 20px; }
+        .dot32{ left: 74px; top: 13px; }
+        .dot33{ left: 104px; top: 19px; }
+        .dot34{ left: 124px; top: 37px; }
+        .dot35{ left: 145px; top: 18px; }
 	</style>
 </head>
 <body>
@@ -62,12 +67,47 @@
 		<div class="dot dot0"></div>
 		<div class="dot dot1"></div>
 		<div class="dot dot2"></div>
-		<div class="dot dot3"></div>
-		
+		<div class="dot dot3"></div>		
 		<div class="dot dot4"></div>
 		<div class="dot dot5"></div>
 		<div class="dot dot6"></div>
-		<div class="dot dot7"></div>
+		<div class="dot dot7"></div>		
+		<div class="dot dot8"></div>
+		<div class="dot dot9"></div>
+		<div class="dot dot10"></div>
+		<div class="dot dot11"></div>
+		<div class="dot dot12"></div>
+		<div class="dot dot13"></div>
+		<div class="dot dot14"></div>
+		<div class="dot dot15"></div>
+		<div class="dot dot16"></div>
+		<div class="dot dot17"></div>
+		<div class="dot dot18"></div>
+		<div class="dot dot19"></div>
+		<div class="dot dot20"></div>
+		<div class="dot dot21"></div>
+		<div class="dot dot22"></div>
+		<div class="dot dot23"></div>		
+		<div class="dot dot16"></div>
+		<div class="dot dot17"></div>
+		<div class="dot dot18"></div>
+		<div class="dot dot19"></div>
+		<div class="dot dot20"></div>
+		<div class="dot dot21"></div>
+		<div class="dot dot22"></div>
+		<div class="dot dot23"></div>
+		<div class="dot dot24"></div>
+		<div class="dot dot25"></div>
+		<div class="dot dot26"></div>
+		<div class="dot dot27"></div>
+		<div class="dot dot28"></div>
+		<div class="dot dot29"></div>
+		<div class="dot dot30"></div>
+		<div class="dot dot31"></div>
+		<div class="dot dot32"></div>
+		<div class="dot dot33"></div>
+		<div class="dot dot34"></div>
+		<div class="dot dot35"></div>
 		<svg id ="svg" height="219" width="246" xmlns="http://www.w3.org/2000/svg">
 			<path d="" stroke="#e1f6f1" fill="none" stroke-width="3"/>
 		</svg>
@@ -76,24 +116,33 @@
 		var auxArray = [];
 		var auxCor = [
                         {x:176,y:12},{x:211,y:27},{x:234,y:57},{x:239,y:88},
-                        {x:235,y:117},{x:217,y:155},{x:188,y:184},{x:152,y:202}
+                        {x:235,y:117},{x:217,y:155},{x:188,y:184},{x:152,y:202},
+                        {x:136,y:193},{x:144,y:172},{x:176,y:157},{x:196,y:137},
+                        {x:209,y:105},{x:208,y:72},{x:190,y:48},{x:165,y:46},
+                        {x:146,y:58},{x:140,y:72},{x:140,y:110},{x:126,y:125},
+                        {x:109,y:112},{x:110,y:77},{x:99,y:53},{x:75,y:45},            
+                        {x:52,y:56},{x:45,y:78},{x:45,y:108},{x:33,y:125},            
+                        {x:13,y:114},{x:15,y:69},{x:23,y:44},{x:48,y:20},
+                        {x:74,y:13},{x:104,y:19},{x:124,y:37},{x:145,y:18},
+                        {x:176,y:12}
                      ];
 		var svg = document.getElementById('svg');
 		var bandera1 = true;
-		$(document).ready(function(){
-			$(".dot").on('mousedown',function(e){
-				e.preventDefault();
-				length = auxArray.length;				
-				
-				var x1 = e.clientX,
-					y1 = e.clientY;
-
-				if($(this).hasClass('dot'+length)){
-					$('.drag').on('mousemove',function(e){
-						length = auxArray.length;
-						var x2 = (e.clientX-4),
-							y2 = (e.clientY-7);
-                        
+		
+        /*$(".dot").on('mousedown',function(e){
+            e.preventDefault();
+            length = auxArray.length;*/
+            $('.drag').on('mousemove',function(e){
+                //if($(this).hasClass('dot'+length)){
+                    console.log('Holaaa');
+                    length = auxArray.length;
+                    /*var x2 = (e.clientX-4),
+                        y2 = (e.clientY-7);*/
+                    var x2 = ((e.clientX - e.currentTarget.offsetLeft)-4),
+                        y2 = ((e.clientY - e.currentTarget.offsetTop)-7);
+                    
+                    console.log((e.clientX - e.currentTarget.offsetLeft),(e.clientY - e.currentTarget.offsetTop));
+                    if(length <= 35){
                         svg.children[length].setAttribute('d','M'+ auxCor[length].x+','+auxCor[length].y+'L'+x2+','+y2);
                         if((x2 >= (auxCor[(length+1)].x-2)  && x2 <= (auxCor[(length+1)].x+4)) &&
                             (y2 >= (auxCor[(length+1)].y-2) && y2 <= (auxCor[(length+1)].y+4))) {
@@ -101,13 +150,14 @@
                             auxArray.push(length);
                             addPath('path',{d:'M'+auxCor[(length+1)].x+','+auxCor[(length+1)].y+'L'+x2+','+y2, stroke:'#e1f6f1',fill:'none','stroke-width':3});
                         }						
-					});
-					$('.drag,.dot').on('mouseup',function(e){
-						$('.drag').off('mousemove');
-					});
-				}
-			});
-		});
+                    }
+                //}
+            });
+            $('.drag,.dot').on('mouseup',function(e){
+                $('.drag').off('mousemove');
+            });
+        //});
+		
 
 		function addPath(tag,attrs){
 			var newpath = document.createElementNS("http://www.w3.org/2000/svg",tag);

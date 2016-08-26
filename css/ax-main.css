@@ -2218,3 +2218,56 @@ form svg path {
     top: -22px;
     left: 4px;
 }
+
+/*DRG UNE LOS PUNTOS*/
+.drag{
+    position: relative;
+/*    border: solid 1px;*/
+    width:246px;
+    height: 227px;
+    display: inline-block;
+    background: url(../img/ax-game-1-page-9.svg) no-repeat;
+}
+.dot{
+    width: 5px;
+    height: 5px;
+    background: #000;
+    border-radius:50%;
+    position: absolute;
+}
+.dot0{ left: 176px; top: 12px; }
+.dot1{ left: 211px; top: 27px; }
+.dot2{ left: 234px; top: 57px; }
+.dot3{ left: 239px; top: 88px; }
+.dot4{ left: 235px; top: 117px; }
+.dot5{ left: 217px; top: 155px; }
+.dot6{ left: 188px; top: 184px; }
+.dot7{ left: 152px; top: 202px; }        
+.dot8{ left: 136px; top: 193px; }
+.dot9{ left: 144px; top: 172px; }
+.dot10{ left: 176px; top: 157px; }
+.dot11{ left: 196px; top: 137px; }
+.dot12{ left: 209px; top: 105px; }
+.dot13{ left: 208px; top: 72px; }
+.dot14{ left: 190px; top: 48px; }
+.dot15{ left: 165px; top: 46px; }        
+.dot16{ left: 146px; top: 58px; }
+.dot17{ left: 140px; top: 72px; }
+.dot18{ left: 140px; top: 110px; }
+.dot19{ left: 126px; top: 125px; }
+.dot20{ left: 109px; top: 112px; }
+.dot21{ left: 110px; top: 77px; }
+.dot22{ left: 99px; top: 53px; }
+.dot23{ left: 75px; top: 45px; }        
+.dot24{ left: 52px; top: 56px; }
+.dot25{ left: 45px; top: 78px; }
+.dot26{ left: 45px; top: 108px; }
+.dot27{ left: 33px; top: 125px; }
+.dot28{ left: 13px; top: 114px; }
+.dot29{ left: 15px; top: 69px; }
+.dot30{ left: 23px; top: 44px; }
+.dot31{ left: 48px; top: 20px; }
+.dot32{ left: 74px; top: 13px; }
+.dot33{ left: 104px; top: 19px; }
+.dot34{ left: 124px; top: 37px; }
+.dot35{ left: 145px; top: 18px; }
