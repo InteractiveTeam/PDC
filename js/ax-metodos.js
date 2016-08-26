@@ -28,11 +28,14 @@ var epmModule = (function($){
                 $('.ax-page-15').load('page.html .page-15');
                 $('.ax-page-16').load('page.html .page-16');
                 $('.ax-page-17').load('page.html .page-17');
-                $('.ax-page-18').load('page.html .page-18');
-                
+                $('.ax-page-18').load('page.html .page-18'); 
                 $('.ax-page-20').load('page.html .page-20');
                 $('.ax-page-22').load('page.html .page-22');
                 $('.ax-page-23').load('page.html .page-23');
+                $('.ax-page-24').load('page.html .page-24');
+                $('.ax-page-25').load('page.html .page-25');
+                $('.ax-page-26').load('page.html .page-26');
+                $('.ax-page-27').load('page.html .page-27');
                 
                 epmModule.bindActions();
                 actions.btnManual.on('click', function(){
@@ -44,7 +47,7 @@ var epmModule = (function($){
                     height: (window.innerWidth > 768)?750:500,
                     autoCenter: true,
                     display: (window.innerWidth > 768)?'double':'single',
-                    page:18
+                    page:26
                 })
 
                 actions.flipbook.bind("turning", function(event, page, view) {
