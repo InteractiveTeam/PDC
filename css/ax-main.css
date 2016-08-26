@@ -2409,6 +2409,9 @@ form svg path {
 }
 
 /*DRG UNE LOS PUNTOS*/
+.ax-lapiz-select{ cursor: url("../img/ax-lapiz-select.jpg") 0 50, auto; }
+.ax-lapiz-select-green{ cursor: url("../img/ax-lapiz-select-green.jpg") 0 50, auto; }
+
 .drag{
     position: relative;
 /*    border: solid 1px;*/

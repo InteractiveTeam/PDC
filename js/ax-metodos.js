@@ -9,8 +9,8 @@ var epmModule = (function($){
             forgotPass:$("#form-forgot-pass"),
             btnManual:$('.btn-manual'),
             manual:$('#manual'),
-            flipbook:$(".flipbook")
-            //svg_dots:document.getElementById('svg_dots')
+            flipbook:$(".flipbook"),
+            svg_stroke:"#000"
         },
         init:function(){
             actions = this.setting;
@@ -71,44 +71,16 @@ var epmModule = (function($){
                         break;
                         case 8:
                         case 9:
-                            //$("#ax-lapiz").on('click',function(){
-                            $("#ax-lapiz").on('mousedown',function(e){
-                                if(!$("#ax-lapiz-clone").length){                                    
-                                    var clone = $(this).clone().prop('id', 'ax-lapiz-clone');
-                                    var x1 = e.clientX,
-                                        y1 = e.clientY;
-                                    clone.css({position:'absolute',left:x1,top:(y1-145)});
-                                    $("body").append(clone);
-                                    
-                                    $(document).on('mousemove',function(e){
-                                        
-                                        /*var x2 = e.clientX,
-                                            y2 = e.clientY;
-                                        clone.css({position:'absolute',left:x2,top:(y2-145)});*/
-                                        $('.ax-principal').css( 'cursor', 'url(../img/ax-lapiz.svg), auto' );
-                                    });
-                                }
+                            $("#ax-lapiz").on('click',function(){
+                                $('.flipbook-viewport').addClass('ax-lapiz-select');
+                                epmModule.dragEMP();
                             });
-                            var svg = document.getElementById('svg_dots');
-                            $('.drag').on('mousemove',function(e){
-                                length = auxArray.length;
-                                var x2 = (e.clientX - parseInt($(this).offset().left)),
-                                    y2 = (e.clientY - parseInt($(this).offset().top));
-
-                                //console.log(x2,y2);
-                                if(length <= 35){
-                                    svg.children[length].setAttribute('d','M'+ auxCor[length].x+','+auxCor[length].y+'L'+x2+','+y2);
-                                    if((x2 >= (auxCor[(length+1)].x)  && x2 <= (auxCor[(length+1)].x+4)) &&
-                                        (y2 >= (auxCor[(length+1)].y) && y2 <= (auxCor[(length+1)].y+4))) {
-                                        svg.children[length].setAttribute('d','M'+ (auxCor[length].x+3)+','+auxCor[length].y+'L'+x2+','+(y2+1));
-                                        auxArray.push(length);
-                                        addPath('path',{d:'M'+(auxCor[(length+1)]+3).x+','+auxCor[(length+1)].y+'L'+x2+','+(y2+1), stroke:'#000',fill:'none','stroke-width':3});
-                                    }						
-                                }
-                            });
-                            $('.drag,.dot').on('mouseup',function(e){            
-                                $('.drag').off('mousemove');
-                            });
+                            
+                            $("#ax-lapiz-green").on('click',function(){
+                                $('.flipbook-viewport').addClass('ax-lapiz-select-green');
+                                epmModule.svg_stroke = '#91c848';
+                                epmModule.dragEMP();
+                            });                            
                             break;
                         case 10:
                         case 11:
@@ -211,6 +183,28 @@ var epmModule = (function($){
                             break;
                     }
                 });
+            });
+        },
+        dragEMP:function(){
+            var svg = document.getElementById('svg_dots');
+            $('.drag').on('mousemove',function(e){
+                length = auxArray.length;
+                var x2 = (e.clientX - parseInt($(this).offset().left)),
+                    y2 = (e.clientY - parseInt($(this).offset().top));
+
+                if(length <= 35){
+                    svg.children[length].setAttribute('d','M'+ auxCor[length].x+','+auxCor[length].y+'L'+x2+','+y2);
+                    if((x2 >= (auxCor[(length+1)].x)  && x2 <= (auxCor[(length+1)].x+4)) &&
+                        (y2 >= (auxCor[(length+1)].y) && y2 <= (auxCor[(length+1)].y+4))) {
+                        svg.children[length].setAttribute('d','M'+ (auxCor[length].x+3)+','+auxCor[length].y+'L'+x2+','+(y2+1));
+                        auxArray.push(length);
+                        addPath('path',{d:'M'+(auxCor[(length+1)].x+3)+','+auxCor[(length+1)].y+'L'+x2+','+(y2+1), stroke:epmModule.svg_stroke,fill:'none','stroke-width':3});
+                    }						
+                }
+            });
+            
+            $('.drag,.dot').on('mouseup',function(e){            
+                $('.drag').off('mousemove');
             });
         },
         bindActions:function(){
