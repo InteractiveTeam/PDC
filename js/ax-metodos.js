@@ -10,6 +10,7 @@ var epmModule = (function($){
             btnManual:$('.btn-manual'),
             manual:$('#manual'),
             flipbook:$(".flipbook")
+            //svg_dots:document.getElementById('svg_dots')
         },
         init:function(){
             actions = this.setting;
@@ -47,7 +48,11 @@ var epmModule = (function($){
                     height: (window.innerWidth > 768)?750:500,
                     autoCenter: true,
                     display: (window.innerWidth > 768)?'double':'single',
+<<<<<<< HEAD
                     page:26
+=======
+                    page:8
+>>>>>>> origin/pruebasArkix
                 })
 
                 actions.flipbook.bind("turning", function(event, page, view) {
@@ -57,8 +62,8 @@ var epmModule = (function($){
                             $('.cont-title').delay(500).fadeIn();                            
                         break;
 
+                        case 5:
                         case 6:
-                        case 7:
                             $('.ax-image-svg').delay(500).animate({opacity: 1}, 1000);
                             $('.ax-page-6 .ax-image-svg').delay(4000).animate({opacity: 1}, 1000);
                             //LLenamos los datos del usuario
@@ -67,6 +72,47 @@ var epmModule = (function($){
                                 $("#pensemos_marca"+i).val(infoPages.data['pensemos_marca'+i]);                                
                             }                             
                         break;
+                        case 8:
+                        case 9:
+                            //$("#ax-lapiz").on('click',function(){
+                            $("#ax-lapiz").on('mousedown',function(e){
+                                if(!$("#ax-lapiz-clone").length){                                    
+                                    var clone = $(this).clone().prop('id', 'ax-lapiz-clone');
+                                    var x1 = e.clientX,
+                                        y1 = e.clientY;
+                                    clone.css({position:'absolute',left:x1,top:(y1-145)});
+                                    $("body").append(clone);
+                                    
+                                    $(document).on('mousemove',function(e){
+                                        
+                                        /*var x2 = e.clientX,
+                                            y2 = e.clientY;
+                                        clone.css({position:'absolute',left:x2,top:(y2-145)});*/
+                                        $('.ax-principal').css( 'cursor', 'url(../img/ax-lapiz.svg), auto' );
+                                    });
+                                }
+                            });
+                            var svg = document.getElementById('svg_dots');
+                            $('.drag').on('mousemove',function(e){
+                                length = auxArray.length;
+                                var x2 = (e.clientX - parseInt($(this).offset().left)),
+                                    y2 = (e.clientY - parseInt($(this).offset().top));
+
+                                //console.log(x2,y2);
+                                if(length <= 35){
+                                    svg.children[length].setAttribute('d','M'+ auxCor[length].x+','+auxCor[length].y+'L'+x2+','+y2);
+                                    if((x2 >= (auxCor[(length+1)].x)  && x2 <= (auxCor[(length+1)].x+4)) &&
+                                        (y2 >= (auxCor[(length+1)].y) && y2 <= (auxCor[(length+1)].y+4))) {
+                                        svg.children[length].setAttribute('d','M'+ (auxCor[length].x+3)+','+auxCor[length].y+'L'+x2+','+(y2+1));
+                                        auxArray.push(length);
+                                        addPath('path',{d:'M'+(auxCor[(length+1)]+3).x+','+auxCor[(length+1)].y+'L'+x2+','+(y2+1), stroke:'#000',fill:'none','stroke-width':3});
+                                    }						
+                                }
+                            });
+                            $('.drag,.dot').on('mouseup',function(e){            
+                                $('.drag').off('mousemove');
+                            });
+                            break;
                         case 10:
                         case 11:
                             //LLenamos los datos del usuario
