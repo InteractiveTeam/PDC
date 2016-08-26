@@ -48,11 +48,7 @@ var epmModule = (function($){
                     height: (window.innerWidth > 768)?750:500,
                     autoCenter: true,
                     display: (window.innerWidth > 768)?'double':'single',
-<<<<<<< HEAD
-                    page:26
-=======
-                    page:8
->>>>>>> origin/pruebasArkix
+                    page:27
                 })
 
                 actions.flipbook.bind("turning", function(event, page, view) {
