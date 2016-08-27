@@ -1,6 +1,8 @@
 epmModule.init();
-var tl = epmModule.setting.tl;
-    
+var settings = epmModule.setting;
+var tl = settings.tl;
+var subTitle = settings.imageTitle;
+
 $(document).ready(function(){    
     
      $('body').css('height', $(window).height())
@@ -10,11 +12,13 @@ $(document).ready(function(){
         .to('.ax-iniciar-sesion', 0.5, {opacity:1,display:'block'},'-=0.20')
         .staggerFrom('.ax-iniciar-sesion .form-group,.ax-iniciar-sesion hgroup', 0.7, {y:-20,opacity:0,},0.10)
         .staggerFrom('.content-btn .button', 0.5, {y:15,opacity:0,},0.10,'-=0.85');
+        tl.from(subTitle, 1, {scale:0, opacity:0},'-=1');
     });
     $(".btn-cancel-login").on('click',function(){
         tl.to('.ax-iniciar-sesion,.ax-registro,.ax-recuperar', 0.5, {opacity:0,display:'none'})
         .to('.content-login', 0.5, {opacity:1,display:'block'})
         .staggerFrom('.content-login .button', 0.7, {y:20,opacity:0,},0.10,'-=0.85');
+        tl.from(subTitle, 1, {scale:0, opacity:0},'-=1');
     });
 
     $(".btn-sign-up").on('click',function(){
@@ -22,6 +26,7 @@ $(document).ready(function(){
         .to('.ax-registro', 0.5, {opacity:1,display:'block'},'-=0.20')
         .staggerFrom('.ax-registro .form-group,.ax-registro hgroup', 0.7, {y:-20,opacity:0,},0.10)
         .staggerFrom('.content-btn .button', 0.5, {y:15,opacity:0,},0.10,'-=0.85');
+        tl.from(subTitle, 1, {scale:0, opacity:0},'-=1');
     });
     
     $(".btn-forgot-pass").on('click',function(){
@@ -29,6 +34,7 @@ $(document).ready(function(){
         .to('.ax-recuperar', 0.5, {opacity:1,display:'block'})
         .staggerFrom('.ax-recuperar .form-group', 0.7, {y:-20,opacity:0,},0.10)
         .staggerFrom('.content-btn .button', 0.7, {y:20,opacity:0,},0.10,'-=0.85');
+        tl.from(subTitle, 1, {scale:0, opacity:0},'-=1');
     });
 
     $(".btn-log-out").on('click',function(){

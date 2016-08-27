@@ -10,6 +10,7 @@ var epmModule = (function($){
             btnManual:$('.btn-manual'),
             manual:$('#manual'),
             flipbook:$(".flipbook"),
+            imageTitle:$('.ax-container svg'),
             svg_stroke:"#000"
         },
         init:function(){
