@@ -9,8 +9,8 @@ var epmModule = (function($){
             forgotPass:$("#form-forgot-pass"),
             btnManual:$('.btn-manual'),
             manual:$('#manual'),
-            flipbook:$(".flipbook")
-            //svg_dots:document.getElementById('svg_dots')
+            flipbook:$(".flipbook"),
+            svg_stroke:"#000"
         },
         init:function(){
             actions = this.setting;
@@ -85,44 +85,17 @@ var epmModule = (function($){
                         break;
                         case 8:
                         case 9:
-                            //$("#ax-lapiz").on('click',function(){
-                            $("#ax-lapiz").on('mousedown',function(e){
-                                if(!$("#ax-lapiz-clone").length){                                    
-                                    var clone = $(this).clone().prop('id', 'ax-lapiz-clone');
-                                    var x1 = e.clientX,
-                                        y1 = e.clientY;
-                                    clone.css({position:'absolute',left:x1,top:(y1-145)});
-                                    $("body").append(clone);
-                                    
-                                    $(document).on('mousemove',function(e){
-                                        
-                                        /*var x2 = e.clientX,
-                                            y2 = e.clientY;
-                                        clone.css({position:'absolute',left:x2,top:(y2-145)});*/
-                                        $('.ax-principal').css( 'cursor', 'url(../img/ax-lapiz.svg), auto' );
-                                    });
-                                }
+                            $("#ax-lapiz").on('click',function(){
+                                $('.flipbook-viewport').addClass('ax-lapiz-select');
+                                epmModule.dragEMP();
                             });
-                            var svg = document.getElementById('svg_dots');
-                            $('.drag').on('mousemove',function(e){
-                                length = auxArray.length;
-                                var x2 = (e.clientX - parseInt($(this).offset().left)),
-                                    y2 = (e.clientY - parseInt($(this).offset().top));
-
-                                //console.log(x2,y2);
-                                if(length <= 35){
-                                    svg.children[length].setAttribute('d','M'+ auxCor[length].x+','+auxCor[length].y+'L'+x2+','+y2);
-                                    if((x2 >= (auxCor[(length+1)].x)  && x2 <= (auxCor[(length+1)].x+4)) &&
-                                        (y2 >= (auxCor[(length+1)].y) && y2 <= (auxCor[(length+1)].y+4))) {
-                                        svg.children[length].setAttribute('d','M'+ (auxCor[length].x+3)+','+auxCor[length].y+'L'+x2+','+(y2+1));
-                                        auxArray.push(length);
-                                        addPath('path',{d:'M'+(auxCor[(length+1)]+3).x+','+auxCor[(length+1)].y+'L'+x2+','+(y2+1), stroke:'#000',fill:'none','stroke-width':3});
-                                    }						
-                                }
-                            });
-                            $('.drag,.dot').on('mouseup',function(e){            
-                                $('.drag').off('mousemove');
-                            });
+                            
+                            $("#ax-lapiz-green").on('click',function(){
+                                $('.flipbook-viewport').addClass('ax-lapiz-select-green');
+                                $("#svg_dots path").attr('stroke','#91c848');
+                                epmModule.svg_stroke = '#91c848';
+                                epmModule.dragEMP();
+                            });                            
                             break;
                         case 10:
                         case 11:
@@ -225,6 +198,28 @@ var epmModule = (function($){
                             break;
                     }
                 });
+            });
+        },
+        dragEMP:function(){
+            var svg = document.getElementById('svg_dots');
+            $('.drag').on('mousemove',function(e){
+                length = auxArray.length;
+                var x2 = (e.clientX - parseInt($(this).offset().left)),
+                    y2 = (e.clientY - parseInt($(this).offset().top));
+
+                if(length <= 35){
+                    svg.children[length].setAttribute('d','M'+ auxCor[length].x+','+auxCor[length].y+'L'+x2+','+y2);
+                    if((x2 >= (auxCor[(length+1)].x)  && x2 <= (auxCor[(length+1)].x+4)) &&
+                        (y2 >= (auxCor[(length+1)].y) && y2 <= (auxCor[(length+1)].y+4))) {
+                        svg.children[length].setAttribute('d','M'+ (auxCor[length].x+3)+','+auxCor[length].y+'L'+x2+','+(y2+1));
+                        auxArray.push(length);
+                        addPath('path',{d:'M'+(auxCor[(length+1)].x+3)+','+auxCor[(length+1)].y+'L'+x2+','+(y2+1), stroke:epmModule.svg_stroke,fill:'none','stroke-width':3});
+                    }						
+                }
+            });
+            
+            $('.drag,.dot').on('mouseup',function(e){            
+                $('.drag').off('mousemove');
             });
         },
         bindActions:function(){
@@ -330,6 +325,8 @@ var epmModule = (function($){
                 data:data,
                 async:false,
                 dataType:'json',
+                processData: false,
+                contentType: false,
                 success:function(data){
                     result = data;
                 }
@@ -346,6 +343,50 @@ var epmModule = (function($){
 
 		    return indexed_array;
 		},
+        previewFile:function(file,type){            
+            var preview = document.getElementById('profile_mesa'); //selects the query named img            
+            var file    = file.files[0]; //sames as here
+            var reader  = new FileReader();
+
+            reader.onloadend = function(){
+                preview.style.display = 'block';
+                preview.src = reader.result;
+                epmModule.effectPreviewFile(type,reader.result);
+            }
+            
+            var data = new FormData();
+            data.append("file", file);
+            data.append("action", "saveImg");
+            data.append("field", type);
+            data.append("data", JSON.stringify(dataUser));
+            
+            infoPages = epmModule.requestAjax(data);
+            console.log(infoPages);            
+            
+            if(file){
+                reader.readAsDataURL(file); //reads the data as a URL
+            } else {
+                preview.src = "";
+            }
+        },
+        effectPreviewFile:function(type,img){
+            switch(type){
+                case'flickr':
+                    actions.tl.to('.caballeros_mesa',1,{scale:1.2}).
+                        to('.caballeros_mesa',1.5,{rotation:-30},'-=0.50').
+                        to('.caballeros_mesa',1.5,{top:95,left:472,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.70');
+                break;
+                case'gplus':
+                    actions.tl.to('.caballeros_mesa',1,{scale:1.2}).
+                        to('.caballeros_mesa',1.5,{rotation:-150},'-=0.50').
+                        to('.caballeros_mesa',1.5,{top:570,left:472,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.70');
+                break;
+            }
+        },
+        setImgMesa:function(id,img){
+            $("."+id).attr('src',img);            
+            $(".caballeros_mesa").attr('src','');
+        },        
         validateForm:function(type,value){
 			var regex = '',status;
 			switch(type){

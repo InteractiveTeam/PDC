@@ -29,6 +29,23 @@
                 $result = $objUser->getData($dataUser);
                 print_r(json_encode($result));
                 break;
+            case 'saveImg':
+                $dataUser = json_decode($_POST['data']);
+                                
+                $temp = explode(".", $_FILES["file"]["name"]);
+                
+                $newfilename = round(microtime(true)) . '.' . end($temp);                
+                
+                $uploaddir = __DIR__.'/../../img/img_users/';
+                $uploadfile = $uploaddir.basename($newfilename);
+                                
+                if(move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile)){
+                    $result = $objUser->saveImage($newfilename,$dataUser,$_POST['field']);
+                    print_r(json_encode($result));
+                }else{
+                    print_r(json_encode(array('data'=>false)));
+                }                
+                break;                
 		}
 	}
 

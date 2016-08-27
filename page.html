@@ -197,7 +197,7 @@ c0,0-11.343-35.121-10.743-57.024c0,0,2.341-3.284,2.042-6.885c-0.601-2.4-2.701-3.
                         <p>Un l√°piz</p>
                     </div>
                     <div class="ax-tols ax-tols-2">
-                        <img src="img/ax-color.svg" />
+                        <img src="img/ax-color.svg" id="ax-lapiz-green"/>
                         <p>Un color</p>
                     </div>
                     <div class="ax-tols ax-tols-3">
@@ -870,28 +870,32 @@ a implementar acciones de mejoramiento para alcanzar nuestros objetivos estrateÃ
             <h4>Nuestras redes tienen cara</h4>
             <p>Ponle rostro a los responsables de cada punto de contacto. Imprime, recorta y pega su foto</p>
         </div>
-        <ul class="ax-cont-group">
-            <li class="ax-item">
-               <div class="ax-image">
-                   <img src="" alt="">
-                </div>
-                <div class="ax-name">
-                   <p>Flickr</p><br/>
-                   <input type="text" placeholder="Nombre" class="input">
-                </div>
-                <input type="text" placeholder="+Personalidad" class="input">
-            </li>
-            <li class="ax-item">
-               <div class="ax-image">
-                   <img src="" alt="">
-                </div>
-                <div class="ax-name">
-                   <p>G+</p><br/>
-                   <input type="text" placeholder="Nombre" class="input">
-                </div>
-                <input type="text" placeholder="+Personalidad" class="input">
-            </li>
-        </ul>
+        <form id="fotos_mesa1">
+            <ul class="ax-cont-group">
+                <li class="ax-item">
+                   <div class="ax-image">                  
+                       <img src="" alt="" width="103" height="137" class="flickr">
+                       <input type="file" class="ax-input-file" onchange="epmModule.previewFile(this,'flickr')">
+                    </div>
+                    <div class="ax-name">
+                       <p>Flickr</p><br/>
+                       <input type="text" placeholder="Nombre" class="input">
+                    </div>
+                    <input type="text" placeholder="+Personalidad" class="input">
+                </li>
+                <li class="ax-item">
+                   <div class="ax-image">
+                       <img src="" alt="" width="103" height="137" class="gplus">
+                       <input type="file" class="ax-input-file" onchange="epmModule.previewFile(this,'gplus')">
+                    </div>
+                    <div class="ax-name">
+                       <p>G+</p><br/>
+                       <input type="text" placeholder="Nombre" class="input">
+                    </div>
+                    <input type="text" placeholder="+Personalidad" class="input">
+                </li>
+            </ul>
+        </form>
     </div>
 </div>
 
