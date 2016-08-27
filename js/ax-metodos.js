@@ -325,6 +325,20 @@ var epmModule = (function($){
                 data:data,
                 async:false,
                 dataType:'json',
+                success:function(data){
+                    result = data;
+                }
+            });
+            return result;
+        },
+        requestAjaxFormdata:function(data){
+            var result = '';
+            $.ajax({
+                type:'POST',
+                url:'../funciones/control/user.php',
+                data:data,
+                async:false,
+                dataType:'json',
                 processData: false,
                 contentType: false,
                 success:function(data){
@@ -360,7 +374,7 @@ var epmModule = (function($){
             data.append("field", type);
             data.append("data", JSON.stringify(dataUser));
             
-            infoPages = epmModule.requestAjax(data);
+            infoPages = epmModule.requestAjaxFormdata(data);
             console.log(infoPages);            
             
             if(file){
