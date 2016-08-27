@@ -43,7 +43,7 @@
                     $result = $objUser->saveImage($newfilename,$dataUser,$_POST['field']);
                     print_r(json_encode($result));
                 }else{
-                    print_r(json_encode(array('data'=>false)));
+                    print_r(json_encode(array('data'=>false,msg=>'img not upload')));
                 }                
                 break;                
 		}
