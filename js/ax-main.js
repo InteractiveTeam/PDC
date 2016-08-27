@@ -2,6 +2,8 @@ epmModule.init();
 var tl = epmModule.setting.tl;
 $(document).ready(function(){
     
+    $('body').css('height', $(window).height())
+    
     $(".btn-login").on('click',function(){
         tl.to('.content-login', 0.5, {opacity:0,display:'none'})
         .to('.ax-iniciar-sesion', 0.5, {opacity:1,display:'block'},'-=0.20')

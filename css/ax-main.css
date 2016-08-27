@@ -73,7 +73,8 @@ textarea {
 :-ms-input-placeholder { color: #b3a1a5 !important; }
 
 body {
-    background: rgb(75, 171, 73);
+    background: url(../img/ax-font-particules.svg), radial-gradient(#4eaf49, #399149);
+    background-size: 100%;
 }
 
 * {
@@ -83,6 +84,98 @@ body {
 p {
     line-height: 1.2rem;
     font-size: 0.95rem;
+}
+
+.ax-image-user {
+    margin: 0 10px;
+    position: relative;
+}
+
+.ax-image-user:before {
+    content: url(../img/ax-avatar-select.svg);
+    display: block;
+    position: absolute;
+    top: -14px;
+    right: -1px;
+    z-index: -1;
+    transform-origin: 50% 50%;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+}
+
+.col-md-12.col-centered.text-right.content-btn {
+    margin: 40px 0;
+    display: inline-block;
+    width: auto;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+}
+
+.col-md-12.col-centered.text-right.content-btn:hover .ax-image-user:before {
+    transform: rotate(270deg) scale(1.3);
+    -webkit-transform: rotate(270deg) scale(1.3);
+    transform-origin: 53% 53%;
+}
+
+.col-md-12.col-centered.text-right.content-btn img {
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+}
+
+.col-md-12.col-centered.text-right.content-btn:hover img {
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+}
+
+.ax-profile {
+     text-align: right;   
+}
+
+.content-login {
+    margin-top: 13%;
+}
+
+.content-login h1, .col-centered h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 110px;
+    letter-spacing: 16px;
+    line-height: 140px;
+    padding: 40px;
+}
+
+.ax-subText {
+    color: #FFF;
+    text-align: center;
+    margin: 20px 0;
+    padding: 60px 0;
+    letter-spacing: 0.2rem;
+    font-size: 38px;
+}
+
+.content-login h1 .ax-part-1, .col-centered h1 .ax-part-1 {
+    font-family: 'vaground';
+    display: block;
+    font-size: 80px;
+}
+
+.content-login h1 .ax-part-2, .col-centered h1 .ax-part-2 {
+    font-family: 'vaground';
+    display: block;
+    font-size: 100px;
+    letter-spacing: 9px;
+    line-height: 90px;
+}
+
+.ax-container {
+    width: 480px;
+    margin: 80px auto 0 auto;
+}
+
+
+.ax-container form {
+    width: 80%;
+    margin: 0 auto;
 }
 
 .manual {
@@ -106,6 +199,73 @@ p {
 
 /*doble página*/
 /* Basic sample */
+
+.flip-control {
+    position: relative;
+    bottom: 48%;
+}
+
+.flip-control #next, .flip-control #prev {
+    position: absolute;
+    opacity: 0.6;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+}
+
+.flip-control #next:hover, .flip-control #prev:hover {
+    opacity: 1;
+}
+
+.flip-control #next {
+    right: 2%;
+    font-size: 0;
+    width: 60px;
+    height: 102px;
+    background: url(../img/sprite-book.png);
+    background-position: -78px 0;
+}
+
+.flip-control #prev {
+    left: 2%;
+    font-size: 0;
+    width: 60px;
+    height: 102px;
+    background: url(../img/sprite-book.png);
+    background-position: -15px 0;
+}
+
+.ax-close {
+    background: #2f8137;
+    width: 85px;
+    height: 65px;
+    padding: 10px 0;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+}
+
+.ax-close:before {
+    content: "";
+    display: block;
+    width: 46px;
+    height: 46px;
+    background: url(../img/sprite-book.png);
+    background-position: -169px -29px;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+}
+
+.ax-close:hover {
+    background: #226d29;
+}
+
+.ax-close:hover:before {
+    transform: rotate(180deg);
+}
 
 .flipbook-viewport{
 	overflow:hidden;
@@ -2027,6 +2187,16 @@ p {
     height: 100%;
 }
 
+.ax-page-28 .ax-cont-info img {
+    width: 120px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 72%;
+    left: 0;
+    margin: auto;
+}
+
 .ax-content-metricas{
     position: relative;
 }
@@ -2289,9 +2459,10 @@ a.linkEffect:after{
 
 a.linkEffect:hover:after{  width:100%; }
 
-.ax-iniciar-sesion .form-control,.ax-registro .form-control,.ax-recuperar .form-control{
+.ax-container .form-control{
     border-radius: 0;
     border: none;
+    padding: 25px 10px;
 }
 
 form li {position: relative;display: inline-block;}

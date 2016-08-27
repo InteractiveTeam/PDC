@@ -43,14 +43,28 @@ var epmModule = (function($){
                 actions.btnManual.on('click', function(){
                     actions.manual.animate({top: 0}, 'slow')
                 })
+                
+                $('.ax-close').on('click', function(){
+                    actions.manual.animate({top: 120+'%'}, 'slow')
+                })
 
                 actions.flipbook.turn({
                     width: (window.innerWidth > 768)?1044:320,
                     height: (window.innerWidth > 768)?750:500,
                     autoCenter: true,
                     display: (window.innerWidth > 768)?'double':'single',
-                    page:27
                 })
+
+                $("#prev").click(function(e){
+                    e.preventDefault();
+                    actions.flipbook.turn("previous");
+                });
+
+                $("#next").click(function(e){
+                    e.preventDefault();
+                    actions.flipbook.turn("next");
+                });
+
 
                 actions.flipbook.bind("turning", function(event, page, view) {
                     pageCat = page;
