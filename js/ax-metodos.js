@@ -196,6 +196,16 @@ var epmModule = (function($){
                                 $("#comentarios_en_tiendas"+i).val(infoPages.data['comentarios_en_tiendas'+i]);
                             }
                             break;
+                            case 24:
+                            case 25:                                
+                                $("img.flickr").attr('src',infoPages.data.img_flickr);
+                                $("img.facebook").attr('src',infoPages.data.img_facebook);
+                                $("img.twitter").attr('src',infoPages.data.img_twitter);
+                                $("img.youtube").attr('src',infoPages.data.img_youtube);
+                                $("img.instagram").attr('src',infoPages.data.img_instagram);
+                                $("img.pinterest").attr('src',infoPages.data.img_pinterest);
+                                $("img.gplus").attr('src',infoPages.data.img_gplus);
+                                break;
                     }
                 });
             });
@@ -386,14 +396,39 @@ var epmModule = (function($){
         effectPreviewFile:function(type,img){
             switch(type){
                 case'flickr':
-                    actions.tl.to('.caballeros_mesa',1,{scale:1.2}).
-                        to('.caballeros_mesa',1.5,{rotation:-30},'-=0.50').
-                        to('.caballeros_mesa',1.5,{top:95,left:472,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.70');
+                    actions.tl.to('.caballeros_mesa',1,{scale:1.5}).
+                        to('.caballeros_mesa',1,{rotation:-30},'-=0.50').
+                        to('.caballeros_mesa',1,{top:95,left:472,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.60');
                 break;
                 case'gplus':
-                    actions.tl.to('.caballeros_mesa',1,{scale:1.2}).
-                        to('.caballeros_mesa',1.5,{rotation:-150},'-=0.50').
-                        to('.caballeros_mesa',1.5,{top:570,left:472,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.70');
+                    actions.tl.to('.caballeros_mesa',1,{scale:1.5}).
+                        to('.caballeros_mesa',1,{rotation:-150},'-=0.50').
+                        to('.caballeros_mesa',1,{top:570,left:472,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.60');
+                break;
+                case'facebook':
+                    actions.tl.to('.caballeros_mesa',1,{scale:1.5}).
+                        to('.caballeros_mesa',1,{rotation:10},'-=0.50').
+                        to('.caballeros_mesa',1,{top:39,left:775,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.60');
+                break;
+                case'twitter':
+                    actions.tl.to('.caballeros_mesa',1,{scale:1.5}).
+                        to('.caballeros_mesa',1,{rotation:40},'-=0.50').
+                        to('.caballeros_mesa',1,{top:116,left:975,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.60');
+                break;
+                case'youtube':
+                    actions.tl.to('.caballeros_mesa',1,{scale:1.5}).
+                        to('.caballeros_mesa',1,{rotation:90},'-=0.50').
+                        to('.caballeros_mesa',1,{top:323,left:1070,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.60');
+                break;
+                case'instagram':
+                    actions.tl.to('.caballeros_mesa',1,{scale:1.5}).
+                        to('.caballeros_mesa',1,{rotation:138},'-=0.50').
+                        to('.caballeros_mesa',1,{top:535,left:974,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.60');
+                break;
+                case'pinterest':
+                    actions.tl.to('.caballeros_mesa',1,{scale:1.5}).
+                        to('.caballeros_mesa',1,{rotation:166},'-=0.50').
+                        to('.caballeros_mesa',1,{top:617,left:787,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.60');
                 break;
             }
         },
