@@ -78,6 +78,7 @@ var epmModule = (function($){
                             
                             $("#ax-lapiz-green").on('click',function(){
                                 $('.flipbook-viewport').addClass('ax-lapiz-select-green');
+                                $("#svg_dots path").attr('stroke','#91c848');
                                 epmModule.svg_stroke = '#91c848';
                                 epmModule.dragEMP();
                             });                            
@@ -310,6 +311,8 @@ var epmModule = (function($){
                 data:data,
                 async:false,
                 dataType:'json',
+                processData: false,
+                contentType: false,
                 success:function(data){
                     result = data;
                 }
@@ -326,6 +329,50 @@ var epmModule = (function($){
 
 		    return indexed_array;
 		},
+        previewFile:function(file,type){            
+            var preview = document.getElementById('profile_mesa'); //selects the query named img            
+            var file    = file.files[0]; //sames as here
+            var reader  = new FileReader();
+
+            reader.onloadend = function(){
+                preview.style.display = 'block';
+                preview.src = reader.result;
+                epmModule.effectPreviewFile(type,reader.result);
+            }
+            
+            var data = new FormData();
+            data.append("file", file);
+            data.append("action", "saveImg");
+            data.append("field", type);
+            data.append("data", JSON.stringify(dataUser));
+            
+            infoPages = epmModule.requestAjax(data);
+            console.log(infoPages);            
+            
+            if(file){
+                reader.readAsDataURL(file); //reads the data as a URL
+            } else {
+                preview.src = "";
+            }
+        },
+        effectPreviewFile:function(type,img){
+            switch(type){
+                case'flickr':
+                    actions.tl.to('.caballeros_mesa',1,{scale:1.2}).
+                        to('.caballeros_mesa',1.5,{rotation:-30},'-=0.50').
+                        to('.caballeros_mesa',1.5,{top:95,left:472,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.70');
+                break;
+                case'gplus':
+                    actions.tl.to('.caballeros_mesa',1,{scale:1.2}).
+                        to('.caballeros_mesa',1.5,{rotation:-150},'-=0.50').
+                        to('.caballeros_mesa',1.5,{top:570,left:472,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.70');
+                break;
+            }
+        },
+        setImgMesa:function(id,img){
+            $("."+id).attr('src',img);            
+            $(".caballeros_mesa").attr('src','');
+        },        
         validateForm:function(type,value){
 			var regex = '',status;
 			switch(type){

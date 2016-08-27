@@ -870,28 +870,32 @@ a implementar acciones de mejoramiento para alcanzar nuestros objetivos estrateÌ
             <h4>Nuestras redes tienen cara</h4>
             <p>Ponle rostro a los responsables de cada punto de contacto. Imprime, recorta y pega su foto</p>
         </div>
-        <ul class="ax-cont-group">
-            <li class="ax-item">
-               <div class="ax-image">
-                   <img src="" alt="">
-                </div>
-                <div class="ax-name">
-                   <p>Flickr</p><br/>
-                   <input type="text" placeholder="Nombre" class="input">
-                </div>
-                <input type="text" placeholder="+Personalidad" class="input">
-            </li>
-            <li class="ax-item">
-               <div class="ax-image">
-                   <img src="" alt="">
-                </div>
-                <div class="ax-name">
-                   <p>G+</p><br/>
-                   <input type="text" placeholder="Nombre" class="input">
-                </div>
-                <input type="text" placeholder="+Personalidad" class="input">
-            </li>
-        </ul>
+        <form id="fotos_mesa1">
+            <ul class="ax-cont-group">
+                <li class="ax-item">
+                   <div class="ax-image">                  
+                       <img src="" alt="" width="103" height="137" class="flickr">
+                       <input type="file" class="ax-input-file" onchange="epmModule.previewFile(this,'flickr')">
+                    </div>
+                    <div class="ax-name">
+                       <p>Flickr</p><br/>
+                       <input type="text" placeholder="Nombre" class="input">
+                    </div>
+                    <input type="text" placeholder="+Personalidad" class="input">
+                </li>
+                <li class="ax-item">
+                   <div class="ax-image">
+                       <img src="" alt="" width="103" height="137" class="gplus">
+                       <input type="file" class="ax-input-file" onchange="epmModule.previewFile(this,'gplus')">
+                    </div>
+                    <div class="ax-name">
+                       <p>G+</p><br/>
+                       <input type="text" placeholder="Nombre" class="input">
+                    </div>
+                    <input type="text" placeholder="+Personalidad" class="input">
+                </li>
+            </ul>
+        </form>
     </div>
 </div>
 

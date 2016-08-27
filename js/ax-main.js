@@ -1,7 +1,6 @@
 epmModule.init();
 var tl = epmModule.setting.tl;
-$(document).ready(function(){
-    
+$(document).ready(function(){    
     $(".btn-login").on('click',function(){
         tl.to('.content-login', 0.5, {opacity:0,display:'none'})
         .to('.ax-iniciar-sesion', 0.5, {opacity:1,display:'block'},'-=0.20')
@@ -66,40 +65,6 @@ var auxCor = [
                 {x:74,y:13},{x:104,y:19},{x:124,y:37},{x:145,y:18},
                 {x:176,y:12}
              ];
-
-/*$("body").on('mousedown','.dot',function(e){
-    e.preventDefault();
-    
-    var svg = document.getElementById('svg_dots');
-    
-    length = auxArray.length;				
-
-    var x1 = e.clientX,
-        y1 = e.clientY;
-    
-    if($(this).hasClass('dot'+length)){
-        $('.drag').on('mousemove',function(e){
-            length = auxArray.length;
-            var x2 = (e.clientX - parseInt($(this).offset().left)),
-                y2 = (e.clientY - parseInt($(this).offset().top));
-            
-            console.log(x2,y2);
-            if(length <= 35){
-                svg.children[length].setAttribute('d','M'+ auxCor[length].x+','+auxCor[length].y+'L'+x2+','+y2);
-                if((x2 >= (auxCor[(length+1)].x)  && x2 <= (auxCor[(length+1)].x+4)) &&
-                    (y2 >= (auxCor[(length+1)].y) && y2 <= (auxCor[(length+1)].y+4))) {
-                    svg.children[length].setAttribute('d','M'+ (auxCor[length].x+2)+','+auxCor[length].y+'L'+x2+','+y2);
-                    auxArray.push(length);
-                    addPath('path',{d:'M'+(auxCor[(length+1)]+2).x+','+auxCor[(length+1)].y+'L'+x2+','+y2, stroke:'#000',fill:'none','stroke-width':3});
-                }						
-            }
-        });
-        $('.drag,.dot').on('mouseup',function(e){            
-            $('.drag').off('mousemove');
-        });
-    }
-});*/
-
 function addPath(tag,attrs){
     var newpath = document.createElementNS("http://www.w3.org/2000/svg",tag);
     var svg = document.getElementById('svg_dots');

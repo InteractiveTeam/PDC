@@ -30,9 +30,11 @@
     font-weight: normal;
     font-style: normal;
 }
-
 h1, h2, h3, h4, h5, h6 {
     font-family: 'vagron'
+}
+input[type='file']:focus{
+	outline:none;
 }
 input[type='number'] {
     -moz-appearance:textfield;
@@ -1904,6 +1906,8 @@ p {
     width: 100%;
     height: 137px;
     background: url(../img/pag-24/ax-user-incog.png);
+    overflow: hidden;
+    position: relative;
 }
 
 .ax-page-24 .ax-cont-user .ax-item input, .ax-page-25 .ax-cont-user .ax-item input {
@@ -1987,6 +1991,20 @@ p {
     left: 80px;
     top: 19px;
     transform: rotate(10deg);
+}
+.page-24 .ax-image img{ object-fit: cover; }
+
+.ax-input-file{
+    height: 100%;
+    position: absolute;
+    top: -24px;
+}
+.caballeros_mesa{
+    display: none;
+    position: absolute;
+    object-fit: cover;
+    top: 336px;
+    left: 698px;
 }
 
 .ax-page-26 .ax-cont-info {

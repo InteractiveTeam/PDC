@@ -107,6 +107,13 @@ class Modeluser {
         $result = $this->queries($query,array($user['id']));
         return array('data'=>$result);
     }
+    
+    public function saveImage($img,$user,$field){
+        $query = "UPDATE data_fields SET img_".$field." =? WHERE id_user=?";
+        $stmt = $this->conn->prepare($query);
+        $result = $stmt->execute(array('img/img_users/'.$img,$user->id));
+        return array('data'=>$result);
+    }
         
     public function generatePassword($length = 9){
 	    $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
