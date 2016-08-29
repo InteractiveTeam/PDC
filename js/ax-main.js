@@ -3,9 +3,13 @@ var settings = epmModule.setting;
 var tl = settings.tl;
 var subTitle = settings.imageTitle;
 
-$(document).ready(function(){    
+$(document).ready(function(){
     
-     $('body').css('height', $(window).height())
+    $('body').css('height', $(window).height());
+//    $( window ).resize(function(){
+//        $('body').css('height', $(window).height());
+//        //$('.flipbook-viewport .container').height(($(window).height())-20);
+//    });    
     
     $(".btn-login").on('click',function(){
         tl.to('.content-login', 0.5, {opacity:0,display:'none'})
@@ -44,7 +48,7 @@ $(document).ready(function(){
     	sessionStorage.clear();
     	location.reload();
     });
-    $("body").on('blur','#pensemos_marca1,#pensemos_marca2,#pensemos_marca3,#pensemos_marca4,#pensemos_marca5,#describe_personaje1,#describe_personaje2,#facebook,#google,#instagram,#twitter,#youtube,#pinterest,#flickr,#dale_orden,#manos_obra,#sitios_web1,#sitios_web2,#boletines_electronicos1,#boletines_electronicos2,#redes_sociales1,#redes_sociales2,#aplicaciones_moviles1,#aplicaciones_moviles2,#visitas1,#visitas2,#visitantes_unicos1,#visitantes_unicos2,#porcentaje_de_rebote1,#porcentaje_de_rebote2,#tiempo_promedio_por_visita1,#tiempo_promedio_por_visita2,#numero_de_contactos1,#numero_de_contactos2,#boletines_abiertos1,#boletines_abiertos2,#me_gusta1,#me_gusta2,#compartidos1,#compartidos2,#seguidores1,#seguidores2,#comentarios1,#comentarios2,#descargas1,#descargas2,#comentarios_en_tiendas1,#comentarios_en_tiendas2,#punto_contacto1,#punto_contacto2,#punto_contacto3,#punto_contacto4,#punto_contacto5,#punto_contacto6,#punto_contacto7,#punto_contacto8,#punto_contacto9,#punto_contacto10,#punto_contacto11',function(){
+    $("body").on('blur','#pensemos_marca1,#pensemos_marca2,#pensemos_marca3,#pensemos_marca4,#pensemos_marca5,#describe_personaje1,#describe_personaje2,#facebook,#google,#instagram,#twitter,#youtube,#pinterest,#flickr,#dale_orden,#manos_obra,#sitios_web1,#sitios_web2,#boletines_electronicos1,#boletines_electronicos2,#redes_sociales1,#redes_sociales2,#aplicaciones_moviles1,#aplicaciones_moviles2,#visitas1,#visitas2,#visitantes_unicos1,#visitantes_unicos2,#porcentaje_de_rebote1,#porcentaje_de_rebote2,#tiempo_promedio_por_visita1,#tiempo_promedio_por_visita2,#numero_de_contactos1,#numero_de_contactos2,#boletines_abiertos1,#boletines_abiertos2,#me_gusta1,#me_gusta2,#compartidos1,#compartidos2,#seguidores1,#seguidores2,#comentarios1,#comentarios2,#descargas1,#descargas2,#comentarios_en_tiendas1,#comentarios_en_tiendas2,#punto_contacto1,#punto_contacto2,#punto_contacto3,#punto_contacto4,#punto_contacto5,#punto_contacto6,#punto_contacto7,#punto_contacto8,#punto_contacto9,#punto_contacto10,#punto_contacto11,#punto_contacto12,#punto_contacto13,#punto_contacto14,#punto_contacto15,#punto_contacto16,#punto_contacto17,#punto_contacto18,#punto_contacto19,#punto_contacto20,#punto_contacto21,#punto_contacto22,#punto_contacto23,#punto_contacto24',function(){
         var text = $(this).val();
         epmModule.saveDataPage(text,$(this).attr('id'),false,'saveData');
     });
