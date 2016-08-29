@@ -93,7 +93,7 @@ p {
     position: relative;
 }
 
-.content-login .ax-point span {
+.ax-point span {
     display: block;
     position: absolute;
     width: 26px;
@@ -105,29 +105,37 @@ p {
     left: 0;
 }
 
-.content-login .ax-point span:nth-child(1) {top: 131px; left: 353px;}
-.content-login .ax-point span:nth-child(2) {top: 131px; left: 451px;}
-.content-login .ax-point span:nth-child(3) {top: 84px; left: 469px;}
-.content-login .ax-point span:nth-child(4) {top: 88px; left: 543px;}
-.content-login .ax-point span:nth-child(5) {top: 129px; left: 599px;}
-.content-login .ax-point span:nth-child(6) {top: 87px; left: 614px;}
-.content-login .ax-point span:nth-child(7) {top: 107px; left: 684px;}
-.content-login .ax-point span:nth-child(8) {top: 132px;left: 740px;}
-.content-login .ax-point span:nth-child(9) {top: 88px;left: 751px;}
-.content-login .ax-point span:nth-child(10) {top: 232px;left: 510px;width: 24px;height: 24px;}
-.content-login .ax-point span:nth-child(11) {top: 261px;left: 597px;width: 22px;height: 22px;}
-.content-login .ax-point span:nth-child(12) {top: 342px;left: 360px;}
-.content-login .ax-point span:nth-child(13) {top: 360px;left: 390px;}
-.content-login .ax-point span:nth-child(14) {top: 360px;left: 427px;}
-.content-login .ax-point span:nth-child(15) {top: 342px;left: 485px;}
-.content-login .ax-point span:nth-child(16) {top: 380px;left: 531px;}
-.content-login .ax-point span:nth-child(17) {top: 342px;left: 546px;}
-.content-login .ax-point span:nth-child(18) {top: 360px;left: 568px;}
-.content-login .ax-point span:nth-child(19) {top: 378px;left: 646px;}
-.content-login .ax-point span:nth-child(20) {top: 342px;left: 665px;}
-.content-login .ax-point span:nth-child(21) {top: 343px;left: 713px;}
-.content-login .ax-point span:nth-child(22) {top: 377px;left: 742px;}
-.content-login .ax-point span:nth-child(23) {top: 347px;left: 769px;}
+.ax-point span:nth-child(1) {top: 131px; left: 353px; animation: titilar 3s ease infinite; animation-delay: 6s;}
+.ax-point span:nth-child(2) {top: 131px; left: 451px;animation: titilar 3s ease infinite; animation-delay: 1s;}
+.ax-point span:nth-child(3) {top: 84px; left: 469px; animation: titilar 4s ease infinite; animation-delay: 12s;}
+.ax-point span:nth-child(4) {top: 88px; left: 543px; animation: titilar 3s ease infinite; animation-delay: 5s;}
+.ax-point span:nth-child(5) {top: 129px; left: 599px; animation: titilar 5s ease infinite; animation-delay: 8s;}
+.ax-point span:nth-child(6) {top: 87px; left: 614px; animation: titilar 3s ease infinite; animation-delay: 7s; }
+.ax-point span:nth-child(7) {top: 107px; left: 684px; animation: titilar 2s ease infinite; animation-delay: 9s;}
+.ax-point span:nth-child(8) {top: 132px;left: 740px; animation: titilar 3s ease infinite; animation-delay: 4s;}
+.ax-point span:nth-child(9) {top: 88px;left: 751px; animation: titilar 3s ease infinite; animation-delay: 10s;}
+.ax-point span:nth-child(10) {top: 232px;left: 510px;width: 24px;height: 24px; animation: titilar 3s ease infinite; animation-delay: 4.4s;}
+.ax-point span:nth-child(11) {top: 261px;left: 597px;width: 22px;height: 22px; animation: titilar 3s ease infinite;animation-delay: 19s;}
+.ax-point span:nth-child(12) {top: 342px;left: 360px; animation: titilar 3s ease infinite;animation-delay: 2s;}
+.ax-point span:nth-child(13) {top: 360px;left: 390px; animation: titilar 2s ease infinite;animation-delay: 15s;}
+.ax-point span:nth-child(14) {top: 360px;left: 427px; animation: titilar 3s ease infinite;animation-delay: 10s;}
+.ax-point span:nth-child(15) {top: 342px;left: 485px; animation: titilar 2s ease infinite;animation-delay: 15s;}
+.ax-point span:nth-child(16) {top: 380px;left: 531px; animation: titilar 3s ease infinite;animation-delay: 14s;}
+.ax-point span:nth-child(17) {top: 342px;left: 546px; animation: titilar 3s ease infinite;animation-delay: 1s;}
+.ax-point span:nth-child(18) {top: 360px;left: 568px; animation: titilar 4s ease infinite;animation-delay: 18s;}
+.ax-point span:nth-child(19) {top: 378px;left: 646px; animation: titilar 3s ease infinite;animation-delay: 6s;}
+.ax-point span:nth-child(20) {top: 342px;left: 665px; animation: titilar 1s ease infinite;animation-delay: 13s;}
+.ax-point span:nth-child(21) {top: 343px;left: 713px; animation: titilar 3s ease infinite;animation-delay: 9s;}
+.ax-point span:nth-child(22) {top: 377px;left: 742px; animation: titilar 5s ease infinite;animation-delay: 3s;}
+.ax-point span:nth-child(23) {top: 347px;left: 769px; animation: titilar 6s ease infinite;animation-delay: 1s;}
+
+@keyframes titilar {
+    0% { transform: scale(0.9)}
+    5% { transform: scale(1)}
+    90% { transform: scale(1)}
+    95% { transform: scale(0.7)}
+    100% { transform: scale(1)}
+}
 
 
 .ax-image-user {
@@ -201,6 +209,7 @@ p {
     padding: 44px 0 80px 0;
     background: url(../img/ax-image-particules-home.svg) no-repeat 62% center;
     background-size: 69%;
+    line-height: 137px;
 }
 
 .content-login h1 .ax-part-1, .col-centered h1 .ax-part-1 {
@@ -2680,6 +2689,7 @@ form svg path {
 }
 .drag.drag-epm-full{
     background: url(../img/ax-game-epm-full.svg) no-repeat;
+    background-size: 100%;
 }
 .dot{
     width: 5px;
@@ -2725,7 +2735,6 @@ form svg path {
 .dot34{ left: 124px; top: 37px; }
 .dot35{ left: 145px; top: 18px; }
 
-<<<<<<< HEAD
 @media screen and (max-width: 1360px){}
 
 @media screen and (max-width: 1024px){
@@ -2734,29 +2743,29 @@ form svg path {
         background-position: center;
     }
     
-    .content-login .ax-point span:nth-child(1) {top: 131px;left: 253px;}
-    .content-login .ax-point span:nth-child(2) {top: 131px;left: 351px;}
-    .content-login .ax-point span:nth-child(3) {top: 84px;left: 369px;}
-    .content-login .ax-point span:nth-child(4) {top: 88px;left: 443px;}
-    .content-login .ax-point span:nth-child(5) {top: 129px;left: 499px;}
-    .content-login .ax-point span:nth-child(6) {top: 87px;left: 514px;}
-    .content-login .ax-point span:nth-child(7) {top: 107px;left: 584px;}
-    .content-login .ax-point span:nth-child(8) {top: 132px;left: 640px;}
-    .content-login .ax-point span:nth-child(9) {top: 88px;left: 651px;}
-    .content-login .ax-point span:nth-child(10) {top: 232px;left: 410px;width: 24px;height: 24px;}
-    .content-login .ax-point span:nth-child(11) {top: 261px;left: 497px;width: 22px;height: 22px;}
-    .content-login .ax-point span:nth-child(12) {top: 342px;left: 260px;}
-    .content-login .ax-point span:nth-child(13) {top: 360px;left: 290px;}
-    .content-login .ax-point span:nth-child(14) {top: 360px;left: 327px;}
-    .content-login .ax-point span:nth-child(15) {top: 342px;left: 385px;}
-    .content-login .ax-point span:nth-child(16) {top: 380px;left: 431px;}
-    .content-login .ax-point span:nth-child(17) {top: 342px;left: 446px;}
-    .content-login .ax-point span:nth-child(18) {top: 360px;left: 468px;}
-    .content-login .ax-point span:nth-child(19) {top: 378px;left: 546px;}
-    .content-login .ax-point span:nth-child(20) {top: 342px;left: 565px;}
-    .content-login .ax-point span:nth-child(21) {top: 343px;left: 613px;}
-    .content-login .ax-point span:nth-child(22) {top: 377px;left: 642px;}
-    .content-login .ax-point span:nth-child(23) {top: 347px;left: 669px;}
+    .ax-point span:nth-child(1) {top: 131px;left: 253px;}
+    .ax-point span:nth-child(2) {top: 131px;left: 351px;}
+    .ax-point span:nth-child(3) {top: 84px;left: 369px;}
+    .ax-point span:nth-child(4) {top: 88px;left: 443px;}
+    .ax-point span:nth-child(5) {top: 129px;left: 499px;}
+    .ax-point span:nth-child(6) {top: 87px;left: 514px;}
+    .ax-point span:nth-child(7) {top: 107px;left: 584px;}
+    .ax-point span:nth-child(8) {top: 132px;left: 640px;}
+    .ax-point span:nth-child(9) {top: 88px;left: 651px;}
+    .ax-point span:nth-child(10) {top: 232px;left: 410px;width: 24px;height: 24px;}
+    .ax-point span:nth-child(11) {top: 261px;left: 497px;width: 22px;height: 22px;}
+    .ax-point span:nth-child(12) {top: 342px;left: 260px;}
+    .ax-point span:nth-child(13) {top: 360px;left: 290px;}
+    .ax-point span:nth-child(14) {top: 360px;left: 327px;}
+    .ax-point span:nth-child(15) {top: 342px;left: 385px;}
+    .ax-point span:nth-child(16) {top: 380px;left: 431px;}
+    .ax-point span:nth-child(17) {top: 342px;left: 446px;}
+    .ax-point span:nth-child(18) {top: 360px;left: 468px;}
+    .ax-point span:nth-child(19) {top: 378px;left: 546px;}
+    .ax-point span:nth-child(20) {top: 342px;left: 565px;}
+    .ax-point span:nth-child(21) {top: 343px;left: 613px;}
+    .ax-point span:nth-child(22) {top: 377px;left: 642px;}
+    .ax-point span:nth-child(23) {top: 347px;left: 669px;}
     
 }
 
@@ -2822,34 +2831,34 @@ form svg path {
         background-size: 160%;
     }
     
-   .container .content-login .ax-point span {
+   .container .ax-point span {
         width: 20px;
         height: 20px;
     }
     
-    .container .content-login .ax-point span:nth-child(1) {top: 135px;left: 19px;;}
-    .container .content-login .ax-point span:nth-child(2) {top: 135px;left: 95px;}
-    .container .content-login .ax-point span:nth-child(3) {top: 101px;left: 108px;}
-    .container .content-login .ax-point span:nth-child(4) {top: 103px;left: 165px;}
-    .container .content-login .ax-point span:nth-child(5) {top: 132px;left: 210px;}
-    .container .content-login .ax-point span:nth-child(6) {top: 103px;left: 223px;}
-    .container .content-login .ax-point span:nth-child(7) {top: 117px;left: 278px;}
-    .container .content-login .ax-point span:nth-child(8) {top: 132px;left: 325px;}
-    .container .content-login .ax-point span:nth-child(9) {top: 103px;left: 331px;}
-    .container .content-login .ax-point span:nth-child(10) {top: 182px;left: 143px;width: 16px;height: 16px;}
-    .container .content-login .ax-point span:nth-child(11) {top: 203px;left: 211px;width: 16px;height: 16px;}
-    .container .content-login .ax-point span:nth-child(12) {top: 262px;left: 58px;}
-    .container .content-login .ax-point span:nth-child(13) {top: 270px;left: 74px;}
-    .container .content-login .ax-point span:nth-child(14) {top: 270px;left: 96px;}
-    .container .content-login .ax-point span:nth-child(15) {top: 261px;left: 134px;}
-    .container .content-login .ax-point span:nth-child(16) {top: 281px;left: 162px;}
-    .container .content-login .ax-point span:nth-child(17) {top: 260px;left: 172px;}
-    .container .content-login .ax-point span:nth-child(18) {top: 269px;left: 185px;}
-    .container .content-login .ax-point span:nth-child(19) {top: 279px;left: 232px;}
-    .container .content-login .ax-point span:nth-child(20) {top: 261px;left: 247px;}
-    .container .content-login .ax-point span:nth-child(21) {top: 260px;left: 278px;}
-    .container .content-login .ax-point span:nth-child(22) {top: 280px;left: 294px;}
-    .container .content-login .ax-point span:nth-child(23) {top: 261px;left: 310px;}
+    .container .ax-point span:nth-child(1) {top: 135px;left: 19px;;}
+    .container .ax-point span:nth-child(2) {top: 135px;left: 95px;}
+    .container .ax-point span:nth-child(3) {top: 101px;left: 108px;}
+    .container .ax-point span:nth-child(4) {top: 103px;left: 165px;}
+    .container .ax-point span:nth-child(5) {top: 132px;left: 210px;}
+    .container .ax-point span:nth-child(6) {top: 103px;left: 223px;}
+    .container .ax-point span:nth-child(7) {top: 117px;left: 278px;}
+    .container .ax-point span:nth-child(8) {top: 132px;left: 325px;}
+    .container .ax-point span:nth-child(9) {top: 103px;left: 331px;}
+    .container .ax-point span:nth-child(10) {top: 182px;left: 143px;width: 16px;height: 16px;}
+    .container .ax-point span:nth-child(11) {top: 203px;left: 211px;width: 16px;height: 16px;}
+    .container .ax-point span:nth-child(12) {top: 262px;left: 58px;}
+    .container .ax-point span:nth-child(13) {top: 270px;left: 74px;}
+    .container .ax-point span:nth-child(14) {top: 270px;left: 96px;}
+    .container .ax-point span:nth-child(15) {top: 261px;left: 134px;}
+    .container .ax-point span:nth-child(16) {top: 281px;left: 162px;}
+    .container .ax-point span:nth-child(17) {top: 260px;left: 172px;}
+    .container .ax-point span:nth-child(18) {top: 269px;left: 185px;}
+    .container .ax-point span:nth-child(19) {top: 279px;left: 232px;}
+    .container .ax-point span:nth-child(20) {top: 261px;left: 247px;}
+    .container .ax-point span:nth-child(21) {top: 260px;left: 278px;}
+    .container .ax-point span:nth-child(22) {top: 280px;left: 294px;}
+    .container .ax-point span:nth-child(23) {top: 261px;left: 310px;}
     
 }
 
@@ -2896,34 +2905,34 @@ form svg path {
         line-height: 80px;
     }
     
-    .container .content-login .ax-point span {
+    body .container .ax-point span {
         width: 18px;
         height: 18px;
     }
     
-    .container .content-login .ax-point span:nth-child(1) {top: 134px;left: 18px;}
-    .container .content-login .ax-point span:nth-child(2) {top: 130px;left: 80px;}
-    .container .content-login .ax-point span:nth-child(3) {top: 105px;left: 89px;}
-    .container .content-login .ax-point span:nth-child(4) {top: 107px;left: 138px;}
-    .container .content-login .ax-point span:nth-child(5) {top: 130px;left: 173px;}
-    .container .content-login .ax-point span:nth-child(6) {top: 107px;left: 185px;}
-    .container .content-login .ax-point span:nth-child(7) {top: 117px;left: 227px;}
-    .container .content-login .ax-point span:nth-child(8) {top: 130px;left: 267px;}
-    .container .content-login .ax-point span:nth-child(9) {top: 106px;left: 275px;}
-    .container .content-login .ax-point span:nth-child(10) {top: 181px;left: 113px;width: 18px;height: 18px;}
-    .container .content-login .ax-point span:nth-child(11) {top: 203px;left: 181px;width: 18px;height: 18px;}
-    .container .content-login .ax-point span:nth-child(12) {top: 262px;left: 28px;}
-    .container .content-login .ax-point span:nth-child(13) {top: 270px;left: 46px;}
-    .container .content-login .ax-point span:nth-child(14) {top: 270px;left: 66px;}
-    .container .content-login .ax-point span:nth-child(15) {top: 261px;left: 104px;}
-    .container .content-login .ax-point span:nth-child(16) {top: 281px;left: 132px;}
-    .container .content-login .ax-point span:nth-child(17) {top: 260px;left: 142px;}
-    .container .content-login .ax-point span:nth-child(18) {top: 269px;left: 157px;}
-    .container .content-login .ax-point span:nth-child(19) {top: 279px;left: 202px;}
-    .container .content-login .ax-point span:nth-child(20) {top: 261px;left: 217px;}
-    .container .content-login .ax-point span:nth-child(21) {top: 260px;left: 248px;}
-    .container .content-login .ax-point span:nth-child(22) {top: 280px;left: 264px;}
-    .container .content-login .ax-point span:nth-child(23) {top: 261px;left: 280px;}
+    body .container .ax-point span:nth-child(1) {top: 134px;left: 18px;}
+    body .container .ax-point span:nth-child(2) {top: 130px;left: 80px;}
+    body .container .ax-point span:nth-child(3) {top: 105px;left: 89px;}
+    body .container .ax-point span:nth-child(4) {top: 107px;left: 138px;}
+    body .container .ax-point span:nth-child(5) {top: 130px;left: 173px;}
+    body .container .ax-point span:nth-child(6) {top: 107px;left: 185px;}
+    body .container .ax-point span:nth-child(7) {top: 117px;left: 227px;}
+    body .container .ax-point span:nth-child(8) {top: 130px;left: 267px;}
+    body .container .ax-point span:nth-child(9) {top: 106px;left: 275px;}
+    body .container .ax-point span:nth-child(10) {top: 181px;left: 113px;width: 18px;height: 18px;}
+    body .container .ax-point span:nth-child(11) {top: 203px;left: 181px;width: 18px;height: 18px;}
+    body .container .ax-point span:nth-child(12) {top: 262px;left: 28px;}
+    body .container .ax-point span:nth-child(13) {top: 270px;left: 46px;}
+    body .container .ax-point span:nth-child(14) {top: 270px;left: 66px;}
+    body .container .ax-point span:nth-child(15) {top: 261px;left: 104px;}
+    body .container .ax-point span:nth-child(16) {top: 281px;left: 132px;}
+    body .container .ax-point span:nth-child(17) {top: 260px;left: 142px;}
+    body .container .ax-point span:nth-child(18) {top: 269px;left: 157px;}
+    body .container .ax-point span:nth-child(19) {top: 279px;left: 202px;}
+    body .container .ax-point span:nth-child(20) {top: 261px;left: 217px;}
+    body .container .ax-point span:nth-child(21) {top: 260px;left: 248px;}
+    body .container .ax-point span:nth-child(22) {top: 280px;left: 264px;}
+    body .container .ax-point span:nth-child(23) {top: 261px;left: 280px;}
 }
 
 @media only screen and (max-width : 768px) {
@@ -3013,35 +3022,35 @@ form svg path {
         height: auto;
     }
     
-    .content-login .ax-point span {
+    .container .ax-point span {
         width: 18px;
         height: 18px;
         border: #3fa435 solid 4px;
     }
     
-    .content-login .ax-point span:nth-child(1) {top: 135px;left: 119px;}
-    .content-login .ax-point span:nth-child(2) {top: 136px;left: 187px;}
-    .content-login .ax-point span:nth-child(3) {top: 108px;left: 199px;}
-    .content-login .ax-point span:nth-child(4) {top: 109px;left: 253px;}
-    .content-login .ax-point span:nth-child(5) {top: 135px;left: 292px;}
-    .content-login .ax-point span:nth-child(6) {top: 107px;left: 304px;}
-    .content-login .ax-point span:nth-child(7) {top: 122px;left: 353px;}
-    .content-login .ax-point span:nth-child(8) {top: 137px;left: 395px;}
-    .content-login .ax-point span:nth-child(9) {top: 109px;left: 401px;}
-    .content-login .ax-point span:nth-child(10) {top: 192px;left: 230px;width: 16px;height: 16px;}
-    .content-login .ax-point span:nth-child(11) {top: 214px;left: 295px;width: 16px;height: 16px;}
-    .content-login .ax-point span:nth-child(12) {top: 270px;left: 140px;}
-    .content-login .ax-point span:nth-child(13) {top: 281px;left: 160px;}
-    .content-login .ax-point span:nth-child(14) {top: 281px;left: 181px;}
-    .content-login .ax-point span:nth-child(15) {top: 272px;left: 220px;}
-    .content-login .ax-point span:nth-child(16) {top: 292px;left: 248px;}
-    .content-login .ax-point span:nth-child(17) {top: 272px;left: 258px;}
-    .content-login .ax-point span:nth-child(18) {top: 280px;left: 272px;}
-    .content-login .ax-point span:nth-child(19) {top: 289px;left: 319px;}
-    .content-login .ax-point span:nth-child(20) {top: 271px;left: 330px;}
-    .content-login .ax-point span:nth-child(21) {top: 271px;left: 365px;}
-    .content-login .ax-point span:nth-child(22) {top: 290px;left: 379px;}
-    .content-login .ax-point span:nth-child(23) {top: 273px;left: 398px;}
+    .container .ax-point span:nth-child(1) {top: 135px;left: 119px;}
+    .container .ax-point span:nth-child(2) {top: 136px;left: 187px;}
+    .container .ax-point span:nth-child(3) {top: 108px;left: 199px;}
+    .container .ax-point span:nth-child(4) {top: 109px;left: 253px;}
+    .container .ax-point span:nth-child(5) {top: 135px;left: 292px;}
+    .container .ax-point span:nth-child(6) {top: 107px;left: 304px;}
+    .container .ax-point span:nth-child(7) {top: 122px;left: 353px;}
+    .container .ax-point span:nth-child(8) {top: 137px;left: 395px;}
+    .container .ax-point span:nth-child(9) {top: 109px;left: 401px;}
+    .container .ax-point span:nth-child(10) {top: 192px;left: 230px;width: 16px;height: 16px;}
+    .container .ax-point span:nth-child(11) {top: 214px;left: 295px;width: 16px;height: 16px;}
+    .container .ax-point span:nth-child(12) {top: 270px;left: 140px;}
+    .container .ax-point span:nth-child(13) {top: 281px;left: 160px;}
+    .container .ax-point span:nth-child(14) {top: 281px;left: 181px;}
+    .container .ax-point span:nth-child(15) {top: 272px;left: 220px;}
+    .container .ax-point span:nth-child(16) {top: 292px;left: 248px;}
+    .container .ax-point span:nth-child(17) {top: 272px;left: 258px;}
+    .container .ax-point span:nth-child(18) {top: 280px;left: 272px;}
+    .container .ax-point span:nth-child(19) {top: 289px;left: 319px;}
+    .container .ax-point span:nth-child(20) {top: 271px;left: 330px;}
+    .container .ax-point span:nth-child(21) {top: 271px;left: 365px;}
+    .container .ax-point span:nth-child(22) {top: 290px;left: 379px;}
+    .container .ax-point span:nth-child(23) {top: 273px;left: 398px;}
     
     .ax-page-6 .ax-eger-2 .ax-text{
         position: relative;
