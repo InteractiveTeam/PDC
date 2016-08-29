@@ -144,7 +144,7 @@ p {
     font-size: 110px;
     letter-spacing: 16px;
     line-height: 140px;
-    padding: 40px;
+    padding: 20px;
 }
 
 .ax-subText {
@@ -181,7 +181,7 @@ p {
     margin: 0 auto;
 }
 
-.ax-container svg {
+svg.svg_home_general{
     position: absolute;
     top: -100px;
     left: -120px;
@@ -284,6 +284,7 @@ p {
 
 .flipbook-viewport .container{
 	margin: 0 auto;
+    position: relative;
 }
 
 .flipbook-viewport .flipbook{
@@ -721,6 +722,10 @@ p {
 .ax-page-7 .ax-text h3 {
     color: #9ac331;
     line-height: 32px;
+}
+
+.ax-page-7 .ax-tols{
+    cursor: pointer;
 }
 
 .ax-imagen-tols {
@@ -2159,7 +2164,7 @@ p {
     top: 19px;
     transform: rotate(10deg);
 }
-.page-24 .ax-image img{ object-fit: cover; }
+.page-24 .ax-image img,.page-25 .ax-image img{ object-fit: cover; }
 
 .ax-input-file{
     height: 100%;
@@ -2170,8 +2175,8 @@ p {
     display: none;
     position: absolute;
     object-fit: cover;
-    top: 336px;
-    left: 698px;
+    top: 306px;
+    left: 544px;
 }
 
 .ax-page-26 .ax-cont-info {
@@ -2605,8 +2610,9 @@ form svg path {
 }
 
 /*DRG UNE LOS PUNTOS*/
-.ax-lapiz-select{ cursor: url("../img/ax-lapiz-select.png") 0 50, auto; }
+.ax-lapiz-select{ cursor: url("../img/ax-lapiz-select.png") 0 63, auto; }
 .ax-lapiz-select-green{ cursor: url("../img/ax-color-select.png") 0 63, auto; }
+.ax-crayola{ cursor: url("../img/ax-crayola.svg") 8 77, auto; }
 
 .drag{
     position: relative;
@@ -2659,3 +2665,88 @@ form svg path {
 .dot33{ left: 104px; top: 19px; }
 .dot34{ left: 124px; top: 37px; }
 .dot35{ left: 145px; top: 18px; }
+
+
+@media only screen and (max-width : 768px) {
+    .content-login h1, .col-centered h1{
+        line-height: 50px;
+        font-size: 30px;
+    }
+    .content-login h1 .ax-part-1, .col-centered h1 .ax-part-1{
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .content-login h1 .ax-part-2, .col-centered h1 .ax-part-2{
+        font-size: 30px;
+        line-height: 30px;
+    }
+    svg.svg_home_general{
+        width: 80%;
+        left: 0;
+    }
+    .ax-subText{
+        margin: auto;
+        padding: 20px 0;        
+    }
+    .ax-container{
+        width: auto;
+        margin: auto;
+    }
+    .ax-cont-info h2{
+        font-size: 1rem;
+    }
+    .ax-page-3 .ax-cont-info ul{
+        margin: auto;
+    }
+    .ax-page-3 .ax-cont-info{
+        top:14%;
+        left: 3%;
+    }
+    .ax-page-3 .ax-cont-info li{
+        font-size: 0.9rem;
+        margin: 6px 0;
+    }
+    .ax-page-4 .ax-cont-info h2{
+        padding-top: 20%;
+    }
+    .ax-page-4 .ax-cont-info p{
+        font-size: 0.9rem;
+    }
+    .flipbook-viewport .ax-eger-2 .ax-image-svg img{
+        width: 100%;
+    }
+    .ax-page-2 h2, .ax-page-27 h2{
+        font-size: 1.4rem;
+    }
+    .manual{
+        position: fixed !important;
+        height: 100% !important;
+    }
+    .flipbook-viewport .page{
+        height: 930px !important;
+    }
+    .flipbook-viewport .page-wrapper{
+        overflow-y: scroll !important;
+    }
+    .flipbook-viewport .ax-page-0,.flipbook-viewport .ax-page-1,.flipbook-viewport .ax-page-2{
+        height: 500px !important;
+    }
+    .flipbook-viewport .ax-imagen-tols .ax-tols{
+        width: 35px;
+        display: inline-block;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .flipbook-viewport .ax-cont-info .ax-cont-first{padding: 10px 0;}
+    .flipbook-viewport .ax-cuadro-verde{
+        width: 100%;
+        margin: 0;
+    }
+    .flipbook-viewport .ax-imagen-tols .ax-tols p{display: none;}
+    .flipbook-viewport .ax-page-8 p{width: 94%; margin:10px auto;}
+    .ax-page-8 .ax-empezar-linea{position: relative;top:0;display: inline-block;}
+    .flipbook-viewport .ax-cont-info .ax-cont-first p{
+        height: auto;
+    }
+}

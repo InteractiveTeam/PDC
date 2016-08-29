@@ -11,7 +11,9 @@ var epmModule = (function($){
             manual:$('#manual'),
             flipbook:$(".flipbook"),
             imageTitle:$('.ax-container svg'),
-            svg_stroke:"#000"
+            svg_stroke:"#000",
+            stroke_width:3,
+            flipbook_viewport:$('.flipbook-viewport')
         },
         init:function(){
             actions = this.setting;
@@ -42,11 +44,15 @@ var epmModule = (function($){
                 
                 epmModule.bindActions();
                 actions.btnManual.on('click', function(){
-                    actions.manual.animate({top: 0}, 'slow')
+                    actions.manual.animate({top: 0}, 'slow',function(){
+                        $(this).css({position:'absolute',height:'auto'});
+                    })
                 })
                 
                 $('.ax-close').on('click', function(){
-                    actions.manual.animate({top: 120+'%'}, 'slow')
+                    actions.manual.animate({top: 120+'%'}, 'slow',function(){
+                        $(this).css({position:'fixed',height:'100%'});
+                    })
                 })
 
                 actions.flipbook.turn({
@@ -86,17 +92,33 @@ var epmModule = (function($){
                         break;
                         case 8:
                         case 9:
-                            $("#ax-lapiz").on('click',function(){
-                                $('.flipbook-viewport').addClass('ax-lapiz-select');
+                            $("#ax-lapiz").on('click',function(){                                
+                                actions.flipbook_viewport.attr('class', 'flipbook-viewport');
+                                actions.flipbook_viewport.addClass('ax-lapiz-select');
+                                epmModule.svg_stroke = '#000';
+                                epmModule.stroke_width = 3;
+                                $("#svg_dots path").attr('stroke',epmModule.svg_stroke);
+                                $("#svg_dots path").attr('stroke-width',epmModule.stroke_width);
                                 epmModule.dragEMP();
                             });
-                            
                             $("#ax-lapiz-green").on('click',function(){
-                                $('.flipbook-viewport').addClass('ax-lapiz-select-green');
-                                $("#svg_dots path").attr('stroke','#91c848');
+                                actions.flipbook_viewport.attr('class', 'flipbook-viewport');
+                                actions.flipbook_viewport.addClass('ax-lapiz-select-green');
                                 epmModule.svg_stroke = '#91c848';
+                                epmModule.stroke_width = 3;
+                                $("#svg_dots path").attr('stroke',epmModule.svg_stroke);
+                                $("#svg_dots path").attr('stroke-width',epmModule.stroke_width);
                                 epmModule.dragEMP();
-                            });                            
+                            });
+                            $("#ax-crayola").on('click',function(){
+                                actions.flipbook_viewport.attr('class', 'flipbook-viewport');
+                                actions.flipbook_viewport.addClass('ax-crayola');
+                                epmModule.svg_stroke = '#000';
+                                epmModule.stroke_width = 6;
+                                $("#svg_dots path").attr('stroke',epmModule.svg_stroke);
+                                $("#svg_dots path").attr('stroke-width',epmModule.stroke_width);
+                                epmModule.dragEMP();
+                            });
                             break;
                         case 10:
                         case 11:
@@ -118,6 +140,11 @@ var epmModule = (function($){
                         case 15:
                             //LLenamos los datos del usuario
                             $("#dale_orden").val(infoPages.data.dale_orden);
+                            
+                            /*$( ".ax-piezas" ).sortable({
+                                tolerance: 'pointer',
+                                revert: 'invalid'
+                            });*/
                             break;
                         case 16:
                         case 17:
@@ -224,7 +251,7 @@ var epmModule = (function($){
                         (y2 >= (auxCor[(length+1)].y) && y2 <= (auxCor[(length+1)].y+4))) {
                         svg.children[length].setAttribute('d','M'+ (auxCor[length].x+3)+','+auxCor[length].y+'L'+x2+','+(y2+1));
                         auxArray.push(length);
-                        addPath('path',{d:'M'+(auxCor[(length+1)].x+3)+','+auxCor[(length+1)].y+'L'+x2+','+(y2+1), stroke:epmModule.svg_stroke,fill:'none','stroke-width':3});
+                        addPath('path',{d:'M'+(auxCor[(length+1)].x+3)+','+auxCor[(length+1)].y+'L'+x2+','+(y2+1), stroke:epmModule.svg_stroke,fill:'none','stroke-width':epmModule.stroke_width});
                     }						
                 }
             });
@@ -399,37 +426,37 @@ var epmModule = (function($){
                 case'flickr':
                     actions.tl.to('.caballeros_mesa',1,{scale:1.5}).
                         to('.caballeros_mesa',1,{rotation:-30},'-=0.50').
-                        to('.caballeros_mesa',1,{top:95,left:472,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.60');
+                        to('.caballeros_mesa',1,{top:76,left:322,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.60');
                 break;
                 case'gplus':
                     actions.tl.to('.caballeros_mesa',1,{scale:1.5}).
                         to('.caballeros_mesa',1,{rotation:-150},'-=0.50').
-                        to('.caballeros_mesa',1,{top:570,left:472,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.60');
+                        to('.caballeros_mesa',1,{top:549,left:322,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.60');
                 break;
                 case'facebook':
                     actions.tl.to('.caballeros_mesa',1,{scale:1.5}).
                         to('.caballeros_mesa',1,{rotation:10},'-=0.50').
-                        to('.caballeros_mesa',1,{top:39,left:775,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.60');
+                        to('.caballeros_mesa',1,{top:18,left:624,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.60');
                 break;
                 case'twitter':
                     actions.tl.to('.caballeros_mesa',1,{scale:1.5}).
                         to('.caballeros_mesa',1,{rotation:40},'-=0.50').
-                        to('.caballeros_mesa',1,{top:116,left:975,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.60');
+                        to('.caballeros_mesa',1,{top:97,left:825,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.60');
                 break;
                 case'youtube':
                     actions.tl.to('.caballeros_mesa',1,{scale:1.5}).
                         to('.caballeros_mesa',1,{rotation:90},'-=0.50').
-                        to('.caballeros_mesa',1,{top:323,left:1070,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.60');
+                        to('.caballeros_mesa',1,{top:302,left:920,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.60');
                 break;
                 case'instagram':
                     actions.tl.to('.caballeros_mesa',1,{scale:1.5}).
                         to('.caballeros_mesa',1,{rotation:138},'-=0.50').
-                        to('.caballeros_mesa',1,{top:535,left:974,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.60');
+                        to('.caballeros_mesa',1,{top:514,left:824,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.60');
                 break;
                 case'pinterest':
                     actions.tl.to('.caballeros_mesa',1,{scale:1.5}).
                         to('.caballeros_mesa',1,{rotation:166},'-=0.50').
-                        to('.caballeros_mesa',1,{top:617,left:787,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.60');
+                        to('.caballeros_mesa',1,{top:596,left:637,scale:1,clearProps:"transform,top,left,display",onComplete:this.setImgMesa,onCompleteParams:[type,img]},'-=0.60');
                 break;
             }
         },
