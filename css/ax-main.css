@@ -2455,7 +2455,7 @@ svg.svg_home_general{
 }
 #particle-canvas canvas{
     position: fixed !important;
-    opacity: 0.2;
+    opacity: 0.25;
 }
 .ax-iniciar-sesion,.ax-registro,.ax-recuperar,.ax-profile,.content-login{
     display: none;
@@ -2767,6 +2767,7 @@ form svg path {
     .ax-point span:nth-child(22) {top: 377px;left: 642px;}
     .ax-point span:nth-child(23) {top: 347px;left: 669px;}
     
+    .manual .flipbook-viewport .container{ margin: 0 }
 }
 
 @media screen and (max-width: 768px){
