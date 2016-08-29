@@ -637,7 +637,12 @@ svg.svg_home_general{
 .ax-page-6 .ax-eger-4 {
     background-position: -4px 0;
 }
-
+.ax-page-6 .ax-egercicio textarea{
+    background: url(../img/ax-font-textarea.png);
+    height: 76px;
+    width: 69%;
+    line-height: 20px;
+}
 .ax-page-5 .ax-eger-4 .ax-pasos { 
     background-image: url(../img/ax-pasos-withe.png);
     color: #000;
