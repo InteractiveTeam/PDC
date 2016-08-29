@@ -1,5 +1,5 @@
 var epmModule = (function($){
-    var actions = '',pageCat = '',infoPages='';
+    var actions = '',pageCat = '',infoPages='',banderaEpm = true;
     var dataUser = JSON.parse(sessionStorage.getItem('user'));
     return {
         setting:{
@@ -77,11 +77,15 @@ var epmModule = (function($){
                     pageCat = page;
                     switch (page) {
                         case 2:
-                            $('.cont-title').delay(500).fadeIn();                            
+                            $('.cont-title').delay(500).fadeIn();
                         break;
-
+                        case 4:
                         case 5:
+                            actions.tl.staggerFrom('.ax-page-3 .ax-cont-info li', 0.8, {y:20,opacity:0,clearProps:"all"},0.10)
+                                .staggerFrom('.ax-page-4 .ax-cont-info p', 0.6, {y:20,opacity:0,clearProps:"all"},0.10,'-=1.2');
+                            break;
                         case 6:
+                        case 7:
                             $('.ax-image-svg').delay(500).animate({opacity: 1}, 1000);
                             $('.ax-page-6 .ax-image-svg').delay(4000).animate({opacity: 1}, 1000);
                             //LLenamos los datos del usuario
@@ -92,41 +96,52 @@ var epmModule = (function($){
                         break;
                         case 8:
                         case 9:
-                            $("#ax-lapiz").on('click',function(){                                
-                                actions.flipbook_viewport.attr('class', 'flipbook-viewport');
-                                actions.flipbook_viewport.addClass('ax-lapiz-select');
-                                epmModule.svg_stroke = '#000';
-                                epmModule.stroke_width = 3;
-                                $("#svg_dots path:last").attr('stroke',epmModule.svg_stroke);
-                                $("#svg_dots path:last").attr('stroke-width',epmModule.stroke_width);
-                                epmModule.dragEMP();
-                            });
-                            $("#ax-lapiz-green").on('click',function(){
-                                actions.flipbook_viewport.attr('class', 'flipbook-viewport');
-                                actions.flipbook_viewport.addClass('ax-lapiz-select-green');
-                                epmModule.svg_stroke = '#91c848';
-                                epmModule.stroke_width = 3;
-                                $("#svg_dots path:last").attr('stroke',epmModule.svg_stroke);
-                                $("#svg_dots path:last").attr('stroke-width',epmModule.stroke_width);
-                                epmModule.dragEMP();
-                            });
-                            $("#ax-crayola").on('click',function(){
-                                actions.flipbook_viewport.attr('class', 'flipbook-viewport');
-                                actions.flipbook_viewport.addClass('ax-crayola');
-                                epmModule.svg_stroke = '#000';
-                                epmModule.stroke_width = 6;
-                                $("#svg_dots path:last").attr('stroke',epmModule.svg_stroke);
-                                $("#svg_dots path:last").attr('stroke-width',epmModule.stroke_width);
-                                epmModule.dragEMP();
-                            });
+                            
+                            actions.tl.staggerFrom('.ax-imagen-tols .ax-tols', 0.8, {y:20,opacity:0,clearProps:"all"},0.10)
+                            .staggerFrom('.ax-page-7 .ax-cont-first p', 0.8, {y:20,opacity:0,clearProps:"all"},0.10,'-=0.85');
+                            
+                            if(!infoPages.data.drawEpm){//validamo que se encuentre dibujado el SVG
+                                $("#ax-lapiz").on('click',function(){                                
+                                    actions.flipbook_viewport.attr('class', 'flipbook-viewport');
+                                    actions.flipbook_viewport.addClass('ax-lapiz-select');
+                                    epmModule.svg_stroke = '#000';
+                                    epmModule.stroke_width = 3;
+                                    $("#svg_dots path:last").attr('stroke',epmModule.svg_stroke);
+                                    $("#svg_dots path:last").attr('stroke-width',epmModule.stroke_width);
+                                    epmModule.dragEMP();
+                                });
+                                $("#ax-lapiz-green").on('click',function(){
+                                    actions.flipbook_viewport.attr('class', 'flipbook-viewport');
+                                    actions.flipbook_viewport.addClass('ax-lapiz-select-green');
+                                    epmModule.svg_stroke = '#91c848';
+                                    epmModule.stroke_width = 3;
+                                    $("#svg_dots path:last").attr('stroke',epmModule.svg_stroke);
+                                    $("#svg_dots path:last").attr('stroke-width',epmModule.stroke_width);
+                                    epmModule.dragEMP();
+                                });
+                                $("#ax-crayola").on('click',function(){
+                                    actions.flipbook_viewport.attr('class', 'flipbook-viewport');
+                                    actions.flipbook_viewport.addClass('ax-crayola');
+                                    epmModule.svg_stroke = '#000';
+                                    epmModule.stroke_width = 6;
+                                    $("#svg_dots path:last").attr('stroke',epmModule.svg_stroke);
+                                    $("#svg_dots path:last").attr('stroke-width',epmModule.stroke_width);
+                                    epmModule.dragEMP();
+                                });
+                            }else{
+                                $(".drag").addClass('drag-epm-full');
+                            }                            
                             break;
                         case 10:
                         case 11:
                             //LLenamos los datos del usuario
                             $("#describe_personaje1").val(infoPages.data.describe_personaje1);
                             $("#describe_personaje2").val(infoPages.data.describe_personaje2);
+                            actions.tl.staggerFrom('.ax-page-9 .ax-cont-first p,.ax-page-10 .ax-cont-first p', 0.8, {y:20,opacity:0,clearProps:"all"},0.10);
                         case 12:
                         case 13:
+                            actions.tl.staggerFrom('.ax-conment-social .ax-coment', 0.8, {y:20,opacity:0,clearProps:"all"},0.10)
+                            .from('.ax-page-12 .ax-cont-first p,.ax-page-13 .ax-cont-first p', 0.8, {y:20,opacity:0,clearProps:"all"},0.10,'-=0.85');
                             //LLenamos los datos del usuario
                             $("#facebook").val(infoPages.data.facebook);
                             $("#google").val(infoPages.data.google);
@@ -136,6 +151,14 @@ var epmModule = (function($){
                             $("#pinterest").val(infoPages.data.pinterest);
                             $("#flickr").val(infoPages.data.flickr);
                         break;
+                        case 14:
+                        case 15:
+                            //.ax-page-14 .ax-image
+                            actions.tl.from('.ax-page-14 .ax-image', 1, {right:-30,top:-100,clearProps:"all"})
+                            .staggerFrom('.ax-page-13 .ax-cont-first p,.ax-page-14 .ax-cont-first p', 0.6, {y:20,opacity:0,clearProps:"all"},0.10,'-=0.85')
+                            .staggerFrom('.ax-pasos-avion img', 0.8, {y:20,opacity:0,clearProps:"all"},0.10,'-=0.65');
+                                                        
+                            break;
                         case 16:
                         case 17:
                             //LLenamos los datos del usuario
@@ -252,7 +275,18 @@ var epmModule = (function($){
                         svg.children[length].setAttribute('d','M'+ (auxCor[length].x+3)+','+auxCor[length].y+'L'+x2+','+(y2+1));
                         auxArray.push(length);
                         addPath('path',{d:'M'+(auxCor[(length+1)].x+3)+','+auxCor[(length+1)].y+'L'+x2+','+(y2+1), stroke:epmModule.svg_stroke,fill:'none','stroke-width':epmModule.stroke_width});
-                    }						
+                    }
+                }
+                
+                if(length === 36 && banderaEpm==true){
+                    banderaEpm = false;
+                    actions.flipbook_viewport.attr('class', 'flipbook-viewport');
+                    data = {
+                        info:{drawEpm:1},
+                        action:'saveData',
+                        data:dataUser
+                    }
+                    var result = epmModule.requestAjax(data);
                 }
             });
             

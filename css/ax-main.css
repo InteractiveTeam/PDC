@@ -2435,13 +2435,19 @@ svg.svg_home_general{
 }
 
 #particle-canvas {
-    position: absolute;
+    position: fixed !important;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
-
+#particle-canvas div{
+    background: transparent !important;
+}
+#particle-canvas canvas{
+    position: fixed !important;
+    opacity: 0.2;
+}
 .ax-iniciar-sesion,.ax-registro,.ax-recuperar,.ax-profile,.content-login{
     display: none;
 }
@@ -2667,11 +2673,13 @@ form svg path {
 
 .drag{
     position: relative;
-/*    border: solid 1px;*/
     width:246px;
     height: 227px;
     display: inline-block;
     background: url(../img/ax-game-1-page-9.svg) no-repeat;
+}
+.drag.drag-epm-full{
+    background: url(../img/ax-game-epm-full.svg) no-repeat;
 }
 .dot{
     width: 5px;
