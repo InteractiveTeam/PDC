@@ -45,13 +45,13 @@ var epmModule = (function($){
                 epmModule.bindActions();
                 actions.btnManual.on('click', function(){
                     actions.manual.animate({top: 0}, 'slow',function(){
-                        $(this).css({position:'absolute',height:'auto'});
+                        $(this).css({position:'absolute'});
                     })
                 })
                 
                 $('.ax-close').on('click', function(){
                     actions.manual.animate({top: 120+'%'}, 'slow',function(){
-                        $(this).css({position:'fixed',height:'100%'});
+                        $(this).css({position:'fixed'});
                     })
                 })
 
@@ -97,8 +97,8 @@ var epmModule = (function($){
                                 actions.flipbook_viewport.addClass('ax-lapiz-select');
                                 epmModule.svg_stroke = '#000';
                                 epmModule.stroke_width = 3;
-                                $("#svg_dots path").attr('stroke',epmModule.svg_stroke);
-                                $("#svg_dots path").attr('stroke-width',epmModule.stroke_width);
+                                $("#svg_dots path:last").attr('stroke',epmModule.svg_stroke);
+                                $("#svg_dots path:last").attr('stroke-width',epmModule.stroke_width);
                                 epmModule.dragEMP();
                             });
                             $("#ax-lapiz-green").on('click',function(){
@@ -106,8 +106,8 @@ var epmModule = (function($){
                                 actions.flipbook_viewport.addClass('ax-lapiz-select-green');
                                 epmModule.svg_stroke = '#91c848';
                                 epmModule.stroke_width = 3;
-                                $("#svg_dots path").attr('stroke',epmModule.svg_stroke);
-                                $("#svg_dots path").attr('stroke-width',epmModule.stroke_width);
+                                $("#svg_dots path:last").attr('stroke',epmModule.svg_stroke);
+                                $("#svg_dots path:last").attr('stroke-width',epmModule.stroke_width);
                                 epmModule.dragEMP();
                             });
                             $("#ax-crayola").on('click',function(){
@@ -115,8 +115,8 @@ var epmModule = (function($){
                                 actions.flipbook_viewport.addClass('ax-crayola');
                                 epmModule.svg_stroke = '#000';
                                 epmModule.stroke_width = 6;
-                                $("#svg_dots path").attr('stroke',epmModule.svg_stroke);
-                                $("#svg_dots path").attr('stroke-width',epmModule.stroke_width);
+                                $("#svg_dots path:last").attr('stroke',epmModule.svg_stroke);
+                                $("#svg_dots path:last").attr('stroke-width',epmModule.stroke_width);
                                 epmModule.dragEMP();
                             });
                             break;
@@ -136,8 +136,8 @@ var epmModule = (function($){
                             $("#pinterest").val(infoPages.data.pinterest);
                             $("#flickr").val(infoPages.data.flickr);
                         break;
-                        case 14:
-                        case 15:
+                        case 16:
+                        case 17:
                             //LLenamos los datos del usuario
                             $("#dale_orden").val(infoPages.data.dale_orden);
                             
@@ -146,9 +146,9 @@ var epmModule = (function($){
                                 revert: 'invalid'
                             });*/
                             break;
-                        case 16:
-                        case 17:
-                                for(var i=1;i<=11;i++){
+                        case 18:
+                        case 19:
+                                for(var i=1;i<=24;i++){
                                     $("#punto_contacto"+i).val(infoPages.data['punto_contacto'+i]);
                                 }
                             break;
@@ -354,6 +354,7 @@ var epmModule = (function($){
                 action:'getDataPages'
             }
             infoPages = epmModule.requestAjax(data);
+            
         },
         requestAjax:function(data){
             var result = '';

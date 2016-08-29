@@ -48,7 +48,7 @@ textarea {
     resize: none;
     position: relative;
     border: none;
-    background: rgba(255,255,255,0.7) url(../img/ax-border-textarea-white.png);
+    background: transparent url(../img/ax-border-textarea-white.png);
     background-size: 100%;
     outline: none;
 }
@@ -2853,7 +2853,7 @@ form svg path {
         height: 100% !important;
     }
     .flipbook-viewport .page{
-        height: 930px !important;
+        height: 980px !important;
     }
     .flipbook-viewport .page-wrapper{
         overflow-y: scroll !important;
@@ -2877,6 +2877,22 @@ form svg path {
     .flipbook-viewport .ax-page-8 p{width: 94%; margin:10px auto;}
     .ax-page-8 .ax-empezar-linea{position: relative;top:0;display: inline-block;}
     .flipbook-viewport .ax-cont-info .ax-cont-first p{
+        height: auto;
+    }
+    .ax-page-6 .ax-eger-2 .ax-text{
+        position: relative;
+        padding: 30px 0;
+    }
+    .ax-page-6 .ax-eger-2{
+        padding: 4px 0;
+    }
+}
+
+@media screen and (max-height: 768px){
+	.flipbook-viewport .container{
+		height:760px;
+	}
+    .manual{
         height: auto;
     }
 }
