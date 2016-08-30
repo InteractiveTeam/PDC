@@ -46,12 +46,14 @@ var epmModule = (function($){
                 actions.btnManual.on('click', function(){
                     actions.manual.animate({top: 0}, 'slow',function(){
                         $(this).css({position:'absolute'});
+                        $("#particle-canvas").html('');
                     })
                 })
                 
                 $('.ax-close').on('click', function(){
                     actions.manual.animate({top: 120+'%'}, 'slow',function(){
                         $(this).css({position:'fixed'});
+                        particleCanvas = new ParticleNetwork(canvasDiv, options);
                     })
                 })
 
@@ -86,6 +88,8 @@ var epmModule = (function($){
                             break;
                         case 6:
                         case 7:
+                            actions.flipbook_viewport.attr('class', 'flipbook-viewport');
+                            
                             $('.ax-image-svg').delay(500).animate({opacity: 1}, 1000);
                             $('.ax-page-6 .ax-image-svg').delay(4000).animate({opacity: 1}, 1000);
                             //LLenamos los datos del usuario
@@ -100,7 +104,7 @@ var epmModule = (function($){
                             actions.tl.staggerFrom('.ax-imagen-tols .ax-tols', 0.8, {y:20,opacity:0,clearProps:"all"},0.10)
                             .staggerFrom('.ax-page-7 .ax-cont-first p', 0.8, {y:20,opacity:0,clearProps:"all"},0.10,'-=0.85');
                             
-                            if(!infoPages.data.drawEpm){//validamo que se encuentre dibujado el SVG
+                            if(!parseInt(infoPages.data.drawEpm)){//validamo que se encuentre dibujado el SVG
                                 $("#ax-lapiz").on('click',function(){                                
                                     actions.flipbook_viewport.attr('class', 'flipbook-viewport');
                                     actions.flipbook_viewport.addClass('ax-lapiz-select');
@@ -133,7 +137,8 @@ var epmModule = (function($){
                             }                            
                             break;
                         case 10:
-                        case 11:
+                        case 11:                            
+                            actions.flipbook_viewport.attr('class', 'flipbook-viewport');
                             //LLenamos los datos del usuario
                             $("#describe_personaje1").val(infoPages.data.describe_personaje1);
                             $("#describe_personaje2").val(infoPages.data.describe_personaje2);
@@ -256,6 +261,21 @@ var epmModule = (function($){
                                 $("img.instagram").attr('src',infoPages.data.img_instagram);
                                 $("img.pinterest").attr('src',infoPages.data.img_pinterest);
                                 $("img.gplus").attr('src',infoPages.data.img_gplus);
+                                
+                                $("#name_flickr").val(infoPages.data.name_flickr);
+                                $("#name_flickr_person").val(infoPages.data.name_flickr_person);
+                                $("#name_facebook").val(infoPages.data.name_facebook);
+                                $("#name_facebook_person").val(infoPages.data.name_facebook_person);
+                                $("#name_twitter").val(infoPages.data.name_twitter);
+                                $("#name_twitter_person").val(infoPages.data.name_twitter_person);
+                                $("#name_youtube").val(infoPages.data.name_youtube);
+                                $("#name_youtube_person").val(infoPages.data.name_youtube_person);
+                                $("#name_instagram").val(infoPages.data.name_instagram);
+                                $("#name_instagram_person").val(infoPages.data.name_instagram_person);
+                                $("#name_pinterest").val(infoPages.data.name_pinterest);
+                                $("#name_pinterest_person").val(infoPages.data.name_pinterest_person);
+                                $("#name_gplus").val(infoPages.data.name_gplus);
+                                $("#name_gplus_person").val(infoPages.data.name_gplus_person);
                                 break;
                     }
                 });
@@ -300,13 +320,13 @@ var epmModule = (function($){
                 
                 var status = true;
 				if(!(epmModule.validateForm('text',$(this).find('[name="name"]').val()))){
-					epmModule.setMessage('El campo nombre no es valido.');status = false;
+					epmModule.setMessage('El campo nombre no es válido.');status = false;
 				}else if(!(epmModule.validateForm('text',$(this).find('[name="lastName"]').val()))){
 					epmModule.setMessage('El campo apellido es incorrecto.');status = false;
 				}else if(!(epmModule.validateForm('email',$(this).find('[name="email"]').val()))){
-					epmModule.setMessage('El campo correo electrónico no es valido.');status = false;
+					epmModule.setMessage('El campo correo electrónico no es válido.');status = false;
 				}else if(!$(this).find('[name="term_cond"]').prop('checked')){
-					epmModule.setMessage('Debe aceptar términos y condiciones.');status = false;
+					epmModule.setMessage('Debes aceptar los términos y condiciones.');status = false;
 				}
                 
                 data = {
@@ -319,7 +339,7 @@ var epmModule = (function($){
                         sessionStorage.setItem('user', JSON.stringify(result.data));
                         location.reload();
                     }else{
-                        epmModule.setMessage('usuario existe');
+                        epmModule.setMessage('El usuario ya se encuentra registrado');
                     }
                 }
             });
@@ -507,7 +527,7 @@ var epmModule = (function($){
 					status = regex.test(value);
 				break;
 				case 'text':
-					regex = /^[A-Za-z]+$/;
+					regex = /^[A-Za-z\d\s]+$/;
 					status = regex.test(value);
 				break;
 				case 'number':
@@ -522,10 +542,9 @@ var epmModule = (function($){
 			return status;
 		},
         setMessage:function(msg){
-            alert(msg);
-			/*$('.msg-box').html(msg).stop().animate({'top': '2%',opacity:1}, 1000, function(){
+            $('.msg-box').html(msg).stop().animate({'top': '2%',opacity:1}, 1000, function(){
 				setTimeout(function(){$('.msg-box').stop().animate({'top': '-15%',opacity:0}, 1000);}, 4000);
-			});*/
+			});
 		}
     }
 }(jQuery));

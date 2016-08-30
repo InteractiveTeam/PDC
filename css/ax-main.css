@@ -75,7 +75,8 @@ textarea {
 :-ms-input-placeholder { color: #b3a1a5 !important; }
 
 body {
-    background: url(../img/ax-font-particules.svg), radial-gradient(#4eaf49, #399149);
+/*    background: url(../img/ax-font-particules.svg), radial-gradient(#4eaf49, #399149);*/
+    background: radial-gradient(#4eaf49, #399149);
     background-size: 100%;
     background-position: 0px 30%;
 }
@@ -270,8 +271,9 @@ svg.svg_home_general{
 /* Basic sample */
 
 .flip-control {
-    position: relative;
+    position: absolute;
     bottom: 48%;
+    width: 100%;
 }
 
 .flip-control #next, .flip-control #prev {
@@ -900,6 +902,26 @@ svg.svg_home_general{
 
 .ax-game-line {
     position: relative;
+}
+
+.page-8 .ax-content-arrowT1{
+    position: absolute;
+    top: 10px;
+    width: 37%;
+    right: 30px;
+}
+.page-8 .ax-content-arrowT1 p.ax-text{
+    font-size: 0.8em;
+    width: 100%;
+}
+.page-8 .ax-row-metrica-text{
+    position: absolute;
+    background: url(http://www.conexionviva.com.co/puntosdecontactoepm/img/ax-flecha-line-2.svg);
+    width: 18px;
+    height: 38px;
+    top: 15px;
+    left: -20px;
+    transform: rotate(21deg);
 }
 
 .ax-page-8 .ax-line-1.ax-game-line {
@@ -2152,6 +2174,7 @@ svg.svg_home_general{
     background: transparent;
     font-family: 'tragic';
     text-align: center;
+    cursor: pointer;
 }
 
 .ax-page-25 .ax-cont-user {
@@ -2345,7 +2368,7 @@ svg.svg_home_general{
 .ax-content-metricas table td table{ width: 100%; }
 .ax-content-metricas .ax-row-metrica{
     position: absolute;
-    background: url(../img/ax-flecha-line.svg);
+    background: url(../img/ax-flecha-line-2.svg);
     width: 18px;
     height: 38px;
     left: -16px;
@@ -2365,12 +2388,16 @@ svg.svg_home_general{
     top: -22px;
     right: -30px;
 }
+
 .ax-content-metricas .ax-content-arrowT2 .ax-row-metrica-text{ right: 18px; }
 .ax-content-metricas .ax-row-metrica-text{
     position: absolute;
-    background: url(../img/ax-flecha-line.svg);
+    background: url(../img/ax-flecha-line-2.svg);
     width: 18px;
     height: 38px;
+}
+.ax-content-metricas .ax-content-arrowT2 .ax-row-metrica-text{
+	background: url(../img/ax-flecha-line.svg);
 }
 
 .ax-content-metricas p.ax-text{
@@ -2680,6 +2707,98 @@ form svg path {
     left: 4px;
 }
 
+.maskLoading{
+  position: fixed;
+  background-color: rgba(70,162,74,1);  
+  width: 100%;
+  height: 100%;
+  z-index: 1051;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.txtLoading{
+  color: #194703;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -60px 0 0 -60px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.maskLoading .txtLoading:after{
+    content: "Cargando";
+    color: #fff;
+    animation:loading_text 2.5s infinite;
+    -webkit-animation:loading_text 2.5s infinite;
+    -moz-animation:loading_text 2.5s infinite;
+}
+
+@-webkit-keyframes loading_text{
+    0%{ content: "Cargando" }
+    25%{ content: "Cargando." }
+    50%{ content: "Cargando.." }
+    75%{ content: "Cargando..."}
+}
+
+@-moz-keyframes loading_text{
+    0%{ content: "Cargando" }
+    25%{ content: "Cargando." }
+    50%{ content: "Cargando.." }
+    75%{ content: "Cargando..."}
+}
+
+@keyframes loading_text{
+    0%{ content: "Cargando" }
+    25%{ content: "Cargando." }
+    50%{ content: "Cargando.." }
+    75%{ content: "Cargando..."}
+}
+.loading{
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -33px;
+    position: absolute;
+}
+.loading i{
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #fff;
+}
+.loading i:first-child{
+  animation:loading2-ani2 0.5s linear infinite;
+  opacity: 0;
+  transform:translate(-20px);
+}
+.loading i:nth-child(2),
+.loading i:nth-child(3){
+  animation:loading2-ani3 0.5s linear infinite;
+}
+.loading i:last-child{
+  animation:loading2-ani1 0.5s linear infinite;
+}
+@keyframes loading2-ani1{
+  100%{
+    transform:translate(40px);
+    opacity: 0;
+  }
+}
+@keyframes loading2-ani2{
+  100%{
+    transform:translate(20px);
+    opacity: 1;
+  }
+}
+@keyframes loading2-ani3{
+  100%{
+    transform:translate(20px);
+  }
+}
+
 /*DRG UNE LOS PUNTOS*/
 .ax-lapiz-select{ cursor: url("../img/ax-lapiz-select.png") 0 63, auto; }
 .ax-lapiz-select-green{ cursor: url("../img/ax-color-select.png") 0 63, auto; }
@@ -2740,6 +2859,19 @@ form svg path {
 .dot34{ left: 124px; top: 37px; }
 .dot35{ left: 145px; top: 18px; }
 
+.msg-box {
+    position: fixed;
+    width: 25%;    
+    right: 2%;
+    top: -15%;
+    background: rgba(140, 113, 129, 0.82);
+    z-index: 9999;
+    border-bottom: 3px solid #fff;
+    box-shadow: 0 -1px 4px rgba(101, 97, 97, 0.82);
+	color: #fff;
+	padding: 20px;
+}
+
 @media screen and (max-width: 1360px){}
 
 @media screen and (max-width: 1024px){
@@ -2776,6 +2908,13 @@ form svg path {
 }
 
 @media screen and (max-width: 768px){
+    .msg-box {
+		width: 80%;
+		right: 0;		
+		left: 0;
+		margin: auto;
+	}
+    
     .content-login h1 .ax-part-1 {
         font-family: 'vagron';
         display: block;

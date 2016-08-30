@@ -142,7 +142,7 @@ c0,0-11.343-35.121-10.743-57.024c0,0,2.341-3.284,2.042-6.885c-0.601-2.4-2.701-3.
         <span class="ax-pasos">4</span>
         <h3>¡Hora de hacernos algunas preguntas! Luego de haber dado tus repuestas,</h3>
         <p>Sabes por qué escogiste esas marcas para responder</p>
-        <textarea maxlength="100" id="pensemos_marca4"></textarea>
+        <textarea maxlength="150" id="pensemos_marca4"></textarea>
     </div>
 </div>
 <!-- pagina 6 -->
@@ -172,7 +172,7 @@ c0,0-11.343-35.121-10.743-57.024c0,0,2.341-3.284,2.042-6.885c-0.601-2.4-2.701-3.
     </div>
     <div class="ax-egercicio ax-eger-4">
         <h3>¿Qué tal si alguien más pudiera recordar tu marca con la misma exactitud y rapidez?</h3>
-        <textarea maxlength="100" id="pensemos_marca2"></textarea>
+        <textarea maxlength="150" id="pensemos_marca2"></textarea>
         <div class=" clearfix">
             <p class="col-md-10">Por último, sino cantaste la canción del comercial, ¡cántala que recordar es vivir!</p>
         </div>
@@ -226,6 +226,10 @@ c0,0-11.343-35.121-10.743-57.024c0,0,2.341-3.284,2.042-6.885c-0.601-2.4-2.701-3.
 <!-- pagina 8 -->
 <div class="ax-cont-info page-8">
     <div class="ax-text ax-game-line ax-line-1">
+       <div class="ax-content-arrowT1">
+                <p class="ax-text">Pasa el lápiz por los puntos<br>sin soltar el maouse</p>
+                <div class="ax-row-metrica-text"></div>
+            </div>
         <p>Uniendo Puntos nos llevamos buenas sorpresas, no será diferente al unir estos</p>
 <!--        <img src="img/ax-game-1-page-9.svg" />-->
         <div class="drag">
@@ -317,7 +321,7 @@ c0,0-11.343-35.121-10.743-57.024c0,0,2.341-3.284,2.042-6.885c-0.601-2.4-2.701-3.
     <div class="ax-cont-first">
         <h3>Describe<br/>al personaje</h3>
         <p class="ax-text">¿Qué personalidad tiene el personaje que acabaste de crear?</p>
-        <textarea id="describe_personaje1"></textarea>
+        <textarea maxlength="200" id="describe_personaje1"></textarea>
         <p class="ax-text">¿Crees que si otra persona lo ve, elegiría las mismas características que tú?</p>
         <input type="text" id="describe_personaje2">
         <img src="img/ax-persona-pag11.png" />
@@ -586,7 +590,7 @@ a implementar acciones de mejoramiento para alcanzar nuestros objetivos estrate�
     <div class="ax-cont-first">
         <div class="ax-pliege-top">
             <h3>Espacio para preguntas <br/>Manos a la obra</h3>
-            <p><span>Si estás leyendo estás líneas fue porque pudiste cruzar el tabler o de juego.</span></p>
+            <p><span>Si estás leyendo estás líneas fue porque pudiste cruzar el tablero de juego.</span></p>
             <p class="ax-felicitaciones ax-text">¡Felicitaciones!</p>
         </div>
         <div class="ax-cont-first">
@@ -867,7 +871,7 @@ a implementar acciones de mejoramiento para alcanzar nuestros objetivos estrate�
     <div class="ax-cont-user">
         <div class="ax-cont-text">
             <h4>Nuestras redes tienen cara</h4>
-            <p>Ponle rostro a los responsables de cada punto de contacto. Imprime, recorta y pega su foto</p>
+            <p>Ponle rostro a los responsables de cada punto de contacto. Imprime, recorta y pega su foto.</p>
         </div>
         <form id="fotos_mesa1">
             <ul class="ax-cont-group">
@@ -878,9 +882,9 @@ a implementar acciones de mejoramiento para alcanzar nuestros objetivos estrate�
                     </div>
                     <div class="ax-name">
                        <p>Flickr</p><br/>
-                       <input type="text" placeholder="Nombre" class="input">
+                       <input type="text" placeholder="Nombre" class="input" id="name_flickr">
                     </div>
-                    <input type="text" placeholder="+Personalidad" class="input">
+                    <input type="text" placeholder="+Personalidad" class="input" id="name_flickr_person">
                 </li>
                 <li class="ax-item">
                    <div class="ax-image">
@@ -889,9 +893,9 @@ a implementar acciones de mejoramiento para alcanzar nuestros objetivos estrate�
                     </div>
                     <div class="ax-name">
                        <p>G+</p><br/>
-                       <input type="text" placeholder="Nombre" class="input">
+                       <input type="text" placeholder="Nombre" class="input" id="name_gplus">
                     </div>
-                    <input type="text" placeholder="+Personalidad" class="input">
+                    <input type="text" placeholder="+Personalidad" class="input" id="name_gplus_person">
                 </li>
             </ul>
         </form>
@@ -909,9 +913,9 @@ a implementar acciones de mejoramiento para alcanzar nuestros objetivos estrate�
                 </div>
                 <div class="ax-name">
                    <p>PINTEREST</p><br/>
-                   <input type="text" placeholder="Nombre" class="input">
+                   <input type="text" placeholder="Nombre" class="input" id="name_pinterest">
                 </div>
-                <input type="text" placeholder="+Personalidad" class="input">
+                <input type="text" placeholder="+Personalidad" class="input" id="name_pinterest_person">
             </li>
             <li class="ax-item">
                <div class="ax-image">                   
@@ -920,9 +924,9 @@ a implementar acciones de mejoramiento para alcanzar nuestros objetivos estrate�
                 </div>
                 <div class="ax-name">
                    <p>INSTAGRAM</p><br/>
-                   <input type="text" placeholder="Nombre" class="input">
+                   <input type="text" placeholder="Nombre" class="input" id="name_instagram">
                 </div>
-                <input type="text" placeholder="+Personalidad" class="input">
+                <input type="text" placeholder="+Personalidad" class="input" id="name_instagram_person">
             </li>
             <li class="ax-item">
                <div class="ax-image">
@@ -931,9 +935,9 @@ a implementar acciones de mejoramiento para alcanzar nuestros objetivos estrate�
                 </div>
                 <div class="ax-name">
                    <p>YOUTUBE</p><br/>
-                   <input type="text" placeholder="Nombre" class="input">
+                   <input type="text" placeholder="Nombre" class="input" id="name_youtube">
                 </div>
-                <input type="text" placeholder="+Personalidad" class="input">
+                <input type="text" placeholder="+Personalidad" class="input" id="name_youtube_person">
             </li>
             <li class="ax-item">
                <div class="ax-image">
@@ -942,9 +946,9 @@ a implementar acciones de mejoramiento para alcanzar nuestros objetivos estrate�
                 </div>
                 <div class="ax-name">
                    <p>TWITTER</p><br/>
-                   <input type="text" placeholder="Nombre" class="input">
+                   <input type="text" placeholder="Nombre" class="input" id="name_twitter">
                 </div>
-                <input type="text" placeholder="+Personalidad" class="input">
+                <input type="text" placeholder="+Personalidad" class="input" id="name_twitter_person">
             </li>
             <li class="ax-item">
                <div class="ax-image">
@@ -953,9 +957,9 @@ a implementar acciones de mejoramiento para alcanzar nuestros objetivos estrate�
                 </div>
                 <div class="ax-name">
                    <p>FACEBOOK</p><br/>
-                   <input type="text" placeholder="Nombre" class="input">
+                   <input type="text" placeholder="Nombre" class="input" id="name_facebook">
                 </div>
-                <input type="text" placeholder="+Personalidad" class="input">
+                <input type="text" placeholder="+Personalidad" class="input" id="name_facebook_person">
             </li>
         </ul>
     </div>

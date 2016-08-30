@@ -15,9 +15,3 @@ var options = {
   density: 'high'
 };
 var particleCanvas = new ParticleNetwork(canvasDiv, options);
-
-/*$(window).load(function(){    
-    var canvas = $('canvas');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-});*/
