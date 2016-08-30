@@ -75,7 +75,8 @@ textarea {
 :-ms-input-placeholder { color: #b3a1a5 !important; }
 
 body {
-    background: url(../img/ax-font-particules.svg), radial-gradient(#4eaf49, #399149);
+/*    background: url(../img/ax-font-particules.svg), radial-gradient(#4eaf49, #399149);*/
+    background: radial-gradient(#4eaf49, #399149);
     background-size: 100%;
     background-position: 0px 30%;
 }
@@ -2152,6 +2153,7 @@ svg.svg_home_general{
     background: transparent;
     font-family: 'tragic';
     text-align: center;
+    cursor: pointer;
 }
 
 .ax-page-25 .ax-cont-user {
@@ -2740,6 +2742,19 @@ form svg path {
 .dot34{ left: 124px; top: 37px; }
 .dot35{ left: 145px; top: 18px; }
 
+.msg-box {
+    position: fixed;
+    width: 25%;    
+    right: 2%;
+    top: -15%;
+    background: rgba(140, 113, 129, 0.82);
+    z-index: 9999;
+    border-bottom: 3px solid #fff;
+    box-shadow: 0 -1px 4px rgba(101, 97, 97, 0.82);
+	color: #fff;
+	padding: 20px;
+}
+
 @media screen and (max-width: 1360px){}
 
 @media screen and (max-width: 1024px){
@@ -2776,6 +2791,13 @@ form svg path {
 }
 
 @media screen and (max-width: 768px){
+    .msg-box {
+		width: 80%;
+		right: 0;		
+		left: 0;
+		margin: auto;
+	}
+    
     .content-login h1 .ax-part-1 {
         font-family: 'vagron';
         display: block;

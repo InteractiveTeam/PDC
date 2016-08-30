@@ -2,7 +2,7 @@
 class Clsconnection{
     public static $user = 'epmusr';
     public static $pass = 'C0NT4C2016!';
-    public static $host = '192.168.3.30';
+    public static $host = '173.192.100.28';
     public static $db = 'epmpuntoscontacto';
     public static $con;
 
