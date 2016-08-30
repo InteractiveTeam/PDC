@@ -2348,7 +2348,7 @@ svg.svg_home_general{
 .ax-content-metricas table td table{ width: 100%; }
 .ax-content-metricas .ax-row-metrica{
     position: absolute;
-    background: url(../img/ax-flecha-line.svg);
+    background: url(../img/ax-flecha-line-2.svg);
     width: 18px;
     height: 38px;
     left: -16px;
@@ -2368,12 +2368,16 @@ svg.svg_home_general{
     top: -22px;
     right: -30px;
 }
+
 .ax-content-metricas .ax-content-arrowT2 .ax-row-metrica-text{ right: 18px; }
 .ax-content-metricas .ax-row-metrica-text{
     position: absolute;
-    background: url(../img/ax-flecha-line.svg);
+    background: url(../img/ax-flecha-line-2.svg);
     width: 18px;
     height: 38px;
+}
+.ax-content-metricas .ax-content-arrowT2 .ax-row-metrica-text{
+	background: url(../img/ax-flecha-line.svg);
 }
 
 .ax-content-metricas p.ax-text{
@@ -2706,6 +2710,7 @@ form svg path {
 
 .maskLoading .txtLoading:after{
     content: "Cargando";
+    color: #fff;
     animation:loading_text 2.5s infinite;
     -webkit-animation:loading_text 2.5s infinite;
     -moz-animation:loading_text 2.5s infinite;
