@@ -10,10 +10,6 @@ $(document).ready(function(){
 	$(".maskLoading").show();
     
     $('body').css('height', $(window).height());
-//    $( window ).resize(function(){
-//        $('body').css('height', $(window).height());
-//        //$('.flipbook-viewport .container').height(($(window).height())-20);
-//    });    
     
     $(".btn-login").on('click',function(){
         tl.to('.content-login', 0.5, {opacity:0,display:'none'})
@@ -21,9 +17,6 @@ $(document).ready(function(){
         .staggerFrom('.ax-iniciar-sesion .form-group,.ax-iniciar-sesion hgroup', 0.7, {y:-20,opacity:0,},0.10)
         .staggerFrom('.content-btn .button', 0.5, {y:15,opacity:0,},0.10,'-=0.85');
         tl.from(subTitle, 1, {scale:0, opacity:0},'-=1');
-
-        //var mySVG = $('.svg_login').drawsvg();
-        //var myAnimation = new DrawFillSVG({elementId: "Layer_1"});
     });
     $(".btn-cancel-login").on('click',function(){
         tl.to('.ax-iniciar-sesion,.ax-registro,.ax-recuperar', 0.5, {opacity:0,display:'none'})
