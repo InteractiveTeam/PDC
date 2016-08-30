@@ -15,10 +15,19 @@
                 $pass = password_hash($dataUser['pwd'],PASSWORD_DEFAULT);
                 $miIp = getRealIP();
                 $result = $objUser->recordUser($dataUser,$miIp,$pass);
+                                
+                $bodyMail = 'Gracias por registrarte con nosotros';
+                $mail = sendEmail($result['data']['email'],$result['data']['name'],'Registro exitoso',$bodyMail);
+                
                 print_r(json_encode($result));
+                                
 				break;
             case 'forgotpass':
                 $result = $objUser->forgotPass($dataUser);
+                
+                $bodyMail = 'Su nueva contraseña es: '.$result['newPass'];
+                $mail = sendEmail($dataUser['emailPass'],'','Recordar contraseña',$bodyMail);
+                
                 print_r(json_encode($result));
                 break;
             case 'saveData':
@@ -49,20 +58,20 @@
 		}
 	}
 
-	function sendEmail($email,$name,$subject,$body,$emailFrom = ''){
-		require_once('phpmailer/PHPMailerAutoload.php');
+	function sendEmail($email,$name,$subject,$body){
+		require_once('../phpmailer/PHPMailerAutoload.php');
 		//include("class.smtp.php"); // optional, gets called from within class.phpmailer.php if not already loaded
 
 		$mail = new PHPMailer;
 		//$mail->SMTPDebug = 3;                               // Enable verbose debug output
 		$mail->isSMTP();                                      // Set mailer to use SMTP
-		$mail->Host = '';  // Specify main and backup SMTP servers
+		$mail->Host = 'smtp.arkix.com';  // Specify main and backup SMTP servers
 		$mail->SMTPAuth = true;                               // Enable SMTP authentication
-		$mail->Username = '';                 // SMTP username
-		$mail->Password = '';                           // SMTP password
+		$mail->Username = 'aplicaciones@arkixmailer.com';                 // SMTP username
+		$mail->Password = 'D4b4rk2019$$%!';                           // SMTP password
 		//$mail->Port = 26;                                    // TCP port to connect to 
 
-		$mail->setFrom($emailFrom, 'Información Alkomprar');
+		$mail->setFrom('davinson.anaya@arkix.com', 'Información Puntos de contacto');
 		$mail->addAddress($email, $name);     // Add a recipient
 		
 		$mail->isHTML(true);                                  // Set email format to HTML

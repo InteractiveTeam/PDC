@@ -86,6 +86,8 @@ var epmModule = (function($){
                             break;
                         case 6:
                         case 7:
+                            actions.flipbook_viewport.attr('class', 'flipbook-viewport');
+                            
                             $('.ax-image-svg').delay(500).animate({opacity: 1}, 1000);
                             $('.ax-page-6 .ax-image-svg').delay(4000).animate({opacity: 1}, 1000);
                             //LLenamos los datos del usuario
@@ -133,7 +135,8 @@ var epmModule = (function($){
                             }                            
                             break;
                         case 10:
-                        case 11:
+                        case 11:                            
+                            actions.flipbook_viewport.attr('class', 'flipbook-viewport');
                             //LLenamos los datos del usuario
                             $("#describe_personaje1").val(infoPages.data.describe_personaje1);
                             $("#describe_personaje2").val(infoPages.data.describe_personaje2);
@@ -334,7 +337,7 @@ var epmModule = (function($){
                         sessionStorage.setItem('user', JSON.stringify(result.data));
                         location.reload();
                     }else{
-                        epmModule.setMessage('usuario existe');
+                        epmModule.setMessage('El usuario ya se encuentra registrado');
                     }
                 }
             });
@@ -522,7 +525,7 @@ var epmModule = (function($){
 					status = regex.test(value);
 				break;
 				case 'text':
-					regex = /^[A-Za-z]+$/;
+					regex = /^[A-Za-z\d\s]+$/;
 					status = regex.test(value);
 				break;
 				case 'number':

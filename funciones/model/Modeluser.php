@@ -49,10 +49,11 @@ class Modeluser {
     public function forgotPass($data){
         $result = $this->consultUser($data['emailPass']);
         if($result){
-            $newPass = password_hash($this->generatePassword(),PASSWORD_DEFAULT);
+            $newPass = $this->generatePassword();
+            $newPassEncryt = password_hash($newPass,PASSWORD_DEFAULT);
             $query = "UPDATE users SET password =? WHERE email=?";
             $stmt = $this->conn->prepare($query);
-            $result = $stmt->execute(array($newPass,$data['emailPass']));
+            $result = $stmt->execute(array($newPassEncryt,$data['emailPass']));
             return array('data'=>$result,'newPass'=>$newPass);
         }else{
             return array('data'=>false,'msg'=>'User no exist');
