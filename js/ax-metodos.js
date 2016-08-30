@@ -46,12 +46,14 @@ var epmModule = (function($){
                 actions.btnManual.on('click', function(){
                     actions.manual.animate({top: 0}, 'slow',function(){
                         $(this).css({position:'absolute'});
+                        $("#particle-canvas").html('');
                     })
                 })
                 
                 $('.ax-close').on('click', function(){
                     actions.manual.animate({top: 120+'%'}, 'slow',function(){
                         $(this).css({position:'fixed'});
+                        particleCanvas = new ParticleNetwork(canvasDiv, options);
                     })
                 })
 

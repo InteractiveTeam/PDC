@@ -3,7 +3,11 @@ var settings = epmModule.setting;
 var tl = settings.tl;
 var subTitle = settings.imageTitle;
 
+$(window).load(function(){
+	$(".maskLoading").hide();
+});
 $(document).ready(function(){
+	$(".maskLoading").show();
     
     $('body').css('height', $(window).height());
 //    $( window ).resize(function(){
