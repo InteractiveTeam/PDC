@@ -2487,7 +2487,7 @@ svg.svg_home_general{
 }
 #particle-canvas canvas{
     position: fixed !important;
-    opacity: 0.25;
+    opacity: 0.25;  
 }
 .ax-iniciar-sesion,.ax-registro,.ax-recuperar,.ax-profile,.content-login{
     display: none;
