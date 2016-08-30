@@ -904,6 +904,26 @@ svg.svg_home_general{
     position: relative;
 }
 
+.page-8 .ax-content-arrowT1{
+    position: absolute;
+    top: 10px;
+    width: 37%;
+    right: 30px;
+}
+.page-8 .ax-content-arrowT1 p.ax-text{
+    font-size: 0.8em;
+    width: 100%;
+}
+.page-8 .ax-row-metrica-text{
+    position: absolute;
+    background: url(http://www.conexionviva.com.co/puntosdecontactoepm/img/ax-flecha-line-2.svg);
+    width: 18px;
+    height: 38px;
+    top: 15px;
+    left: -20px;
+    transform: rotate(21deg);
+}
+
 .ax-page-8 .ax-line-1.ax-game-line {
     padding: 70px 0 0 0;
 }
