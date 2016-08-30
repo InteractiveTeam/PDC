@@ -271,8 +271,9 @@ svg.svg_home_general{
 /* Basic sample */
 
 .flip-control {
-    position: relative;
+    position: absolute;
     bottom: 48%;
+    width: 100%;
 }
 
 .flip-control #next, .flip-control #prev {
