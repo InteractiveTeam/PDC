@@ -2803,6 +2803,10 @@ form svg path {
 .ax-lapiz-select{ cursor: url("../img/ax-lapiz-select.png") 0 63, auto; }
 .ax-lapiz-select-green{ cursor: url("../img/ax-color-select.png") 0 63, auto; }
 .ax-crayola{ cursor: url("../img/ax-crayola.svg") 8 77, auto; }
+.ax-marcador{ cursor: url("../img/ax-marcador-select.png") 0 63, auto; }
+.ax-cuerda{ cursor: url("../img/ax-cuerda-select.png") 0 63, auto; }
+.ax-plastilina{ cursor: url("../img/ax-plastilina-select.png") 0 63, auto; }
+
 
 .drag{
     position: relative;

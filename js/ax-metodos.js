@@ -126,12 +126,40 @@ var epmModule = (function($){
                                 $("#ax-crayola").on('click',function(){
                                     actions.flipbook_viewport.attr('class', 'flipbook-viewport');
                                     actions.flipbook_viewport.addClass('ax-crayola');
-                                    epmModule.svg_stroke = '#000';
+                                    epmModule.svg_stroke = '#226d29';
                                     epmModule.stroke_width = 6;
                                     $("#svg_dots path:last").attr('stroke',epmModule.svg_stroke);
                                     $("#svg_dots path:last").attr('stroke-width',epmModule.stroke_width);
                                     epmModule.dragEMP();
                                 });
+                                $("#ax-marcador").on('click',function(){
+                                    actions.flipbook_viewport.attr('class', 'flipbook-viewport');
+                                    actions.flipbook_viewport.addClass('ax-marcador');
+                                    epmModule.svg_stroke = '#000';
+                                    epmModule.stroke_width = 4;
+                                    $("#svg_dots path:last").attr('stroke',epmModule.svg_stroke);
+                                    $("#svg_dots path:last").attr('stroke-width',epmModule.stroke_width);
+                                    epmModule.dragEMP();
+                                });
+                                $("#ax-cuerda").on('click',function(){
+                                    actions.flipbook_viewport.attr('class', 'flipbook-viewport');
+                                    actions.flipbook_viewport.addClass('ax-cuerda');
+                                    epmModule.svg_stroke = '#000';
+                                    epmModule.stroke_width = 3;
+                                    $("#svg_dots path:last").attr('stroke',epmModule.svg_stroke);
+                                    $("#svg_dots path:last").attr('stroke-width',epmModule.stroke_width);
+                                    epmModule.dragEMP();
+                                });
+                                $("#ax-plastilina").on('click',function(){
+                                    actions.flipbook_viewport.attr('class', 'flipbook-viewport');
+                                    actions.flipbook_viewport.addClass('ax-plastilina');
+                                    epmModule.svg_stroke = '#d4d4d4';
+                                    epmModule.stroke_width = 3;
+                                    $("#svg_dots path:last").attr('stroke',epmModule.svg_stroke);
+                                    $("#svg_dots path:last").attr('stroke-width',epmModule.stroke_width);
+                                    epmModule.dragEMP();
+                                });
+                                
                             }else{
                                 $(".drag").addClass('drag-epm-full');
                             }                            

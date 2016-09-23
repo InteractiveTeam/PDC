@@ -6,7 +6,7 @@
         $dataUser = $_POST['data'];
         $objUser = new Modeluser();
         
-		switch ($_POST['action']) {
+		switch ($_POST['action']){
             case 'login':                
                 $result = $objUser->login($dataUser);				
                 print_r(json_encode($result));				
@@ -16,7 +16,12 @@
                 $miIp = getRealIP();
                 $result = $objUser->recordUser($dataUser,$miIp,$pass);
                                 
-                $bodyMail = 'Gracias por registrarte con nosotros';
+                $bodyMail = 'Hola '.$result['data']['name'].',
+                <br>Queremos darte la bienvenida a Puntos de contacto.<br> 
+                Recuerda que tus datos de acceso son:<br><br>
+                <b>Dirección de correo electrónico</b>:'.$result['data']['email'].'<br>
+                <b>Clave</b>:'.$dataUser['pwd'].'<br><br>
+                Te invitamos a ingresar e interactuar con nosotros en<br>http://www.conexionviva.com.co/puntosdecontactoepm/';
                 $mail = sendEmail($result['data']['email'],$result['data']['name'],'Registro exitoso',$bodyMail);
                 
                 print_r(json_encode($result));
@@ -25,7 +30,8 @@
             case 'forgotpass':
                 $result = $objUser->forgotPass($dataUser);
                 
-                $bodyMail = 'Su nueva contraseña es: '.$result['newPass'];
+                $bodyMail = 'Tu nueva contraseña es:'.$result['newPass'].'<br>
+                Ya podrás continuar interactuando con nuestros puntos de contacto.';
                 $mail = sendEmail($dataUser['emailPass'],'','Recordar contraseña',$bodyMail);
                 
                 print_r(json_encode($result));
@@ -60,8 +66,9 @@
 
 	function sendEmail($email,$name,$subject,$body){
 		require_once('../phpmailer/PHPMailerAutoload.php');
-		//include("class.smtp.php"); // optional, gets called from within class.phpmailer.php if not already loaded
-
+        $html = file_get_contents('../../mail.html');
+        $body = str_replace("[body]",$body,$html);
+        
 		$mail = new PHPMailer;
 		//$mail->SMTPDebug = 3;                               // Enable verbose debug output
 		$mail->isSMTP();                                      // Set mailer to use SMTP
