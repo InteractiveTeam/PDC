@@ -1269,6 +1269,7 @@ svg.svg_home_general{
     width: 60%;
     height: 296px;
     position: absolute;
+    background: #fff;
 }
 
 .ax-page-13 .ax-plie-top-left {
@@ -1339,6 +1340,17 @@ svg.svg_home_general{
     right: 100px;
     top: 30px;
     position: absolute;
+}
+
+.ax-page-14 .ax-url-pdf {
+    color: #91c848 !important;
+    font-family: 'tragic';
+    letter-spacing: 0.05rem;
+    font-size: 23px;
+    line-height: 21px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
 }
 
 .ax-page-15 .ax-image {
