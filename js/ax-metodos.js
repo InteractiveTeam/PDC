@@ -10,6 +10,7 @@ var epmModule = (function($){
             btnManual:$('.btn-manual'),
             manual:$('#manual'),
             flipbook:$(".flipbook"),
+            instrucion:$(".instruction"),
             imageTitle:$('.ax-container svg'),
             svg_stroke:"#000",
             stroke_width:3,
@@ -88,6 +89,7 @@ var epmModule = (function($){
                             break;
                         case 6:
                         case 7:
+                            $('.ax-cont-instrucion').hide();
                             actions.flipbook_viewport.attr('class', 'flipbook-viewport');
                             
                             $('.ax-image-svg').delay(500).animate({opacity: 1}, 1000);
@@ -100,7 +102,7 @@ var epmModule = (function($){
                         break;
                         case 8:
                         case 9:
-                            
+                            $('.ax-cont-instrucion').show().animate({opacity: 1}, 1000);
                             actions.tl.staggerFrom('.ax-imagen-tols .ax-tols', 0.8, {y:20,opacity:0,clearProps:"all"},0.10)
                             .staggerFrom('.ax-page-7 .ax-cont-first p', 0.8, {y:20,opacity:0,clearProps:"all"},0.10,'-=0.85');
                             
@@ -162,10 +164,12 @@ var epmModule = (function($){
                                 
                             }else{
                                 $(".drag").addClass('drag-epm-full');
+                                $('.ax-cont-instrucion').hide();
                             }                            
                             break;
                         case 10:
-                        case 11:                            
+                        case 11:
+                            $('.ax-cont-instrucion').hide();
                             actions.flipbook_viewport.attr('class', 'flipbook-viewport');
                             //LLenamos los datos del usuario
                             $("#describe_personaje1").val(infoPages.data.describe_personaje1);

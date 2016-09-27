@@ -2960,6 +2960,41 @@ form svg path {
         left: 0;
         width: 100%;
     }
+    
+    .ax-cont-instrucion .ax-instrucion {
+        width: 90%;
+        height: 70%;
+    }
+    
+    .ax-cont-instrucion .ax-instrucion img {
+        width: 100%;
+    }
+    
+    .flipbook-viewport .shadow {
+        margin: 0 auto !important;
+    }
+    
+    #manual .flip-control a {
+        width: 30px;
+    }
+    
+    #manual .flip-control #next {
+        background-position: -104px 0;
+    }
+    
+    #manual .ax-close {
+        width: 65px;
+        height: 45px;
+        z-index: 2;
+    }
+    
+    #manual .ax-close:before {
+        width: 26px;
+        height: 26px;
+        background-size: 124px;
+        background-position: -87px -14px;
+    }
+    
 }
 
 @media screen and (max-width: 480px){
@@ -3088,7 +3123,7 @@ form svg path {
     .content-login h1, .col-centered h1{
         line-height: 90px;
         font-size: 70px;
-        width: 550px;
+        /*width: 550px;*/
         margin: 0 auto;
         padding: 80px 0;
         background-size: 100%;
@@ -3214,7 +3249,52 @@ form svg path {
 	.flipbook-viewport .container{
 		height:760px;
 	}
-    .manual{
+    .manual {
         height: auto;
     }
 }
+
+.ax-cont-instrucion {
+    width: 100%;
+    height: 100%;
+    background: rgba(63, 164, 53, 0.4);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    opacity: 0;
+    z-index: 99;
+}
+
+.ax-cont-instrucion .ax-close-instructions {
+    background: #3fa435;
+    color: #fff;
+    padding: 7px;
+    border-radius: 100%;
+    border: #fff solid 5px;
+    position: absolute;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    cursor: pointer;
+    top: -15px;
+    transition: all 0.4s ease;
+    webkit-transition: all 0.4s ease;
+    left: -15px;
+}
+
+.ax-cont-instrucion .ax-close-instructions:hover {
+    transform: scale(1.05);
+    webkit-transform: scale(1.06);
+}
+
+.ax-instrucion {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 61.5%;
+        height: 66.5%;
+    }
