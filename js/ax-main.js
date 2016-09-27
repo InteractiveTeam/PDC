@@ -17,6 +17,7 @@ $(document).ready(function(){
         .staggerFrom('.ax-iniciar-sesion .form-group,.ax-iniciar-sesion hgroup', 0.7, {y:-20,opacity:0,},0.10)
         .staggerFrom('.content-btn .button', 0.5, {y:15,opacity:0,},0.10,'-=0.85');
         tl.from(subTitle, 1, {scale:0, opacity:0},'-=1');
+
     });
     $(".btn-cancel-login").on('click',function(){
         tl.to('.ax-iniciar-sesion,.ax-registro,.ax-recuperar', 0.5, {opacity:0,display:'none'})
@@ -68,6 +69,13 @@ $(document).ready(function(){
     	$('.flipbook-viewport').attr('class', 'flipbook-viewport');
 		//$(".flipbook-viewport").removeClass('ax-lapiz-select-green ax-lapiz-select');
 	});
+    
+    $('.ax-cont-instrucion span').on('click', function(){
+       $('.ax-cont-instrucion').animate({opacity: 0},
+                                        1000, function(){                               $(this).hide()
+                                        });
+    })
+    
 });
 
 
