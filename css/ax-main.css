@@ -550,6 +550,23 @@ svg.svg_home_general{
     padding: 0 2px;
 }
 
+.ax-page-8 p.ax-help span {
+    background: #91c848;
+    color: #fff;
+    line-height: 21px;
+    padding: 0 2px;   
+    font-family: 'tragic';
+    font-size: 23px;
+}
+
+.ax-page-8 p.ax-help {
+    position: absolute;
+    bottom: 0;
+    left: 17px;
+    font-size: 23px !important;
+    width: 57% !important;
+}
+
 .ax-page-9 .ax-cont-info .ax-cont-first {
     padding: 120px 0 0 0; 
     width: 84%;
@@ -1294,20 +1311,6 @@ svg.svg_home_general{
     width: 60%;
     height: 296px;
     position: absolute;
-    background: #fff;
-}
-
-.ax-page-13 .ax-plie-top-left {
-    top: 0;
-    background: transparent;
-}
-
-.ax-page-13 .ax-plie-top-left:before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 219px;
-    background: #fff;
 }
 
 .ax-page-13 p {
@@ -1467,7 +1470,7 @@ svg.svg_home_general{
 
 .ax-textarea-page-15 {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
 }
 
 .ax-textarea-page-15 p {
@@ -1477,12 +1480,14 @@ svg.svg_home_general{
     line-height: 27px;
     width: 37%;
     display: inline-block;
+    vertical-align: top;
 }
 
 .ax-textarea-page-15 textarea {
-    width: 55%;
+    width: 61%;
     display: inline-block;
     height: 77px;
+    background-size: 130%;
 }
 
 .ax-page-16 .ax-cont-info {
