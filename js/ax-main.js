@@ -11,6 +11,10 @@ $(document).ready(function(){
     
     $('body').css('height', $(window).height());
     
+    $('body').on('click','.ax-btn-help a', function(){
+        $('#ax-help').show().animate({opacity: 1}, 1000);  
+    })
+    
     $(".btn-login").on('click',function(){
         tl.to('.content-login', 0.5, {opacity:0,display:'none'})
         .to('.ax-iniciar-sesion', 0.5, {opacity:1,display:'block'},'-=0.20')
