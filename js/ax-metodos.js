@@ -106,6 +106,12 @@ var epmModule = (function($){
                             actions.tl.staggerFrom('.ax-imagen-tols .ax-tols', 0.8, {y:20,opacity:0,clearProps:"all"},0.10)
                             .staggerFrom('.ax-page-7 .ax-cont-first p', 0.8, {y:20,opacity:0,clearProps:"all"},0.10,'-=0.85');
                             
+                            if(infoPages.data.img_une_9puntos){
+                                $("#une_9puntos").attr('src',infoPages.data.img_une_9puntos);
+                            }
+                            if(infoPages.data.img_draw_house){
+                                $("#draw_house").attr('src',infoPages.data.img_draw_house);
+                            }
                             if(!parseInt(infoPages.data.drawEpm)){//validamo que se encuentre dibujado el SVG
                                 $("#ax-lapiz").on('click',function(){                                
                                     actions.flipbook_viewport.attr('class', 'flipbook-viewport');
@@ -482,7 +488,7 @@ var epmModule = (function($){
 
 		    return indexed_array;
 		},
-        unepuntosFile:function(file,type){
+        /*unepuntosFile:function(file,type){
             var preview = document.getElementById(type); //selects the query named img            
             var file    = file.files[0]; //sames as here
             var reader  = new FileReader();
@@ -492,29 +498,28 @@ var epmModule = (function($){
                 epmModule.effectPreviewFile(type,reader.result);
             }
             
-            if(file){
-                reader.readAsDataURL(file); //reads the data as a URL
-            } else {
-                preview.src = "";
-            }
-            /*var data = new FormData();
+            var data = new FormData();
             data.append("file", file);
             data.append("action", "saveImg");
             data.append("field", type);
             data.append("data", JSON.stringify(dataUser));
             
             infoPages = epmModule.requestAjaxFormdata(data);
-            console.log(infoPages);            
-            */
-            
-        },
-        previewFile:function(file,type){
-            var preview = document.getElementById('profile_mesa'); //selects the query named img            
+            console.log(infoPages);
+            if(file){
+                reader.readAsDataURL(file); //reads the data as a URL
+            } else {
+                preview.src = "";
+            }
+        },*/
+        previewFile:function(file,type,field){
+            var preview = document.getElementById(field); //selects the query named img            
             var file    = file.files[0]; //sames as here
             var reader  = new FileReader();
 
             reader.onloadend = function(){
-                preview.style.display = 'block';
+                if(field == 'profile_mesa')
+                    preview.style.display = 'block';
                 preview.src = reader.result;
                 epmModule.effectPreviewFile(type,reader.result);
             }
@@ -533,8 +538,7 @@ var epmModule = (function($){
             } else {
                 preview.src = "";
             }
-        },
-        
+        },        
         effectPreviewFile:function(type,img){
             switch(type){
                 case'unepuntos':

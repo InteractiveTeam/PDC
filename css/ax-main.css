@@ -948,7 +948,7 @@ svg.svg_home_general{
 .ax-page-8 .ax-line-2 img {
     display: inline-block;
     width: 33%;
-    margin: 30px
+    margin: 30px;
 }
 
 .ax-page-8 .ax-line-3 P {
@@ -961,7 +961,7 @@ svg.svg_home_general{
 .ax-page-8 .ax-line-3 img {
     display: inline-block;
     width: 23%;
-    margin: 40px 0 0 0;
+    margin: 20px 0 0 0;
 }
 
 .ax-page-8 .ax-empezar-linea {
@@ -3298,3 +3298,10 @@ form svg path {
         width: 61.5%;
         height: 66.5%;
     }
+
+.upload-une-9puntos{
+    overflow: hidden;
+    width: 100px;
+    height: 50px;
+    display: inline-block;
+}
