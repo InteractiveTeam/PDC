@@ -80,7 +80,7 @@ var epmModule = (function($){
                     pageCat = page;
                     switch (page) {
                         case 2:
-                            $('.cont-title').delay(500).fadeIn();
+                            $('.cont-title').delay(400).fadeIn();
                         break;
                         case 4:
                         case 5:
@@ -110,6 +110,7 @@ var epmModule = (function($){
                                 $("#une_9puntos").attr('src',infoPages.data.img_une_9puntos);
                             }
                             if(infoPages.data.img_draw_house){
+                                $("#draw_house").show();
                                 $("#draw_house").attr('src',infoPages.data.img_draw_house);
                             }
                             if(!parseInt(infoPages.data.drawEpm)){//validamo que se encuentre dibujado el SVG
@@ -487,31 +488,7 @@ var epmModule = (function($){
 		    });
 
 		    return indexed_array;
-		},
-        /*unepuntosFile:function(file,type){
-            var preview = document.getElementById(type); //selects the query named img            
-            var file    = file.files[0]; //sames as here
-            var reader  = new FileReader();
-
-            reader.onloadend = function(){
-                preview.src = reader.result;
-                epmModule.effectPreviewFile(type,reader.result);
-            }
-            
-            var data = new FormData();
-            data.append("file", file);
-            data.append("action", "saveImg");
-            data.append("field", type);
-            data.append("data", JSON.stringify(dataUser));
-            
-            infoPages = epmModule.requestAjaxFormdata(data);
-            console.log(infoPages);
-            if(file){
-                reader.readAsDataURL(file); //reads the data as a URL
-            } else {
-                preview.src = "";
-            }
-        },*/
+		},        
         previewFile:function(file,type,field){
             var preview = document.getElementById(field); //selects the query named img            
             var file    = file.files[0]; //sames as here
@@ -520,6 +497,8 @@ var epmModule = (function($){
             reader.onloadend = function(){
                 if(field == 'profile_mesa')
                     preview.style.display = 'block';
+                if(field == 'draw_house')
+                    preview.style.display = 'inline-block';
                 preview.src = reader.result;
                 epmModule.effectPreviewFile(type,reader.result);
             }
