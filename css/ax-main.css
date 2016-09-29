@@ -159,7 +159,7 @@ p {
 .col-md-12.col-centered.text-right.content-btn {
     margin: 40px 0;
     display: inline-block;
-    width: auto;
+    width: 400px;
     transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;
 }
@@ -3473,10 +3473,10 @@ form svg path {
 }
 
 .upload-une-9puntos input{
-    height: 50px;
     top: -24px;
     position: absolute;
     cursor: pointer;
+    padding-bottom: 20px;
 }
 
 .ax-line-3 .upload-une-9puntos  {
