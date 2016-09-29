@@ -2659,7 +2659,7 @@ a.linkEffect:hover:after{  width:100%; }
 .ax-container .form-control{
     border-radius: 0;
     border: none;
-    padding: 25px 10px;
+    height: 48px;
 }
 
 form li {position: relative;display: inline-block;}
